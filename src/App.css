@@ -1,5 +1,46 @@
 .App {
   text-align: center;
+  background-image: url(imgs/background.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#root {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50rem;
+  padding: 1vh;
+}
+
+.nav-bar {
+  opacity: 0.9;
+  background-color: #4263eb;
+}
+
+.change {
+  background-color: #dbe4ff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+h3 {
+  margin: 3rem;
+  padding: 1vh;
+  background-color: #dbe4ff;
+  color: #4263eb;
+}
+
+.QA {
+  margin-left: 5vh;
+  margin-right: none;
 }
 
 /* .App-logo {

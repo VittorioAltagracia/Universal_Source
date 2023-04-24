@@ -1,4 +1,4 @@
-export const fetchTestAnswer = async () => {
+export const fetchAnswers = async () => {
   const res = await fetch(
     "https://teqtlancpsgidvygohhh.supabase.co/rest/v1/test",
     {
@@ -11,8 +11,7 @@ export const fetchTestAnswer = async () => {
     }
   );
 
-  const inter = await res.json();
-  const data = [];
-  data.push(inter);
+  const data = await res.json();
   console.log(data);
+  return data;
 };
