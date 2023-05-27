@@ -4,15 +4,14 @@ import Answer from "./Answer";
 import { useSelector } from "react-redux";
 import { selectAllAnswers } from "./answersSlice";
 
-const AnswersList = ({ answer }) => {
+const AnswersList = () => {
   const answers = useSelector(selectAllAnswers);
-
+  console.log(answers);
   return (
     <>
       <Row>
         {answers.map((answer) => (
-          <Col key={answer.id}>
-            {" "}
+          <Col md="6" key={answer.id}>
             <Answer answer={answer} />
           </Col>
         ))}

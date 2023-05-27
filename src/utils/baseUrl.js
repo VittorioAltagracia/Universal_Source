@@ -1,1 +1,1 @@
-export const baseUrl = "https://teqtlancpsgidvygohhh.supabase.co/rest/v1/test";
+export const baseUrl = "http://localhost:3001/";

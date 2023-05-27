@@ -1,14 +1,13 @@
-import { fetchTestAnswer } from "./fetchAnswers";
 import { Card, CardBody, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
 
-const Answer = ({ answer }) => {
-  const { id, name, answers } = answer;
+const Answer = () => {
+  const { id, name, answer } = answer;
 
   return (
     <div>
       <Card>
         <CardTitle>{name}</CardTitle>
-        <CardBody>{answers}</CardBody>
+        <CardBody>{answer}</CardBody>
       </Card>
     </div>
   );

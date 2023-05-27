@@ -12,7 +12,6 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import SecondDropdown from "../subComponents/SecondDropdown";
-import { fetchAnswers } from "../answers/fetchAnswers";
 import AnswersList from "../answers/AnswersList";
 
 const NavigationBar = ({ props }) => {
@@ -47,20 +46,15 @@ const NavigationBar = ({ props }) => {
                   <DropdownItem>Action</DropdownItem>
                   <DropdownItem divider />
                   <NavLink className="nav-link" to="/answers">
-                    <DropdownItem>
-                      <AnswersList
-                        onClick={fetchAnswers}
-                        props={fetchAnswers}
-                      />
-                    </DropdownItem>
+                    <DropdownItem>Test</DropdownItem>
                   </NavLink>
                   <DropdownItem divider />
                   <DropdownItem>Another Action</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </NavItem>
-            {/* independent dropdown for languages is below */}
             <NavItem>
+              {/* independent dropdown for languages is below */}
               <SecondDropdown />
             </NavItem>
             <NavItem>
