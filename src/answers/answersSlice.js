@@ -13,6 +13,7 @@ export const getAnswers = createAsyncThunk("answers/getAnswers", async () => {
 
 const initialState = {
   answersArray: [],
+  errorMes: "",
 };
 
 const answersSlice = createSlice({
@@ -20,6 +21,9 @@ const answersSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
+    [getAnswers.rejected]: (state, action) => {
+      state.errorMes = action.error ? action.error.message : "Fetch has failed";
+    },
     [getAnswers.fulfilled]: (state, action) => {
       state.answersArray = action.payload;
     },

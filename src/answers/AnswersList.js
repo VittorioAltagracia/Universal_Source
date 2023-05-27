@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Row } from "reactstrap";
 import Answer from "./Answer";
 import { useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import { selectAllAnswers } from "./answersSlice";
 
 const AnswersList = () => {
   const answers = useSelector(selectAllAnswers);
-  console.log(answers);
+  console.log(answers + ": dog");
   return (
     <>
       <Row>
@@ -15,6 +15,7 @@ const AnswersList = () => {
             <Answer answer={answer} />
           </Col>
         ))}
+        Render check
       </Row>
     </>
   );

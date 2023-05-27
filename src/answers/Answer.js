@@ -1,4 +1,4 @@
-import { Card, CardBody, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
+import { Card, CardBody, CardTitle } from "reactstrap";
 
 const Answer = () => {
   const { id, name, answer } = answer;
@@ -6,8 +6,8 @@ const Answer = () => {
   return (
     <div>
       <Card>
-        <CardTitle>{name}</CardTitle>
-        <CardBody>{answer}</CardBody>
+        <CardTitle>Name: {name}</CardTitle>
+        <CardBody>Answer: {answer}</CardBody>
       </Card>
     </div>
   );

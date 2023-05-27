@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import Main from "./components/Main.js";
 import NavigationBar from "./components/Navbar.js";
 import "./App.css";
@@ -8,11 +7,19 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import AnswersPage from "./pages/AnswersPage.js";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getAnswers } from "./answers/answersSlice";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAnswers);
+  }, [dispatch]);
+
   return (
     <div className="App">
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
       <Container fluid>
         <Row>
           <Col>
