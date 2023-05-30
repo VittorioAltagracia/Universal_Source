@@ -1,13 +1,13 @@
 import { Card, CardBody, CardTitle } from "reactstrap";
 
-const Answer = () => {
-  const { id, name, answer } = answer;
+const Answer = ({ answer }) => {
+  const { id, name, description } = answer;
 
   return (
     <div>
       <Card>
         <CardTitle>Name: {name}</CardTitle>
-        <CardBody>Answer: {answer}</CardBody>
+        <CardBody>Answer: {description}</CardBody>
       </Card>
     </div>
   );

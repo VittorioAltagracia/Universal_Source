@@ -6,7 +6,7 @@ import { selectAllAnswers } from "./answersSlice";
 
 const AnswersList = () => {
   const answers = useSelector(selectAllAnswers);
-  console.log(answers + ": dog");
+  console.log(answers + ": retrieved data from BE");
   return (
     <>
       <Row>

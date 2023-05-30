@@ -9,13 +9,13 @@ import AboutPage from "./pages/AboutPage.js";
 import AnswersPage from "./pages/AnswersPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getAnswers } from "./answers/answersSlice";
+import { fetchAnswers } from "./answers/answersSlice";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getAnswers);
+    dispatch(fetchAnswers());
   }, [dispatch]);
 
   return (
