@@ -11,12 +11,14 @@ import QuestionsPage from "./pages/QuestionsPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getAnswers } from "./answers/answersSlice";
+import { getQuestions } from "./questions/questionsSlice.js";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getAnswers());
+    dispatch(getQuestions());
   }, [dispatch]);
 
   return (

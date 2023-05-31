@@ -15,7 +15,6 @@ const AnswersList = () => {
             <Answer answer={answer} />
           </Col>
         ))}
-        Render check
       </Row>
     </>
   );
