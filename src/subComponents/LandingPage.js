@@ -27,9 +27,7 @@ const LandingPage = () => {
             unable.
           </p>
         </Col>
-        {/* <Col md="2">
-          <img src={QA} alt="Questions and answers" className="QA"></img>
-        </Col> */}
+
         <Col md="6"></Col>
       </Row>
       <Row>

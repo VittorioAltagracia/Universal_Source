@@ -34,6 +34,11 @@ const NavigationBar = ({ props }) => {
                 Home
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink to="/questions" className="nav-link">
+                Load questions...
+              </NavLink>
+            </NavItem>
             {/* first dropdown is below */}
             <NavItem>
               <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>

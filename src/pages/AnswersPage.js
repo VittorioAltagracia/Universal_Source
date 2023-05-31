@@ -1,15 +1,13 @@
 import AnswersList from "../answers/AnswersList";
-import { Row, Col, Button } from "reactstrap";
+import { Row, Col } from "reactstrap";
 
 const AnswersPage = () => {
   return (
     <div>
       <Row>
         <Col>
-          <Button>Click me</Button>
           <AnswersList />
         </Col>
-        <Col>QA</Col>
       </Row>
     </div>
   );

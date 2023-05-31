@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import AnswersPage from "./pages/AnswersPage.js";
+import QuestionsPage from "./pages/QuestionsPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getAnswers } from "./answers/answersSlice";
@@ -28,6 +29,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="answers" element={<AnswersPage />} />
+              <Route path="questions" element={<QuestionsPage />} />
             </Routes>
             <Main />
           </Col>

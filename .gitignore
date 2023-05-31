@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+jqueryExperiment.js
 # production
 /build
 
