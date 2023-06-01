@@ -18,13 +18,8 @@ const FooterComponent = () => {
               is voice total power mr ye might round still. Yet remarkably
             </p>
           </Col>
-          <Col>
-            {" "}
-            <span>Placeholder</span>
-          </Col>
-          <Col>
-            <span>Placeholder Placeholder</span>
-          </Col>
+          <Col></Col>
+          <Col></Col>
         </Row>
       </Container>
     </footer>

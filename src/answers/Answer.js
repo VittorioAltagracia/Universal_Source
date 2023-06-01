@@ -1,4 +1,4 @@
-import { Card, CardBody, CardTitle } from "reactstrap";
+import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 
 const Answer = ({ answer }) => {
   const { id, name, description } = answer;
@@ -6,8 +6,10 @@ const Answer = ({ answer }) => {
   return (
     <div>
       <Card>
-        <CardTitle>Name: {name}</CardTitle>
-        <CardBody>Answer: {description}</CardBody>
+        <CardTitle> {name}</CardTitle>
+        <CardBody>
+          <CardText> {description}</CardText>
+        </CardBody>
       </Card>
     </div>
   );

@@ -5,7 +5,6 @@ const QuestionsPage = () => {
   return (
     <div>
       <Row>
-        <Col>Questions Page...</Col>
         <QuestionsList />
       </Row>
     </div>
