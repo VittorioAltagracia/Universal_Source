@@ -4,13 +4,23 @@ import Question from "./Question";
 import { useSelector } from "react-redux";
 import { selectAllQuestions } from "./questionsSlice";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
+import ErrorToast from "../subComponents/ErrorToast";
 
 const QuestionsList = () => {
   const questions = useSelector(selectAllQuestions);
   const isLoading = useSelector((state) => state.questions.isLoading);
+  const errorMes = useSelector((state) => state.questions.errorMes);
 
   if (isLoading) {
     return <LoadingSpinner />;
+  }
+
+  if (errorMes) {
+    return (
+      <Row>
+        <ErrorToast errorMes={errorMes} />
+      </Row>
+    );
   }
 
   return (

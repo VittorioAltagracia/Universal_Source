@@ -4,7 +4,7 @@ import { baseUrl } from "../utils/baseUrl";
 export const getQuestions = createAsyncThunk(
   "questions/getQuestions",
   async () => {
-    const res = await fetch(baseUrl + "questions");
+    const res = await fetch(baseUrl + "question");
     if (!res.ok) {
       return Promise.reject("Unable to fetch, status: " + res.status);
     }
@@ -35,6 +35,7 @@ const questionsSlice = createSlice({
     [getQuestions.fulfilled]: (state, action) => {
       state.questionsArray = action.payload;
       state.isLoading = false;
+      state.errorMes = "";
     },
   },
 });
