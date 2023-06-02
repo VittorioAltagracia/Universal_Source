@@ -1,0 +1,12 @@
+.card-color {
+  background-color: #5d73c9;
+}
+
+.card-category {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.card-source {
+  font-weight: bold;
+}

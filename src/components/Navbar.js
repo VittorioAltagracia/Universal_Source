@@ -35,7 +35,7 @@ const NavigationBar = ({ props }) => {
             </NavItem>
             <NavItem>
               <NavLink to="/questions" className="nav-link">
-                Find your answers
+                Load all answers
               </NavLink>
             </NavItem>
             {/* first dropdown is below */}

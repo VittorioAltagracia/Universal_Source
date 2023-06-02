@@ -5,10 +5,8 @@ import {
   AccordionHeader,
   Card,
   CardBody,
-  CardHeader,
 } from "reactstrap";
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 
 const Question = ({ question }) => {
   const { name, answer, category, source } = question;
@@ -24,20 +22,19 @@ const Question = ({ question }) => {
 
   return (
     <div>
-      <Accordion
-        open={open}
-        toggle={toggle}
-        onClick={() => console.log("peter")}
-      >
+      <Accordion open={open} toggle={toggle} className="accordion">
         <AccordionItem>
-          <AccordionHeader targetId="1">{name}</AccordionHeader>
-          <AccordionBody accordionId="1">
-            <Card>
+          <AccordionHeader targetId="1">
+            <span className="acc-header">{name} </span>
+          </AccordionHeader>
+          <AccordionBody accordionId="1" className="card-color">
+            <Card className="mb-3">
               <CardBody>{answer}</CardBody>
             </Card>
-            Category: {category}
+            <span className="card-category">Category: </span>
+            {category}
             <br />
-            Source: {source}
+            <span className="card-source">Source:</span> {source}
           </AccordionBody>
         </AccordionItem>
       </Accordion>

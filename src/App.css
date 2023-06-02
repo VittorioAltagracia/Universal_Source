@@ -61,3 +61,7 @@ h3 {
     transform: translateY(0px);
   }
 }
+
+.acc-header {
+  font-weight: bold;
+}
