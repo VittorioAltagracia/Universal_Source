@@ -3,23 +3,15 @@ import {
   AccordionBody,
   AccordionItem,
   AccordionHeader,
+  Card,
+  CardBody,
+  CardHeader,
 } from "reactstrap";
 import React, { useState } from "react";
-import { selectAllAnswers } from "../answers/answersSlice";
 import { useSelector } from "react-redux";
-import { useRef } from "react";
 
 const Question = ({ question }) => {
-  const { name } = question;
-  // const { description } = answer;
-
-  const answers = useSelector(selectAllAnswers);
-  function Acc() {
-    {
-      answers.map((answer) => <p key={answer.id} answer={answer} />);
-    }
-  }
-  const $it = useRef(Acc());
+  const { name, answer, category, source } = question;
 
   const [open, setOpen] = useState(false);
   const toggle = (id) => {
@@ -39,7 +31,14 @@ const Question = ({ question }) => {
       >
         <AccordionItem>
           <AccordionHeader targetId="1">{name}</AccordionHeader>
-          <AccordionBody accordionId="1">{$it.current}</AccordionBody>
+          <AccordionBody accordionId="1">
+            <Card>
+              <CardBody>{answer}</CardBody>
+            </Card>
+            Category: {category}
+            <br />
+            Source: {source}
+          </AccordionBody>
         </AccordionItem>
       </Accordion>
     </div>

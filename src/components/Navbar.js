@@ -13,7 +13,6 @@ import {
 import { NavLink } from "react-router-dom";
 import SecondDropdown from "../subComponents/SecondDropdown";
 import AnswersList from "../answers/AnswersList";
-import "../App.css";
 
 const NavigationBar = ({ props }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -36,7 +35,7 @@ const NavigationBar = ({ props }) => {
             </NavItem>
             <NavItem>
               <NavLink to="/questions" className="nav-link">
-                Load questions...
+                Find your answers
               </NavLink>
             </NavItem>
             {/* first dropdown is below */}
@@ -48,13 +47,17 @@ const NavigationBar = ({ props }) => {
                 <DropdownMenu>
                   <DropdownItem header>Select your category</DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>Action</DropdownItem>
+                  <DropdownItem>Education</DropdownItem>
                   <DropdownItem divider />
                   <NavLink className="nav-link" to="/answers">
-                    <DropdownItem>Test</DropdownItem>
+                    <DropdownItem>All answers together</DropdownItem>
                   </NavLink>
                   <DropdownItem divider />
-                  <DropdownItem>Another Action</DropdownItem>
+                  <DropdownItem>How to apply for documents?</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Job Search</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Driving and getting a car</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </NavItem>

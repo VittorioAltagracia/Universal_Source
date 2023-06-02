@@ -29,7 +29,7 @@ const QuestionsList = () => {
     <>
       <Row className="ms-auto">
         {questions.map((question) => (
-          <Col md="4" className="m-4" key={question.id}>
+          <Col md="3" className="m-5" key={question.id}>
             <Question question={question} />
           </Col>
         ))}
