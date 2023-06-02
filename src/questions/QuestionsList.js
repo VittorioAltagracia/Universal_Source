@@ -18,7 +18,9 @@ const QuestionsList = () => {
   if (errorMes) {
     return (
       <Row>
-        <ErrorToast errorMes={errorMes} />
+        <Col sm="4">
+          <ErrorToast errorMes={errorMes} />
+        </Col>
       </Row>
     );
   }

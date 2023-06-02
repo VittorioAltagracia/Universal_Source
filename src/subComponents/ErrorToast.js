@@ -1,11 +1,13 @@
-import { Toast, ToastHeader, ToastBody } from "reactstrap";
+import { Toast, ToastHeader, ToastBody, Col } from "reactstrap";
 
 const ErrorToast = ({ errorMes }) => {
   return (
-    <Toast className="p-2 bg-danger my-3">
-      <ToastHeader>Error</ToastHeader>
-      <ToastBody>{errorMes}</ToastBody>
-    </Toast>
+    <Col>
+      <Toast className="p-2 bg-info my-3">
+        <ToastHeader>Error</ToastHeader>
+        <ToastBody>{errorMes}</ToastBody>
+      </Toast>
+    </Col>
   );
 };
 

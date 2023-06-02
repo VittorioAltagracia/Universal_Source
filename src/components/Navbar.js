@@ -13,6 +13,7 @@ import {
 import { NavLink } from "react-router-dom";
 import SecondDropdown from "../subComponents/SecondDropdown";
 import AnswersList from "../answers/AnswersList";
+import "../App.css";
 
 const NavigationBar = ({ props }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -22,9 +23,8 @@ const NavigationBar = ({ props }) => {
 
   return (
     <>
-      {/* <div className="header"></div> */}
       <Navbar sticky="top" expand="md" dark className="mt-3 py-0 nav-bar">
-        <h3>Universal Source </h3>
+        <h3 className="header-float">Universal Source </h3>
 
         <NavbarToggler onClick={() => setNavOpen(!navOpen)} />
         <Collapse isOpen={navOpen} navbar>
