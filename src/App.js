@@ -2,6 +2,7 @@ import Main from "./components/Main.js";
 import NavigationBar from "./components/Navbar.js";
 import "./App.css";
 import "./CardStyle.css";
+import supabase from "./utils/Supabase.js";
 import { Container, Row, Col } from "reactstrap";
 import FooterComponent from "./components/Footer.js";
 import { Routes, Route } from "react-router-dom";
