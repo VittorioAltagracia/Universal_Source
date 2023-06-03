@@ -25,6 +25,14 @@ const QuestionsList = () => {
     );
   }
 
+  // function filterByCategory() {
+  //   questions.filter((question) => question.category === "Jobs");
+  // }
+
+  const filterByCategory = questions.filter(
+    (question) => question.category === "Jobs"
+  );
+
   return (
     <>
       <Row className="ms-auto">
@@ -34,6 +42,9 @@ const QuestionsList = () => {
           </Col>
         ))}
       </Row>
+      {filterByCategory.map((category) => (
+        <Col>{category.answer}</Col>
+      ))}
     </>
   );
 };

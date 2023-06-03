@@ -12,7 +12,6 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import SecondDropdown from "../subComponents/SecondDropdown";
-import AnswersList from "../answers/AnswersList";
 
 const NavigationBar = ({ props }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

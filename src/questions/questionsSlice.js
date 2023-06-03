@@ -45,3 +45,12 @@ export const questionsReducer = questionsSlice.reducer;
 export const selectAllQuestions = (state) => {
   return state.questions.questionsArray;
 };
+
+// export const selectQuestionsByCategory = ( state) => {
+//   return {
+//     categorizedQuestion: state.questions.questionsArray.filter(
+//       (question) => question.
+
+//     )
+//   }
+// }
