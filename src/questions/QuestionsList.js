@@ -25,12 +25,12 @@ const QuestionsList = () => {
     );
   }
 
-  function proof(cat) {
+  const Proof = (category) => {
     const filterByCategory = questions.filter(
-      (question) => question.category === cat
+      (question) => question.category === category
     );
     return filterByCategory;
-  }
+  };
 
   return (
     <>
@@ -41,8 +41,8 @@ const QuestionsList = () => {
           </Col>
         ))}
       </Row>
-      {proof("Documents").map((category) => (
-        <Col>{category.answer}</Col>
+      {Proof("Documents").map((category) => (
+        <Col key={category}>{category.answer}</Col>
       ))}
     </>
   );

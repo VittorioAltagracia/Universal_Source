@@ -4,8 +4,11 @@ const LandingPage = () => {
   return (
     <Container fluid className="mt-0">
       <Row className="align-items-start">
-        <Col md="3" className="ml-1">
-          <h2>Lorem Ipsum Ad Dolores e Sinum Versi</h2>
+        <Col md="3">
+          <h2>
+            New in this country? Find quick answers to the most important
+            questions.
+          </h2>
           <p className="mt-4">
             Day handsome addition horrible sensible goodness two contempt.
             Evening for married his account removal. Estimable me disposing of
@@ -27,11 +30,6 @@ const LandingPage = () => {
             unable.
           </p>
         </Col>
-
-        <Col md="6"></Col>
-      </Row>
-      <Row>
-        <Col></Col>
       </Row>
     </Container>
   );

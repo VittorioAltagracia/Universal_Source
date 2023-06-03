@@ -5,7 +5,6 @@ import {
   DropdownToggle,
   DropdownMenu,
 } from "reactstrap";
-import { NavLink } from "react-router-dom";
 
 const SecondDropdown = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,8 +18,8 @@ const SecondDropdown = () => {
           Languages
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem disabled>English</DropdownItem>
-          <DropdownItem>Ukrainian</DropdownItem>
+          <DropdownItem disabled>English 🌎</DropdownItem>
+          <DropdownItem>Ukrainian 🔷 (coming soon) </DropdownItem>
         </DropdownMenu>
       </Dropdown>
     </>

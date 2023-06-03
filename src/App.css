@@ -17,6 +17,7 @@
   gap: 50rem;
   padding: 1vh;
   pointer-events: none;
+  /* background-color: yellow; */
 }
 
 .nav-bar {

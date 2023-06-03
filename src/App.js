@@ -1,4 +1,3 @@
-import Main from "./components/Main.js";
 import NavigationBar from "./components/Navbar.js";
 import "./App.css";
 import "./CardStyle.css";
@@ -9,7 +8,7 @@ import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import AnswersPage from "./pages/AnswersPage.js";
 import QuestionsPage from "./pages/QuestionsPage.js";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getAnswers } from "./answers/answersSlice";
 import { getQuestions } from "./questions/questionsSlice.js";
@@ -34,7 +33,6 @@ function App() {
               <Route path="answers" element={<AnswersPage />} />
               <Route path="questions" element={<QuestionsPage />} />
             </Routes>
-            <Main />
           </Col>
         </Row>
         <Row>
