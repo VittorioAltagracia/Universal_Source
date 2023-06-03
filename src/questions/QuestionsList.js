@@ -25,13 +25,12 @@ const QuestionsList = () => {
     );
   }
 
-  // function filterByCategory() {
-  //   questions.filter((question) => question.category === "Jobs");
-  // }
-
-  const filterByCategory = questions.filter(
-    (question) => question.category === "Jobs"
-  );
+  function proof(cat) {
+    const filterByCategory = questions.filter(
+      (question) => question.category === cat
+    );
+    return filterByCategory;
+  }
 
   return (
     <>
@@ -42,7 +41,7 @@ const QuestionsList = () => {
           </Col>
         ))}
       </Row>
-      {filterByCategory.map((category) => (
+      {proof("Documents").map((category) => (
         <Col>{category.answer}</Col>
       ))}
     </>
