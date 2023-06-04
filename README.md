@@ -6,7 +6,7 @@ The information is scattered around the web and often available mostly in Englis
 
 # Ukrainian speaking immigrants (and everyone else who speaks English and/ or other languages)
 
-# People who generally want to have a source of truth for most common questions a ‘newcomer’ may have
+People who generally want to have a source of truth for most common questions a ‘newcomer’ may have
 
 
 # Getting Started with Create React App and Redux
