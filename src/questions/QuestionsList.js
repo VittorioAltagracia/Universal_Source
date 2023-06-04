@@ -34,6 +34,10 @@ const QuestionsList = () => {
 
   return (
     <>
+      <Col className="mt-4">
+        This page will display all the questions and answers that are stored in
+        the database.
+      </Col>
       <Row className="ms-auto">
         {questions.map((question) => (
           <Col md="3" className="m-5" key={question.id}>
