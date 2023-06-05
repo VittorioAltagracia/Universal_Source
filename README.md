@@ -15,7 +15,7 @@ The project is still in development and the data needs to be moved to a remote s
 
 - Clone the repository
 - Open the project in your code editor
-- Run `npm install' (this will install all the required dependancies from package.json)
+- Run `npm install` (this will install all the required dependencies from package.json)
 - Execute `npm start` in the project folder
 
 Runs the app in the development mode.\
