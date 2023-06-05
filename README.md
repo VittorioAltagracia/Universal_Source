@@ -8,7 +8,7 @@ The information is scattered around the web and often available mostly in Englis
 
 # Disclaimer
 
-The project is still in development complete, the data needs to be moved to a remote server, currently the app fetches the data from a local JSON server.
+The project is still in development and the data needs to be moved to a remote server, currently the app fetches the data from a local JSON server.
 
 
 # To run the project
