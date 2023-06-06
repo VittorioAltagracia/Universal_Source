@@ -1,10 +1,15 @@
 .card-color {
   background-color: #4263eb;
+  opacity: 0.9;
 }
 
 .card-category {
   font-weight: bold;
   margin-top: 1rem;
+}
+
+.card-text-category {
+  font-style: italic;
 }
 
 .card-source {

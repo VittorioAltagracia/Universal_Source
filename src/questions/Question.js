@@ -32,7 +32,7 @@ const Question = ({ question }) => {
               <CardBody>{answer}</CardBody>
             </Card>
             <span className="card-category">Category: </span>
-            {category}
+            <span className="card-text-category">{category}</span>
             <br />
             <span className="card-source">Source: </span>
             <span>
