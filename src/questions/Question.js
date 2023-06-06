@@ -34,7 +34,12 @@ const Question = ({ question }) => {
             <span className="card-category">Category: </span>
             {category}
             <br />
-            <span className="card-source">Source:</span> {source}
+            <span className="card-source">Source: </span>
+            <span>
+              <a href={source} target="_blank">
+                Link
+              </a>
+            </span>
           </AccordionBody>
         </AccordionItem>
       </Accordion>
