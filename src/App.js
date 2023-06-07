@@ -2,6 +2,7 @@ import NavigationBar from "./components/Navbar.js";
 import "./App.css";
 import "./CardStyle.css";
 import { Container, Row, Col } from "reactstrap";
+import { Parallax, Background } from "react-parallax";
 import FooterComponent from "./components/Footer.js";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage.js";
@@ -23,22 +24,31 @@ function App() {
 
   return (
     <div className="App">
-      <Container fluid>
-        <Row>
-          <Col>
-            <NavigationBar />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="about" element={<AboutPage />} />
-              <Route path="answers" element={<AnswersPage />} />
-              <Route path="questions" element={<QuestionsPage />} />
-            </Routes>
-          </Col>
-        </Row>
-        <Row>
-          <FooterComponent />
-        </Row>
-      </Container>
+      <Parallax
+        style={{
+          backgroundImage: `url("/background.jpg")`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        strength={500}
+      >
+        <Container fluid style={{ height: 1200 }}>
+          <Row>
+            <Col>
+              <NavigationBar />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="about" element={<AboutPage />} />
+                <Route path="answers" element={<AnswersPage />} />
+                <Route path="questions" element={<QuestionsPage />} />
+              </Routes>
+            </Col>
+          </Row>
+          <Row>
+            <FooterComponent />
+          </Row>
+        </Container>
+      </Parallax>
     </div>
   );
 }

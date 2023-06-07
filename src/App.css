@@ -1,9 +1,5 @@
 .App {
   text-align: center;
-  background-image: url(imgs/background.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #root {
@@ -17,7 +13,6 @@
   gap: 50rem;
   padding: 1vh;
   pointer-events: none;
-  /* background-color: yellow; */
 }
 
 .nav-bar {
