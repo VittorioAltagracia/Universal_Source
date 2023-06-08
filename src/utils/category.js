@@ -1,8 +1,24 @@
 export const Category = [
+  { id: 0, name: "Education" },
+  { id: 1, name: "Documents" },
   {
-    name: "Select your category",
+    id: 2,
+    name: "Driving",
   },
   {
-    name: "Education",
+    id: 3,
+    name: "Jobs",
+  },
+  {
+    id: 4,
+    name: "Language",
+  },
+  {
+    id: 5,
+    name: "Housing",
+  },
+  {
+    id: 6,
+    name: "Immigration",
   },
 ];

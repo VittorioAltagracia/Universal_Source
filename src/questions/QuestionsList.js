@@ -46,7 +46,7 @@ const QuestionsList = (Category) => {
           </Col>
         ))}
       </Row>
-      {Proof("Documents").map((category) => (
+      {Proof(Category.name).map((category) => (
         <Col key={category}>{category.answer}</Col>
       ))}
     </>

@@ -46,26 +46,17 @@ const NavigationBar = () => {
                 <DropdownToggle nav caret>
                   Answers by Category
                 </DropdownToggle>
-                <DropdownMenu>
-                  {/* 
-                  {Category.map((cat )=>{ return {
-                    <DropdownItem>{cat.name}</DropdownItem>
-                    <DropdownItem divider/>
-                     )}}} */}
 
-                  <DropdownItem header>Select your category</DropdownItem>
+                <DropdownMenu>
+                  <DropdownItem>Select your category</DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>Education</DropdownItem>
+                  {Category.map((cat) => {
+                    return <DropdownItem key={cat.id}>{cat.name}</DropdownItem>;
+                  })}
                   <DropdownItem divider />
                   <NavLink className="nav-link" to="/answers">
                     <DropdownItem>All answers together</DropdownItem>
                   </NavLink>
-                  <DropdownItem divider />
-                  <DropdownItem>How to apply for documents?</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Job Search</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Driving and getting a car</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </NavItem>
