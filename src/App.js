@@ -32,20 +32,33 @@ function App() {
         }}
         strength={500}
       >
-        <Container fluid style={{ height: 1200 }}>
+        <Container fluid style={{ height: 1350 }}>
+          <Background>
+            <div>
+              <Row>
+                <Col>
+                  {/* 1. Pass props from navbar all the way to questions list
+                pass down name from object to quesitons page, from quesitons page to questions list, 
+                this way proof function
+                
+                */}
+                  <NavigationBar />
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="about" element={<AboutPage />} />
+                    <Route path="answers" element={<AnswersPage />} />
+                    <Route path="questions" element={<QuestionsPage />} />
+                  </Routes>
+                </Col>
+              </Row>
+            </div>
+          </Background>
           <Row>
-            <Col>
-              <NavigationBar />
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="about" element={<AboutPage />} />
-                <Route path="answers" element={<AnswersPage />} />
-                <Route path="questions" element={<QuestionsPage />} />
-              </Routes>
-            </Col>
-          </Row>
-          <Row>
-            <FooterComponent />
+            <Background>
+              <div>
+                <FooterComponent />
+              </div>
+            </Background>
           </Row>
         </Container>
       </Parallax>

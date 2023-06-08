@@ -12,13 +12,16 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import SecondDropdown from "../subComponents/SecondDropdown";
+import { Category } from "../utils/category";
 
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);
-
   const [navOpen, setNavOpen] = useState(false);
 
+  const test = Category.map((cat) => cat.name);
+
+  //  could create an object or an array of objects to hold categories
   return (
     <>
       <Navbar sticky="top" expand="md" dark className="mt-3 py-0 nav-bar">
@@ -44,6 +47,12 @@ const NavigationBar = () => {
                   Answers by Category
                 </DropdownToggle>
                 <DropdownMenu>
+                  {/* 
+                  {Category.map((cat )=>{ return {
+                    <DropdownItem>{cat.name}</DropdownItem>
+                    <DropdownItem divider/>
+                     )}}} */}
+
                   <DropdownItem header>Select your category</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Education</DropdownItem>

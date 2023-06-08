@@ -6,7 +6,8 @@ import { selectAllQuestions } from "./questionsSlice";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import ErrorToast from "../subComponents/ErrorToast";
 
-const QuestionsList = () => {
+const QuestionsList = (Category) => {
+  const { name } = Category;
   const questions = useSelector(selectAllQuestions);
   const isLoading = useSelector((state) => state.questions.isLoading);
   const errorMes = useSelector((state) => state.questions.errorMes);
