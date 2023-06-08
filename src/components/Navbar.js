@@ -19,8 +19,6 @@ const NavigationBar = () => {
   const toggle = () => setDropdownOpen(!dropdownOpen);
   const [navOpen, setNavOpen] = useState(false);
 
-  const test = Category.map((cat) => cat.name);
-
   //  could create an object or an array of objects to hold categories
   return (
     <>
@@ -46,7 +44,6 @@ const NavigationBar = () => {
                 <DropdownToggle nav caret>
                   Answers by Category
                 </DropdownToggle>
-
                 <DropdownMenu>
                   <DropdownItem>Select your category</DropdownItem>
                   <DropdownItem divider />
