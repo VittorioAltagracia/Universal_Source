@@ -1,11 +1,11 @@
 import { Row } from "reactstrap";
 import QuestionsList from "../questions/QuestionsList";
 import { Category } from "../utils/category";
-const QuestionsPage = () => {
+const QuestionsPage = ({ selected }) => {
   return (
     <div>
       <Row>
-        <QuestionsList Category={Category} />
+        <QuestionsList Category={Category} selected={selected} />
       </Row>
     </div>
   );

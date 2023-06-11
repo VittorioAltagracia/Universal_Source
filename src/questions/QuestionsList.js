@@ -6,7 +6,7 @@ import { selectAllQuestions } from "./questionsSlice";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import ErrorToast from "../subComponents/ErrorToast";
 
-const QuestionsList = ({ Category }) => {
+const QuestionsList = ({ Category, selected }) => {
   const { name } = Category;
   const questions = useSelector(selectAllQuestions);
   const isLoading = useSelector((state) => state.questions.isLoading);
@@ -46,12 +46,15 @@ const QuestionsList = ({ Category }) => {
           </Col>
         ))}
       </Row>
-      {Proof(name).map(
-        (category) => (
-          (<Col key={category}>{category.answer}</Col>),
-          console.log(Category.name)
-        )
-      )}
+
+      {selected
+        ? Proof(selected).map(
+            (category) => (
+              (<Col key={category}>{category.answer}</Col>),
+              console.log(Category.name)
+            )
+          )
+        : console.log(`undefined, bro`)}
     </>
   );
 };
