@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
 import supabase from "../utils/Supabase";
+import LoadingSpinner from "../subComponents/LoadingSpinner";
 
 const AboutPage = () => {
-  const [about, setAbout] = useState("ddffd");
+  const [about, setAbout] = useState([]);
+  const [Loading, setLoading] = useState(true);
 
   useEffect(function () {
     async function loadAbout() {
-      const { data: about, error } = await supabase.from("About").select("*");
+      const { data: About } = await supabase.from("About").select("*");
       console.log(about);
-      setAbout(about);
+      setAbout(About);
+      setLoading(false);
     }
     loadAbout();
   }, []);
-  return <div>AboutPage</div>;
+  if (Loading) return <LoadingSpinner />;
+  return <div>Lala</div>;
 };
 
 export default AboutPage;

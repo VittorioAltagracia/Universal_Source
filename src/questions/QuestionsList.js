@@ -54,7 +54,7 @@ const QuestionsList = ({ Category, selected }) => {
               console.log(Category.name)
             )
           )
-        : console.log(`undefined, bro`)}
+        : console.log(`undefined`)}
     </>
   );
 };
