@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import AnswersPage from "./pages/AnswersPage.js";
 import QuestionsPage from "./pages/QuestionsPage.js";
+import DynamicPage from "./pages/DynamicPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getAnswers } from "./answers/answersSlice";
@@ -48,6 +49,7 @@ function App() {
                     <Route path="about" element={<AboutPage />} />
                     <Route path="answers" element={<AnswersPage />} />
                     <Route path="questions" element={<QuestionsPage />} />
+                    <Route path="dynamic" element={<DynamicPage />} />
                   </Routes>
                 </Col>
               </Row>
