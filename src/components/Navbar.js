@@ -20,9 +20,9 @@ const NavigationBar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [selected, setSelected] = useState("");
 
-  const onDropdownClick = (e) => {
-    setSelected(e.target.value);
-    console.log(e + "test me");
+  const onDropdownClick = (catName) => {
+    setSelected(catName);
+    console.log(catName);
   };
 
   //  could create an object or an array of objects to hold categories
@@ -56,7 +56,10 @@ const NavigationBar = () => {
 
                   {Category.map((cat) => {
                     return (
-                      <DropdownItem value={cat.name} key={cat.id} readOnly>
+                      <DropdownItem
+                        key={cat.id}
+                        onClick={() => onDropdownClick(cat.name)}
+                      >
                         {cat.name}
                         <DropdownItem divider />
                       </DropdownItem>
