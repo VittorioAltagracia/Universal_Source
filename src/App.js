@@ -50,6 +50,10 @@ function App() {
                     <Route path="answers" element={<AnswersPage />} />
                     <Route path="questions" element={<QuestionsPage />} />
                     <Route path="dynamic" element={<DynamicPage />} />
+                    <Route
+                      path="/dymanic/:categoryName"
+                      element={<DynamicPage />}
+                    />
                   </Routes>
                 </Col>
               </Row>

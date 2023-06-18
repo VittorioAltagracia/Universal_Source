@@ -7,6 +7,7 @@ import {
   CardBody,
 } from "reactstrap";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Question = ({ question }) => {
   const { name, answer, category, source } = question;
