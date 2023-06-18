@@ -10,10 +10,9 @@ import {
   Collapse,
   NavbarToggler,
 } from "reactstrap";
-import { NavLink } from "react-router-dom";
 import SecondDropdown from "../subComponents/SecondDropdown";
-import ChildComponent from "./ChildComponent";
 import { Category } from "../utils/category";
+import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -21,8 +20,9 @@ const NavigationBar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [selected, setSelected] = useState("");
 
-  const onDropdownClick = (cat) => {
-    setSelected(cat);
+  const onDropdownClick = (catName) => {
+    setSelected(catName);
+    console.log(catName);
   };
 
   //  could create an object or an array of objects to hold categories
@@ -53,14 +53,19 @@ const NavigationBar = () => {
                 <DropdownMenu>
                   <DropdownItem>Select your category</DropdownItem>
                   <DropdownItem divider />
+
                   {Category.map((cat) => {
                     return (
-                      <DropdownItem key={cat.id} onClick={onDropdownClick}>
+                      <DropdownItem
+                        key={cat.id}
+                        onClick={() => onDropdownClick(cat.name)}
+                      >
                         {cat.name}
+                        <DropdownItem divider />
                       </DropdownItem>
                     );
                   })}
-                  <DropdownItem divider />
+
                   <NavLink className="nav-link" to="/answers">
                     <DropdownItem>All answers together</DropdownItem>
                   </NavLink>
@@ -79,7 +84,6 @@ const NavigationBar = () => {
           </Nav>
         </Collapse>
       </Navbar>
-      <ChildComponent selected={selected} />
     </>
   );
 };
