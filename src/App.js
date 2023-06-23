@@ -49,7 +49,10 @@ function App() {
                     <Route path="about" element={<AboutPage />} />
                     <Route path="answers" element={<AnswersPage />} />
                     <Route path="questions" element={<QuestionsPage />} />
-                    <Route path="dynamic" element={<DynamicPage />} />
+                    <Route
+                      path="dynamic/:categoryName"
+                      element={<DynamicPage />}
+                    />
                   </Routes>
                 </Col>
               </Row>
