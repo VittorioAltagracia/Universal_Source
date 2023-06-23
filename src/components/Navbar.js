@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 import SecondDropdown from "../subComponents/SecondDropdown";
 import { Category } from "../utils/category";
-import { NavLink, Route, Switch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import DynamicPage from "../pages/DynamicPage";
 
 const NavigationBar = () => {
@@ -59,7 +59,7 @@ const NavigationBar = () => {
                     return (
                       <NavLink
                         key={cat.id}
-                        to={`dynamic/${cat.name}`}
+                        to={`/dynamic/${cat.name}`}
                         onClick={() => onDropdownClick(cat.name)}
                       >
                         {cat.name}

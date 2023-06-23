@@ -6,12 +6,12 @@ import Question from "../questions/Question";
 
 const DynamicPage = () => {
   const { categoryName } = useParams();
-  const question = useSelector(selectQuestionsByCategory(categoryName));
+  // const question = useSelector(selectQuestionsByCategory(categoryName));
 
   return (
     <div>
       It's dynamic
-      <Question question={question} />
+      {/* <Question question={question} /> */}
       Selected category: {categoryName}
     </div>
   );
