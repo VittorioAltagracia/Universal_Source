@@ -26,13 +26,6 @@ const QuestionsList = ({ Category, selected }) => {
     );
   }
 
-  const Proof = (category) => {
-    const filterByCategory = questions.filter(
-      (question) => question.category === category
-    );
-    return filterByCategory;
-  };
-
   return (
     <>
       <Col className="mt-4">
@@ -47,14 +40,14 @@ const QuestionsList = ({ Category, selected }) => {
         ))}
       </Row>
 
-      {selected
-        ? Proof(selected).map(
+      {/* {selected
+       ? Proof(selected).map(
             (category) => (
               (<Col key={category}>{category.answer}</Col>),
               console.log(Category.name)
             )
           )
-        : console.log(`undefined`)}
+        : console.log(`undefined`)} */}
     </>
   );
 };
