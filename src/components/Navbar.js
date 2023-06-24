@@ -23,7 +23,6 @@ const NavigationBar = () => {
 
   const onDropdownClick = (catName) => {
     setSelected(catName);
-    console.log(catName);
   };
 
   //  could create an object or an array of objects to hold categories
