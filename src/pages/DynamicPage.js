@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Question from "../questions/Question";
 import { selectAllQuestions } from "../questions/questionsSlice";
-import { Col, Card, CardBody, CardTitle } from "reactstrap";
+import { Col, Card, CardBody, CardTitle, CardFooter } from "reactstrap";
 
 const DynamicPage = () => {
   const { categoryName } = useParams();
@@ -22,25 +22,23 @@ const DynamicPage = () => {
 
   switch (categoryName) {
     case "Education":
-      return RenderByCat("Education").map(
-        (category) => (
-          (
-            <Col key={category}>
-              <Card>
-                <CardTitle>{category.name}</CardTitle>
-                <CardBody> {category.answer}</CardBody>
-              </Card>
-            </Col>
-          ),
-          displaySelectedCat(categoryName)
-        )
-      );
+      return RenderByCat("Education").map((category) => (
+        <Col key={category} md="6">
+          <Card>
+            <CardTitle>{category.name}</CardTitle>
+
+            <CardBody> {category.answer}</CardBody>
+            <CardFooter>{displaySelectedCat(categoryName)}</CardFooter>
+          </Card>
+        </Col>
+      ));
     case "Documents":
       return RenderByCat(categoryName).map((category) => (
         <Col key={category}>
           <Card>
             <CardTitle>{category.name}</CardTitle>
             <CardBody> {category.answer}</CardBody>
+            <CardFooter>{displaySelectedCat(categoryName)}</CardFooter>
           </Card>
         </Col>
       ));
