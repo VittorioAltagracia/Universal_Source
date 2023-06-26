@@ -5,7 +5,7 @@ const Answer = ({ answer }) => {
 
   return (
     <div>
-      <Card>
+      <Card className="my-5">
         <CardTitle> {name}</CardTitle>
         <CardBody>
           <CardText> {description}</CardText>

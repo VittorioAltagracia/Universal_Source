@@ -1,9 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Question from "../questions/Question";
 import { selectAllQuestions } from "../questions/questionsSlice";
-import { Col, Card, CardBody, CardTitle, CardFooter } from "reactstrap";
+import { Col, Row, Card, CardBody, CardTitle, CardFooter } from "reactstrap";
 
 const DynamicPage = () => {
   const { categoryName } = useParams();
@@ -20,73 +19,49 @@ const DynamicPage = () => {
     return <Col>Selected category: {categoryName}</Col>;
   };
 
+  const QuestionAnswerCard = (category) => {
+    return (
+      <Row>
+        <Col key={category} md="6">
+          <Card className="my-5">
+            <CardTitle>{category.name}</CardTitle>
+            <CardBody> {category.answer}</CardBody>
+            <CardFooter>{displaySelectedCat(categoryName)}</CardFooter>
+          </Card>
+        </Col>
+      </Row>
+    );
+  };
+
   switch (categoryName) {
     case "Education":
-      return RenderByCat("Education").map((category) => (
-        <Col key={category} md="6">
-          <Card>
-            <CardTitle>{category.name}</CardTitle>
-
-            <CardBody> {category.answer}</CardBody>
-            <CardFooter>{displaySelectedCat(categoryName)}</CardFooter>
-          </Card>
-        </Col>
-      ));
+      return RenderByCat("Education").map((category) =>
+        QuestionAnswerCard(category)
+      );
     case "Documents":
-      return RenderByCat(categoryName).map((category) => (
-        <Col key={category}>
-          <Card>
-            <CardTitle>{category.name}</CardTitle>
-            <CardBody> {category.answer}</CardBody>
-            <CardFooter>{displaySelectedCat(categoryName)}</CardFooter>
-          </Card>
-        </Col>
-      ));
+      return RenderByCat(categoryName).map((category) =>
+        QuestionAnswerCard(category)
+      );
     case "Driving":
-      return RenderByCat(categoryName).map((category) => (
-        <Col key={category}>
-          <Card>
-            <CardTitle>{category.name}</CardTitle>
-            <CardBody> {category.answer}</CardBody>
-          </Card>
-        </Col>
-      ));
+      return RenderByCat(categoryName).map((category) =>
+        QuestionAnswerCard(category)
+      );
     case "Jobs":
-      return RenderByCat(categoryName).map((category) => (
-        <Col key={category}>
-          <Card>
-            <CardTitle>{category.name}</CardTitle>
-            <CardBody> {category.answer}</CardBody>
-          </Card>
-        </Col>
-      ));
+      return RenderByCat(categoryName).map((category) =>
+        QuestionAnswerCard(category)
+      );
     case "Language":
-      return RenderByCat(categoryName).map((category) => (
-        <Col key={category}>
-          <Card>
-            <CardTitle>{category.name}</CardTitle>
-            <CardBody> {category.answer}</CardBody>
-          </Card>
-        </Col>
-      ));
+      return RenderByCat(categoryName).map((category) =>
+        QuestionAnswerCard(category)
+      );
     case "Housing":
-      return RenderByCat(categoryName).map((category) => (
-        <Col key={category}>
-          <Card>
-            <CardTitle>{category.name}</CardTitle>
-            <CardBody> {category.answer}</CardBody>
-          </Card>
-        </Col>
-      ));
+      return RenderByCat(categoryName).map((category) =>
+        QuestionAnswerCard(category)
+      );
     case "Immigration":
-      return RenderByCat(categoryName).map((category) => (
-        <Col key={category}>
-          <Card>
-            <CardTitle>{category.name}</CardTitle>
-            <CardBody> {category.answer}</CardBody>
-          </Card>
-        </Col>
-      ));
+      return RenderByCat(categoryName).map((category) =>
+        QuestionAnswerCard(category)
+      );
 
     default:
       return <span>Category wasn't selected or there was an error</span>;
