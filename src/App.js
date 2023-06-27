@@ -38,11 +38,6 @@ function App() {
             <div>
               <Row>
                 <Col>
-                  {/* 1. Pass props from navbar all the way to questions list
-                pass down name from object to quesitons page, from quesitons page to questions list, 
-                this way proof function
-                
-                */}
                   <NavigationBar />
                   <Routes>
                     <Route path="/" element={<HomePage />} />

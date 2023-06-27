@@ -25,7 +25,6 @@ const NavigationBar = () => {
     setSelected(catName);
   };
 
-  //  could create an object or an array of objects to hold categories
   return (
     <>
       <Navbar sticky="top" expand="md" dark className="mt-3 py-0 nav-bar">

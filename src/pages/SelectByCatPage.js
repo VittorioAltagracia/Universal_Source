@@ -8,6 +8,8 @@ const SelectByCatPage = () => {
   const { categoryName } = useParams();
   const questions = useSelector(selectAllQuestions);
 
+  //  This function filters data from questions array
+  // below I am passing in it an argument which is a category that user clicks on
   const RenderByCat = (category) => {
     const filterByCategory = questions.filter(
       (question) => question.category === category
@@ -15,18 +17,19 @@ const SelectByCatPage = () => {
     return filterByCategory;
   };
 
+  //  This function will render a category that corresponds to data user is viewing
   const displaySelectedCat = (categoryName) => {
-    return <Col>Selected category: {categoryName}</Col>;
+    return <CardFooter>Selected category: {categoryName}</CardFooter>;
   };
 
   const QuestionAnswerCard = (category) => {
     return (
       <Row>
-        <Col key={category} md="6">
+        <Col key={category.id} md="6">
           <Card className="my-5">
             <CardTitle>{category.name}</CardTitle>
             <CardBody> {category.answer}</CardBody>
-            <CardFooter>{displaySelectedCat(categoryName)}</CardFooter>
+            {displaySelectedCat(categoryName)}
           </Card>
         </Col>
       </Row>
