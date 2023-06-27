@@ -24,7 +24,7 @@ const SelectByCatPage = () => {
 
   const QuestionAnswerCard = (category) => {
     return (
-      <Row>
+      <Row key={category.id}>
         <Col key={category.id} md="6">
           <Card className="my-5">
             <CardTitle>{category.name}</CardTitle>
