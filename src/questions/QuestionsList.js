@@ -39,15 +39,6 @@ const QuestionsList = ({ Category, selected }) => {
           </Col>
         ))}
       </Row>
-
-      {/* {selected
-       ? Proof(selected).map(
-            (category) => (
-              (<Col key={category}>{category.answer}</Col>),
-              console.log(Category.name)
-            )
-          )
-        : console.log(`undefined`)} */}
     </>
   );
 };
