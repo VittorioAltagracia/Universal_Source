@@ -35,7 +35,7 @@ const DynamicPage = () => {
 
   switch (categoryName) {
     case "Education":
-      return RenderByCat("Education").map((category) =>
+      return RenderByCat(categoryName).map((category) =>
         QuestionAnswerCard(category)
       );
     case "Documents":
