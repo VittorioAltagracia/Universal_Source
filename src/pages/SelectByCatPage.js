@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { selectAllQuestions } from "../questions/questionsSlice";
 import { Col, Row, Card, CardBody, CardTitle, CardFooter } from "reactstrap";
 
-const DynamicPage = () => {
+const SelectByCatPage = () => {
   const { categoryName } = useParams();
   const questions = useSelector(selectAllQuestions);
 
@@ -68,4 +68,4 @@ const DynamicPage = () => {
   }
 };
 
-export default DynamicPage;
+export default SelectByCatPage;

@@ -13,7 +13,7 @@ import {
 import SecondDropdown from "../subComponents/SecondDropdown";
 import { Category } from "../utils/category";
 import { NavLink } from "react-router-dom";
-import DynamicPage from "../pages/DynamicPage";
+import SelectByCatPage from "../pages/SelectByCatPage";
 
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
