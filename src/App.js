@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import AnswersPage from "./pages/AnswersPage.js";
 import QuestionsPage from "./pages/QuestionsPage.js";
-import DynamicPage from "./pages/DynamicPage.js";
+import SelectByCatPage from "./pages/SelectByCatPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getAnswers } from "./answers/answersSlice";
@@ -38,11 +38,6 @@ function App() {
             <div>
               <Row>
                 <Col>
-                  {/* 1. Pass props from navbar all the way to questions list
-                pass down name from object to quesitons page, from quesitons page to questions list, 
-                this way proof function
-                
-                */}
                   <NavigationBar />
                   <Routes>
                     <Route path="/" element={<HomePage />} />
@@ -51,7 +46,7 @@ function App() {
                     <Route path="questions" element={<QuestionsPage />} />
                     <Route
                       path="dynamic/:categoryName"
-                      element={<DynamicPage />}
+                      element={<SelectByCatPage />}
                     />
                   </Routes>
                 </Col>

@@ -13,7 +13,7 @@ import {
 import SecondDropdown from "../subComponents/SecondDropdown";
 import { Category } from "../utils/category";
 import { NavLink } from "react-router-dom";
-import DynamicPage from "../pages/DynamicPage";
+import SelectByCatPage from "../pages/SelectByCatPage";
 
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -25,7 +25,6 @@ const NavigationBar = () => {
     setSelected(catName);
   };
 
-  //  could create an object or an array of objects to hold categories
   return (
     <>
       <Navbar sticky="top" expand="md" dark className="mt-3 py-0 nav-bar">
@@ -60,15 +59,16 @@ const NavigationBar = () => {
                         key={cat.id}
                         to={`/dynamic/${cat.name}`}
                         onClick={() => onDropdownClick(cat.name)}
+                        className="dropdown-item"
                       >
                         {cat.name}
-                        <DropdownItem divider />
                       </NavLink>
                     );
                   })}
+                  <DropdownItem divider />
 
-                  <NavLink className="nav-link" to="/answers">
-                    <DropdownItem>All answers together</DropdownItem>
+                  <NavLink className="dropdown-item" to="/answers">
+                    All answers together
                   </NavLink>
                 </DropdownMenu>
               </Dropdown>
