@@ -59,15 +59,16 @@ const NavigationBar = () => {
                         key={cat.id}
                         to={`/dynamic/${cat.name}`}
                         onClick={() => onDropdownClick(cat.name)}
+                        className="dropdown-item"
                       >
                         {cat.name}
-                        <DropdownItem divider />
                       </NavLink>
                     );
                   })}
+                  <DropdownItem divider />
 
-                  <NavLink className="nav-link" to="/answers">
-                    <DropdownItem>All answers together</DropdownItem>
+                  <NavLink className="dropdown-item" to="/answers">
+                    All answers together
                   </NavLink>
                 </DropdownMenu>
               </Dropdown>
