@@ -3,10 +3,14 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectAllQuestions } from "../questions/questionsSlice";
 import { Col, Row, Card, CardBody, CardTitle, CardFooter } from "reactstrap";
+import LoadingSpinner from "../subComponents/LoadingSpinner";
+import ErrorToast from "../subComponents/ErrorToast";
 
 const SelectByCatPage = () => {
   const { categoryName } = useParams();
   const questions = useSelector(selectAllQuestions);
+  const isLoading = useSelector((state) => state.questions.isLoading);
+  const errorMes = useSelector((state) => state.questions.errorMes);
 
   // This function filters data from questions array
   // below I am passing in it an argument which is a category that user clicks on
@@ -35,6 +39,10 @@ const SelectByCatPage = () => {
       </Row>
     );
   };
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
 
   switch (categoryName) {
     case "Education":
@@ -68,6 +76,14 @@ const SelectByCatPage = () => {
 
     default:
       return <span>Category wasn't selected or there was an error</span>;
+    // return (
+    //   <Row>
+    //     <Col sm="4">
+    //       <ErrorToast errorMes={errorMes} />
+    //       {console.log("oh shit")}
+    //     </Col>
+    //   </Row>
+    // );
   }
 };
 
