@@ -8,7 +8,7 @@ const SelectByCatPage = () => {
   const { categoryName } = useParams();
   const questions = useSelector(selectAllQuestions);
 
-  //  This function filters data from questions array
+  // This function filters data from questions array
   // below I am passing in it an argument which is a category that user clicks on
   const RenderByCat = (category) => {
     const filterByCategory = questions.filter(
