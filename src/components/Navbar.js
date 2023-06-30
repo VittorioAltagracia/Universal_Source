@@ -13,7 +13,6 @@ import {
 import SecondDropdown from "../subComponents/SecondDropdown";
 import { Category } from "../utils/category";
 import { NavLink } from "react-router-dom";
-import SelectByCatPage from "../pages/SelectByCatPage";
 
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -55,21 +54,23 @@ const NavigationBar = () => {
 
                   {Category.map((cat) => {
                     return (
-                      <NavLink
-                        key={cat.id}
-                        to={`/dynamic/${cat.name}`}
-                        onClick={() => onDropdownClick(cat.name)}
-                        className="dropdown-item"
-                      >
-                        {cat.name}
-                      </NavLink>
+                      <DropdownItem key={cat.id}>
+                        <NavLink
+                          to={`/dynamic/${cat.name}`}
+                          onClick={() => onDropdownClick(cat.name)}
+                          className="dropdown-item"
+                        >
+                          {cat.name}
+                        </NavLink>
+                      </DropdownItem>
                     );
                   })}
                   <DropdownItem divider />
-
-                  <NavLink className="dropdown-item" to="/answers">
-                    All answers together
-                  </NavLink>
+                  <DropdownItem>
+                    <NavLink className="dropdown-item" to="/answers">
+                      All answers tgether
+                    </NavLink>
+                  </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </NavItem>
