@@ -9,7 +9,6 @@ export const getQuestions = createAsyncThunk(
       return Promise.reject("Unable to fetch, status: " + res.status);
     }
     const data = await res.json();
-    console.log(data);
     return data;
   }
 );

@@ -16,13 +16,7 @@ const QuestionsList = () => {
   }
 
   if (errorMes) {
-    return (
-      <Row>
-        <Col sm="4">
-          <ErrorToast errorMes={errorMes} />
-        </Col>
-      </Row>
-    );
+    return <ErrorToast errorMes={errorMes} />;
   }
 
   return (
