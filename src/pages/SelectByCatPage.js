@@ -44,6 +44,16 @@ const SelectByCatPage = () => {
     return <LoadingSpinner />;
   }
 
+  if (errorMes) {
+    return (
+      <Row>
+        <Col sm="4">
+          <ErrorToast errorMes={errorMes} />
+        </Col>
+      </Row>
+    );
+  }
+
   switch (categoryName) {
     case "Education":
       return RenderByCat(categoryName).map((category) =>
@@ -76,14 +86,6 @@ const SelectByCatPage = () => {
 
     default:
       return <span>Category wasn't selected or there was an error</span>;
-    // return (
-    //   <Row>
-    //     <Col sm="4">
-    //       <ErrorToast errorMes={errorMes} />
-    //       {console.log("oh shit")}
-    //     </Col>
-    //   </Row>
-    // );
   }
 };
 
