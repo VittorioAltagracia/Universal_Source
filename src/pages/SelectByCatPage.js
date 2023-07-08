@@ -45,13 +45,7 @@ const SelectByCatPage = () => {
   }
 
   if (errorMes) {
-    return (
-      <Row>
-        <Col sm="4">
-          <ErrorToast errorMes={errorMes} />
-        </Col>
-      </Row>
-    );
+    return <ErrorToast errorMes={errorMes} />;
   }
 
   switch (categoryName) {
