@@ -77,6 +77,10 @@ const SelectByCatPage = () => {
       return RenderByCat(categoryName).map((category) =>
         QuestionAnswerCard(category)
       );
+    case "Finances":
+      return RenderByCat(categoryName).map((category) =>
+        QuestionAnswerCard(category)
+      );
 
     default:
       return <span>Category wasn't selected or there was an error</span>;
