@@ -21,4 +21,8 @@ export const Category = [
     id: 6,
     name: "Immigration",
   },
+  {
+    id: 7,
+    name: "Finances",
+  },
 ];
