@@ -1,17 +1,23 @@
 .card-color {
-  background-color: #4263eb;
+  background-color: #7e97fa;
   opacity: 0.9;
 }
 
 .card-category {
   font-weight: bold;
-  margin-top: 1rem;
 }
 
 .card-text-category {
   font-style: italic;
+  background-color: #fff;
+  padding: 5px;
 }
 
 .card-source {
   font-weight: bold;
+}
+
+.link-button {
+  border: none;
+  margin-top: 1rem;
 }

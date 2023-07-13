@@ -5,6 +5,7 @@ import {
   AccordionHeader,
   Card,
   CardBody,
+  Button,
 } from "reactstrap";
 import React, { useState } from "react";
 
@@ -45,9 +46,11 @@ const Question = ({ question }) => {
             <br />
             <span className="card-source">Source: </span>
             <span>
-              <a href={source} target="_blank">
-                Link
-              </a>
+              <button className="link-button">
+                <a href={source} target="_blank">
+                  Link
+                </a>
+              </button>
             </span>
           </AccordionBody>
         </AccordionItem>
