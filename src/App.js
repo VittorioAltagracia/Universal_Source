@@ -33,7 +33,7 @@ function App() {
         }}
         strength={500}
       >
-        <Container fluid style={{ height: 1350 }}>
+        <Container fluid style={{ height: 1650 }}>
           <Background>
             <div>
               <Row>

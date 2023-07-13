@@ -64,16 +64,16 @@ h3 {
 
 /* links */
 
-span > a:link {
+.link-button > a:link {
   text-decoration: none;
   color: #fff;
   font-style: italic;
 }
 
-span > a:visited {
+.link-button > a:visited {
   color: #000;
 }
 
-span > a:hover {
-  color: #dbe4ff;
+.link-button > a:hover {
+  color: #4263eb;
 }

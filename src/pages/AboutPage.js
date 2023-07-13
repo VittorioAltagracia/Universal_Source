@@ -13,7 +13,6 @@ const AboutPage = () => {
     async function loadAbout() {
       const { data: TextData } = await supabase.from("About").select("*");
       setAbout(TextData);
-      console.log(about);
       setLoading(false);
     }
     loadAbout();
