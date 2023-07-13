@@ -44,7 +44,12 @@ const NavigationBar = () => {
             </NavItem>
             {/* first dropdown is below */}
             <NavItem>
-              <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+              <Dropdown
+                nav
+                isOpen={dropdownOpen}
+                toggle={toggle}
+                direction="end"
+              >
                 <DropdownToggle nav caret>
                   Answers by Category
                 </DropdownToggle>
@@ -68,7 +73,7 @@ const NavigationBar = () => {
                   <DropdownItem divider />
                   <DropdownItem>
                     <NavLink className="dropdown-item" to="/answers">
-                      All answers tgether
+                      All answers together
                     </NavLink>
                   </DropdownItem>
                 </DropdownMenu>
