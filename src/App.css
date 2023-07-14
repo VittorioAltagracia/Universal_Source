@@ -77,3 +77,12 @@ h3 {
 .link-button > a:hover {
   color: #4263eb;
 }
+
+.app-info {
+  background-color: #e5e9fd;
+  opacity: 0.8;
+  /* border-top: black solid 1px;
+  border-left: black solid 1px; */
+}
+
+/* #7e97fa */

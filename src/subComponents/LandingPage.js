@@ -21,33 +21,34 @@ const LandingPage = () => {
   if (Loading) return <LoadingSpinner />;
 
   return (
-    <Container fluid className="mt-0">
+    <Container fluid className="mt-5 mx-4">
       <Row className="align-items-start">
-        <Col md="3">
+        <Col md="5" className="app-info py-3">
           <h2>
             New in the US? Find quick answers to the most important questions.
           </h2>
-          <p className="mt-4"></p>
         </Col>
       </Row>
       <Row>
-        <div>
-          {about.map((info) => (
-            <div key={info.id}>
-              <Container>
-                <Row className="my-5">
-                  <Col md="auto">
-                    <p>{info.about}</p>
-                  </Col>
-                  <Col>
-                    <p>Added by: {info.added_by}</p>
-                    <p>Updated at: {updated_at}</p>
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-          ))}
-        </div>
+        <Col md="5" className="app-info">
+          <div>
+            {about.map((info) => (
+              <div key={info.id}>
+                <Container>
+                  <Row className="my-3">
+                    <Col md="auto">
+                      <p>{info.about}</p>
+                    </Col>
+                    <Col>
+                      <p>Added by: {info.added_by}</p>
+                      <p>Updated at: {updated_at}</p>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+            ))}
+          </div>
+        </Col>
       </Row>
     </Container>
   );
