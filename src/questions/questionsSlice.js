@@ -1,14 +1,15 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { baseUrl } from "../utils/baseUrl";
+import { db } from "../firebase.config";
+import { collection, getDocs } from "firebase/firestore";
 
 export const getQuestions = createAsyncThunk(
   "questions/getQuestions",
   async () => {
-    const res = await fetch(baseUrl + "questions");
-    if (!res.ok) {
-      return Promise.reject("Unable to fetch, status: " + res.status);
-    }
-    const data = await res.json();
+    const querySnapshot = await getDocs(collection + (db, "questions"));
+    const questions = [];
+    querySnapshot.forEach((doc) => {
+      questions.push(doc.data());
+    });
     return data;
   }
 );
