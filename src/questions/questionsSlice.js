@@ -5,12 +5,12 @@ import { collection, getDocs } from "firebase/firestore";
 export const getQuestions = createAsyncThunk(
   "questions/getQuestions",
   async () => {
-    const querySnapshot = await getDocs(collection + (db, "questions"));
+    const querySnapshot = await getDocs(collection(db, "questions"));
     const questions = [];
     querySnapshot.forEach((doc) => {
       questions.push(doc.data());
     });
-    return data;
+    return questions;
   }
 );
 
@@ -44,10 +44,4 @@ export const questionsReducer = questionsSlice.reducer;
 
 export const selectAllQuestions = (state) => {
   return state.questions.questionsArray;
-};
-
-export const selectQuestionsByCategory = (category) => (state) => {
-  return state.questions.questionsArray.find(
-    (question) => (question.category = category)
-  );
 };
