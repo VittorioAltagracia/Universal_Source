@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/* Global reset */
 #root {
   padding: 0;
   margin: 0;
@@ -85,4 +86,6 @@ h3 {
   border-left: black solid 1px; */
 }
 
-/* #7e97fa */
+.toast-content {
+  color: white;
+}

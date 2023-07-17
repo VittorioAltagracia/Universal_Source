@@ -33,6 +33,11 @@ const SelectByCatPage = () => {
           <Card className="my-5">
             <CardTitle>{category.name}</CardTitle>
             <CardBody> {category.answer}</CardBody>
+            {category.required_documents ? (
+              <CardFooter>
+                Required Documents: {category.required_documents}
+              </CardFooter>
+            ) : null}
             {displaySelectedCat(categoryName)}
           </Card>
         </Col>

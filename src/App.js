@@ -1,6 +1,6 @@
 import NavigationBar from "./components/Navbar.js";
-import "./App.css";
-import "./CardStyle.css";
+import "../src/cssStyling/App.css";
+import "../src/cssStyling/CardStyle.css";
 import { Container, Row, Col } from "reactstrap";
 import FooterComponent from "./components/Footer.js";
 import { Routes, Route } from "react-router-dom";

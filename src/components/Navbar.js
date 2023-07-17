@@ -27,7 +27,7 @@ const NavigationBar = () => {
   return (
     <>
       <Navbar sticky="top" expand="md" dark className="mt-3 py-0 nav-bar">
-        <h3 className="header-float">Universal Source </h3>
+        <h3 className="header-float">Universal Source (Beta)</h3>
 
         <NavbarToggler onClick={() => setNavOpen(!navOpen)} />
         <Collapse isOpen={navOpen} navbar>
@@ -44,12 +44,7 @@ const NavigationBar = () => {
             </NavItem>
             {/* first dropdown is below */}
             <NavItem>
-              <Dropdown
-                nav
-                isOpen={dropdownOpen}
-                toggle={toggle}
-                direction="end"
-              >
+              <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle nav caret>
                   Answers by Category
                 </DropdownToggle>
