@@ -49,7 +49,11 @@ const Question = ({ question }) => {
             <span>
               <button className="link-button">
                 {source.includes("https") ? (
-                  <a href={source} target="_blank">
+                  <a
+                    href={source}
+                    target="_blank"
+                    rel="leads to a source of information or describes it"
+                  >
                     Click here
                   </a>
                 ) : source ? (
