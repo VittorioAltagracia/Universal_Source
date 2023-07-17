@@ -1,4 +1,4 @@
-import { Container, Row, Col, Toast, ToastHeader, ToastBody } from "reactstrap";
+import { Row, Col, Toast, ToastHeader, ToastBody } from "reactstrap";
 
 const FooterComponent = () => {
   return (
