@@ -30,19 +30,15 @@ const Question = ({ question }) => {
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
             <Card className="mb-3">
-              <CardBody>
-                {answer}Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </CardBody>
+              <CardBody>{answer}</CardBody>
               {required_documents ? (
                 <CardFooter>
-                  Required Documents: {required_documents}
+                  Accepted/Required Documents:
+                  {
+                    <ul>
+                      <li>{required_documents}</li>
+                    </ul>
+                  }
                 </CardFooter>
               ) : null}
             </Card>
@@ -52,9 +48,13 @@ const Question = ({ question }) => {
             <span className="card-source">Source: </span>
             <span>
               <button className="link-button">
-                <a href={source} target="_blank">
-                  Link
-                </a>
+                {source.includes("https") ? (
+                  <a href={source} target="_blank">
+                    Link
+                  </a>
+                ) : (
+                  <p>{source} </p>
+                )}
               </button>
             </span>
           </AccordionBody>
