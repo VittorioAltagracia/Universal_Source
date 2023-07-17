@@ -50,10 +50,12 @@ const Question = ({ question }) => {
               <button className="link-button">
                 {source.includes("https") ? (
                   <a href={source} target="_blank">
-                    Link
+                    Click here
                   </a>
+                ) : source ? (
+                  <p>{source}</p>
                 ) : (
-                  <p>{source} </p>
+                  `The link is unavailable or there is no source yet.`
                 )}
               </button>
             </span>

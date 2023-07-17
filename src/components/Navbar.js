@@ -44,12 +44,7 @@ const NavigationBar = () => {
             </NavItem>
             {/* first dropdown is below */}
             <NavItem>
-              <Dropdown
-                nav
-                isOpen={dropdownOpen}
-                toggle={toggle}
-                direction="end"
-              >
+              <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle nav caret>
                   Answers by Category
                 </DropdownToggle>

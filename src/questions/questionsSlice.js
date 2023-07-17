@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { db } from "../utils/firebase.config";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, getDocs, addDoc, where, query } from "firebase/firestore";
 import data from "../../src/utils/db.json";
 
 // async function that fetches all the data within question collection in the db
@@ -21,18 +21,28 @@ export const getQuestions = createAsyncThunk(
 
 export const addData = async () => {
   const dataArray = data.data;
+
   for (const entry of dataArray) {
-    const docRef = await addDoc(collection(db, "questions"), {
-      id: entry.id,
-      name: entry.name,
-      answer: entry.answer,
-      category: entry.category,
-      source: entry.source,
-    });
-    console.log(
-      "Collection updated with the following document ID: ",
-      docRef.id
+    const checkDuplicateEntries = await getDocs(
+      query(collection(db, "questions"), where("id", "==", entry.id))
     );
+
+    if (checkDuplicateEntries.empty) {
+      const docRef = await addDoc(collection(db, "questions"), {
+        id: entry.id,
+        name: entry.name,
+        answer: entry.answer,
+        category: entry.category,
+        source: entry.source,
+      });
+
+      console.log(
+        "Collection updated with the following document ID: ",
+        docRef.id
+      );
+    } else {
+      console.log("Skipping duplicate entry:", entry.id);
+    }
   }
 };
 
@@ -58,7 +68,7 @@ const questionsSlice = createSlice({
       state.questionsArray = action.payload;
       state.isLoading = false;
       state.errorMes = "";
-      // addData();
+      addData();
       // function is called after promise has been resolved
     },
   },
