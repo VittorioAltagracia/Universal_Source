@@ -5,12 +5,12 @@ import {
   AccordionHeader,
   Card,
   CardBody,
-  Button,
+  CardFooter,
 } from "reactstrap";
 import React, { useState } from "react";
 
 const Question = ({ question }) => {
-  const { name, answer, category, source } = question;
+  const { name, answer, category, source, required_documents } = question;
 
   const [open, setOpen] = useState(false);
   const toggle = (id) => {
@@ -40,6 +40,11 @@ const Question = ({ question }) => {
                 cupidatat non proident, sunt in culpa qui officia deserunt
                 mollit anim id est laborum.
               </CardBody>
+              {required_documents ? (
+                <CardFooter>
+                  Required Documents: {required_documents}
+                </CardFooter>
+              ) : null}
             </Card>
             <span className="card-category">Category: </span>
             <span className="card-text-category">{category}</span>

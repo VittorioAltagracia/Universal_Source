@@ -1,6 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { db } from "../firebase.config";
-import { collection, getDocs } from "firebase/firestore";
+import { db } from "../utils/firebase.config";
+import { collection, getDocs, addDoc } from "firebase/firestore";
+import data from "../../src/utils/db.json";
+
+// async function that fetches all the data within question collection in the db
 
 export const getQuestions = createAsyncThunk(
   "questions/getQuestions",
@@ -13,6 +16,25 @@ export const getQuestions = createAsyncThunk(
     return questions;
   }
 );
+
+// helper function used to quickly populate firestore db iterating over data in db.json file
+
+export const addData = async () => {
+  const dataArray = data.data;
+  for (const entry of dataArray) {
+    const docRef = await addDoc(collection(db, "questions"), {
+      id: entry.id,
+      name: entry.name,
+      answer: entry.answer,
+      category: entry.category,
+      source: entry.source,
+    });
+    console.log(
+      "Collection updated with the following document ID: ",
+      docRef.id
+    );
+  }
+};
 
 const initialState = {
   questionsArray: [],
@@ -36,6 +58,7 @@ const questionsSlice = createSlice({
       state.questionsArray = action.payload;
       state.isLoading = false;
       state.errorMes = "";
+      // addData(); function is called after promise has been resolved
     },
   },
 });
