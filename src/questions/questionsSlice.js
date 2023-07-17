@@ -68,8 +68,8 @@ const questionsSlice = createSlice({
       state.questionsArray = action.payload;
       state.isLoading = false;
       state.errorMes = "";
-      addData();
-      // function is called after promise has been resolved
+      // addData();
+      // function is called after promise has been resolved, this function won't be called in production
     },
   },
 });
