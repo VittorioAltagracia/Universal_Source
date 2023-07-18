@@ -1,4 +1,6 @@
-# url to see the project live - https://universalsource-6b70f.web.app/questions
+# url to see the project live
+
+https://universalsource-6b70f.web.app
 
 # Universal Source
 Project MVP -  https://universal-source.atlassian.net/wiki/spaces/~61320bfa6fa73c006a9ae562/pages/360449/MVP+for+The+Universal+Source
