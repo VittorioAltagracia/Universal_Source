@@ -9,7 +9,7 @@
 /coverage
 jqueryExperiment.js
 # production
-/build
+
 
 # misc
 .DS_Store
@@ -25,3 +25,5 @@ yarn-error.log*
 firebase.config.js
 db.json
 universalSourceBuild.zip
+hosting.YnVpbGQ.cache
+firebase.json
