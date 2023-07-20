@@ -8,12 +8,13 @@
   margin: 0;
 }
 
-.header-float {
+.header-app-name {
   display: flex;
   justify-content: flex-start;
   gap: 50rem;
   padding: 1vh;
   pointer-events: none;
+  margin-bottom: 0;
 }
 
 .nav-bar {
@@ -30,8 +31,7 @@
 }
 
 h3 {
-  margin: 3rem;
-  padding: 1vh;
+  margin-left: 3rem;
   background-color: #dbe4ff;
   color: #4263eb;
 }
@@ -41,35 +41,23 @@ h3 {
   margin-right: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .header-float {
-    animation: header-float-float infinite 4s ease-in-out;
-  }
-}
-
-@keyframes header-float-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(12px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 .acc-header {
   font-weight: bold;
 }
 
-/* links */
-
-.link-button > a:link {
-  text-decoration: none;
+.accordion-header .accordion-button:focus {
+  background-color: #4263eb;
   color: #fff;
-  font-style: italic;
+  opacity: 0.9;
 }
+
+.accordion-header .accordion-button:not(:focus) {
+  background-color: #4263eb;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* links */
 
 .link-button > a:visited {
   color: #000;
@@ -81,11 +69,6 @@ h3 {
 
 .app-info {
   background-color: #e5e9fd;
-  opacity: 0.8;
-  /* border-top: black solid 1px;
-  border-left: black solid 1px; */
-}
 
-.toast-content {
-  color: white;
+  opacity: 0.8;
 }

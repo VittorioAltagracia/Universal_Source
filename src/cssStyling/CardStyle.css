@@ -3,21 +3,24 @@
   opacity: 0.9;
 }
 
-.card-category {
-  font-weight: bold;
-}
-
-.card-text-category {
-  font-style: italic;
+.card-text-category-1 {
   background-color: #fff;
-  padding: 5px;
+  padding: 0.3rem;
+  margin-bottom: 2rem;
 }
 
-.card-source {
-  font-weight: bold;
+.in-detail {
+  margin-top: 1rem;
+  padding: 0.3rem;
+  background-color: #ffffff;
 }
 
 .link-button {
   border: none;
-  margin-top: 0.4rem;
+  margin-top: 1rem;
+}
+
+.categorized-card {
+  background-color: #90a5f8;
+  color: #fff;
 }

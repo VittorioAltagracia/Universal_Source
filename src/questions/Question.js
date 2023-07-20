@@ -25,8 +25,8 @@ const Question = ({ question }) => {
     <div>
       <Accordion open={open} toggle={toggle} className="accordion">
         <AccordionItem>
-          <AccordionHeader targetId="1">
-            <span className="acc-header">{name} </span>
+          <AccordionHeader targetId="1" className="accordion-header">
+            <span className="acc-header">{name}</span>
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
             <Card className="mb-3">
@@ -42,24 +42,22 @@ const Question = ({ question }) => {
                 </CardFooter>
               ) : null}
             </Card>
-            <span className="card-category">Category: </span>
-            <span className="card-text-category">{category}</span>
+            <span className="card-text-category-1">Category: {category}</span>
             <br />
-            <span className="card-source">Source: </span>
-            <span>
+            <span className="in-detail">
+              To read more in detail about this topic please visit the link if
+              it's available:
               <button className="link-button">
                 {source.includes("https") ? (
                   <a
                     href={source}
                     target="_blank"
-                    rel="leads to a source of information or describes it"
+                    alt="leads to a source of information or describes it"
                   >
                     Click here
                   </a>
-                ) : source ? (
-                  <p>{source}</p>
                 ) : (
-                  `The link is unavailable or there is no source yet.`
+                  `The link is unavailable or is not provided yet.`
                 )}
               </button>
             </span>
