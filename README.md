@@ -1,4 +1,4 @@
-# url to see the project live
+# Url to see the project live
 
 https://universalsource-6b70f.web.app
 
