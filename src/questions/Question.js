@@ -25,8 +25,8 @@ const Question = ({ question }) => {
     <div>
       <Accordion open={open} toggle={toggle} className="accordion">
         <AccordionItem>
-          <AccordionHeader targetId="1">
-            <span className="acc-header">{name} </span>
+          <AccordionHeader targetId="1" className="accordion-header">
+            <span className="acc-header">{name}</span>
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
             <Card className="mb-3">
@@ -45,14 +45,17 @@ const Question = ({ question }) => {
             <span className="card-category">Category: </span>
             <span className="card-text-category">{category}</span>
             <br />
-            <span className="card-source">Source: </span>
+            <span className="card-source">
+              To read more in detail about this topic please visit the link if
+              it's available:{" "}
+            </span>
             <span>
               <button className="link-button">
                 {source.includes("https") ? (
                   <a
                     href={source}
                     target="_blank"
-                    rel="leads to a source of information or describes it"
+                    alt="leads to a source of information or describes it"
                   >
                     Click here
                   </a>
