@@ -6,7 +6,7 @@ const FooterComponent = () => {
       <div className="d-flex justify-content-center align-items-center">
         <Row>
           <Col>
-            <Toast className="p-2 bg-info my-3">
+            <Toast className="p-2 bg-warning my-3">
               <ToastHeader>Please note</ToastHeader>
               <ToastBody className="toast-content">
                 This application is still in development and may contain fake

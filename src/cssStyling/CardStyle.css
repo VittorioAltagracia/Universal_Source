@@ -8,7 +8,7 @@
 }
 
 .card-text-category {
-  font-style: italic;
+  /* font-style: italic; */
   background-color: #fff;
   padding: 5px;
 }
@@ -20,4 +20,9 @@
 .link-button {
   border: none;
   margin-top: 0.4rem;
+}
+
+.categorized-card {
+  background-color: #90a5f8;
+  color: #fff;
 }

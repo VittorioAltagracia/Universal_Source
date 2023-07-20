@@ -2,7 +2,15 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectAllQuestions } from "../questions/questionsSlice";
-import { Col, Row, Card, CardBody, CardTitle, CardFooter } from "reactstrap";
+import {
+  Col,
+  Row,
+  Container,
+  Card,
+  CardBody,
+  CardTitle,
+  CardFooter,
+} from "reactstrap";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import ErrorToast from "../subComponents/ErrorToast";
 
@@ -23,25 +31,38 @@ const SelectByCatPage = () => {
 
   //  This function will render a category that corresponds to data user is viewing
   const displaySelectedCat = (categoryName) => {
-    return <CardFooter>Selected category: {categoryName}</CardFooter>;
+    return (
+      <CardFooter style={{ backgroundColor: "#90a5f8", color: "#fff" }}>
+        Selected category: {categoryName}
+      </CardFooter>
+    );
   };
 
   const QuestionAnswerCard = (category) => {
     return (
-      <Row key={category.id}>
-        <Col key={category.id} md="6">
-          <Card className="my-5">
-            <CardTitle>{category.name}</CardTitle>
-            <CardBody> {category.answer}</CardBody>
-            {category.required_documents ? (
-              <CardFooter>
-                Required Documents: {category.required_documents}
-              </CardFooter>
-            ) : null}
-            {displaySelectedCat(categoryName)}
-          </Card>
-        </Col>
-      </Row>
+      <Container fluid key={category.id} style={{ justifyContent: "center" }}>
+        <Row key={category.id}>
+          <Col key={category.id} md="6">
+            <Card className="my-5">
+              <CardTitle className="categorized-card my-0">
+                {category.name}
+              </CardTitle>
+              <CardBody className="categorized-card">
+                {category.answer}
+              </CardBody>
+              {category.required_documents ? (
+                <CardFooter
+                  style={{ backgroundColor: "#90a5f8", color: "#fff" }}
+                >
+                  Required Documents: {category.required_documents}
+                </CardFooter>
+              ) : null}
+              {displaySelectedCat(categoryName)}
+              {console.log(category.required_documents)}
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     );
   };
 
