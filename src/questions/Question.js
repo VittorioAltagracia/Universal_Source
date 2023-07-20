@@ -42,14 +42,11 @@ const Question = ({ question }) => {
                 </CardFooter>
               ) : null}
             </Card>
-            <span className="card-category">Category: </span>
-            <span className="card-text-category">{category}</span>
+            <span className="card-text-category-1">Category: {category}</span>
             <br />
-            <span className="card-source">
+            <span className="in-detail">
               To read more in detail about this topic please visit the link if
-              it's available:{" "}
-            </span>
-            <span>
+              it's available:
               <button className="link-button">
                 {source.includes("https") ? (
                   <a
@@ -59,10 +56,8 @@ const Question = ({ question }) => {
                   >
                     Click here
                   </a>
-                ) : source ? (
-                  <p>{source}</p>
                 ) : (
-                  `The link is unavailable or there is no source yet.`
+                  `The link is unavailable or is not provided yet.`
                 )}
               </button>
             </span>

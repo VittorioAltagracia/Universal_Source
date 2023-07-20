@@ -45,18 +45,19 @@ h3 {
   font-weight: bold;
 }
 
-.accordion-header .accordion-button {
+.accordion-header .accordion-button:focus {
   background-color: #4263eb;
   color: #fff;
+  opacity: 0.9;
+}
+
+.accordion-header .accordion-button:not(:focus) {
+  background-color: #4263eb;
+  color: #fff;
+  opacity: 0.9;
 }
 
 /* links */
-
-.link-button > a:link {
-  text-decoration: none;
-  color: #fff;
-  font-style: italic;
-}
 
 .link-button > a:visited {
   color: #000;
