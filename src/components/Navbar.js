@@ -49,9 +49,6 @@ const NavigationBar = () => {
                   Answers by Category
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>Select your category</DropdownItem>
-                  <DropdownItem divider />
-
                   {Category.map((cat) => {
                     return (
                       <DropdownItem key={cat.id}>
