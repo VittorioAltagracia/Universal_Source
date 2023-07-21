@@ -34,11 +34,7 @@ const Question = ({ question }) => {
               {required_documents ? (
                 <CardFooter>
                   Accepted/Required Documents:
-                  {
-                    <ul>
-                      <li>{required_documents}</li>
-                    </ul>
-                  }
+                  {` ` + required_documents}
                 </CardFooter>
               ) : null}
             </Card>
