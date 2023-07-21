@@ -40,8 +40,11 @@ const SelectByCatPage = () => {
 
   const QuestionAnswerCard = (category) => {
     return (
-      <Container fluid key={category.id} style={{ justifyContent: "center" }}>
-        <Row key={category.id}>
+      <Container fluid key={category.id}>
+        <Row
+          key={category.id}
+          className="ms-auto justify-content-center align-items-center"
+        >
           <Col key={category.id} md="6">
             <Card className="my-5">
               <CardTitle className="categorized-card my-0">
