@@ -1,6 +1,5 @@
 .card-color {
-  background-color: #7e97fa;
-  opacity: 0.9;
+  background-color: #7188e7;
 }
 
 .card-text-category-1 {
@@ -21,6 +20,12 @@
 }
 
 .categorized-card {
-  background-color: #90a5f8;
+  background-color: #7188e7;
   color: #fff;
+}
+
+.categorized-card-title {
+  background-color: #4263eb;
+  color: #fff;
+  opacity: 0.9;
 }
