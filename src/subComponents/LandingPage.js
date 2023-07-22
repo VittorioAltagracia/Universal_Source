@@ -1,24 +1,40 @@
 import React, { useState, useEffect } from "react";
 import supabase from "../utils/Supabase";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
+import ErrorToast from "../subComponents/ErrorToast";
 import { Container, Row, Col } from "reactstrap";
 
 const LandingPage = () => {
   const [about, setAbout] = useState([]);
   const [Loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const updated_at = new Date("Jul 11, 23").toLocaleDateString("en-US");
 
   useEffect(function () {
     async function loadAbout() {
-      const { data: TextData } = await supabase.from("About").select("*");
-      setAbout(TextData);
-      setLoading(false);
+      try {
+        const { data: TextData, error } = await supabase
+          .from("About")
+          .select("*");
+
+        if (!error) {
+          setAbout(TextData);
+          setLoading(false);
+        } else {
+          setError(error.message + `. Unable to load data.`);
+          setLoading(false);
+        }
+      } catch (error) {
+        setError(error.message);
+        setLoading(false);
+      }
     }
     loadAbout();
   }, []);
 
   if (Loading) return <LoadingSpinner />;
+  if (error) return <ErrorToast errorMes={error} />;
 
   return (
     <Container fluid className="mt-5 mx-4">
