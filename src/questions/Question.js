@@ -30,9 +30,9 @@ const Question = ({ question }) => {
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
             <Card className="mb-3">
-              <CardBody>{answer}</CardBody>
+              <CardBody className="p-3">{answer}</CardBody>
               {required_documents ? (
-                <CardFooter>
+                <CardFooter className="p-3">
                   Accepted/Required Documents:
                   {` ` + required_documents}
                 </CardFooter>

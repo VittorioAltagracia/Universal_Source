@@ -29,10 +29,13 @@ const SelectByCatPage = () => {
     return filterByCategory;
   };
 
-  //  This function will render a category that corresponds to data user is viewing
+  //  This function will render a category that corresponds to data user is viewing and a footer, below this function is called upon in QuestionAnswerCard function
   const displaySelectedCat = (categoryName) => {
     return (
-      <CardFooter style={{ backgroundColor: "#90a5f8", color: "#fff" }}>
+      <CardFooter
+        className="p-3"
+        style={{ backgroundColor: "#7188e7", color: "#fff" }}
+      >
         Selected category: {categoryName}
       </CardFooter>
     );
@@ -47,15 +50,16 @@ const SelectByCatPage = () => {
         >
           <Col key={category.id} md="6">
             <Card className="my-5">
-              <CardTitle className="categorized-card my-0">
+              <CardTitle className="categorized-card-title my-0 p-3">
                 {category.name}
               </CardTitle>
-              <CardBody className="categorized-card">
+              <CardBody className="categorized-card p-3">
                 {category.answer}
               </CardBody>
               {category.required_documents ? (
                 <CardFooter
-                  style={{ backgroundColor: "#90a5f8", color: "#fff" }}
+                  className="p-3"
+                  style={{ backgroundColor: "#7188e7", color: "#fff" }}
                 >
                   Required Documents: {category.required_documents}
                 </CardFooter>
