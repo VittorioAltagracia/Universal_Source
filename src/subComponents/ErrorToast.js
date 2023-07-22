@@ -5,7 +5,10 @@ const ErrorToast = ({ errorMes }) => {
     <div className="d-flex justify-content-center align-items-center">
       <Row>
         <Col>
-          <Toast className="p-2 bg-info my-3">
+          <Toast
+            className="p-2 my-3"
+            style={{ backgroundColor: "#ff711f", opacity: "0.9" }}
+          >
             <ToastHeader>Error</ToastHeader>
             <ToastBody>{errorMes}</ToastBody>
           </Toast>
