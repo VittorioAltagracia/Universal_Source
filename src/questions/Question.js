@@ -26,9 +26,7 @@ const Question = ({ question }) => {
       <Accordion open={open} toggle={toggle} className="accordion">
         <AccordionItem>
           <AccordionHeader targetId="1" className="accordion-header">
-            <div className="center-acc-header">
-              <span className="acc-header">{name}</span>
-            </div>
+            <span className="acc-header">{name}</span>
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
             <Card className="mb-3">
