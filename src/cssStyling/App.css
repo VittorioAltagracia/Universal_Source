@@ -38,6 +38,9 @@ h3 {
 
 .acc-header {
   font-weight: bold;
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 
 .accordion-header .accordion-button:focus {
@@ -50,6 +53,11 @@ h3 {
   background-color: #4263eb;
   color: #fff;
   opacity: 0.9;
+}
+
+.accordion-header .accordion-button {
+  display: block;
+  align-items: center;
 }
 
 /* links */
@@ -66,4 +74,9 @@ h3 {
   background-color: #e5e9fd;
 
   opacity: 0.8;
+}
+
+.questions-overlay {
+  background-color: #fff;
+  opacity: 0.9;
 }

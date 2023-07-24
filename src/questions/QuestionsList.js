@@ -21,7 +21,7 @@ const QuestionsList = () => {
 
   return (
     <>
-      <Row className="ms-auto justify-content-center align-items-center">
+      <Row className="ms-auto justify-content-center align-items-center questions-overlay">
         {questions.map((question) => (
           <Col md="8" className="m-5" key={question.id}>
             <Question question={question} />
