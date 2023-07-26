@@ -49,7 +49,7 @@ const SelectByCatPage = () => {
           className="justify-content-center align-items-center mt-4"
         >
           <Col key={category.id} md="6" xs="11">
-            <Card className="my-5">
+            <Card className="my-5 main-categorized-card">
               <CardTitle className="categorized-card-title my-0 p-3">
                 {category.name}
               </CardTitle>
@@ -65,7 +65,6 @@ const SelectByCatPage = () => {
                 </CardFooter>
               ) : null}
               {displaySelectedCat(categoryName)}
-              {console.log(category.required_documents)}
             </Card>
           </Col>
         </Row>

@@ -36,6 +36,8 @@ h3 {
   color: #4263eb;
 }
 
+/* main class is assigned to the div that renders info about this app on the home page */
+
 .main {
   padding-left: 0;
 }

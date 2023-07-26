@@ -1,3 +1,6 @@
+.main-categorized-card {
+  opacity: 0.9;
+}
 .card-color {
   background-color: #7188e7;
 }
@@ -27,5 +30,4 @@
 .categorized-card-title {
   background-color: #4263eb;
   color: #fff;
-  opacity: 0.9;
 }
