@@ -7,7 +7,7 @@ const Main = () => {
       <Container fluid>
         <Row>
           <Col>
-            <div className="main mt-4">
+            <div>
               <LandingPage />
             </div>
           </Col>

@@ -37,7 +37,7 @@ const LandingPage = () => {
   if (error) return <ErrorToast errorMes={error} />;
 
   return (
-    <Container fluid className="mt-5 mx-4">
+    <Container fluid className="mt-5">
       <Row className="align-items-start">
         <Col md="5" className="app-info py-3">
           <h2>

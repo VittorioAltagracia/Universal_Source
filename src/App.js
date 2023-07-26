@@ -29,25 +29,24 @@ function App() {
         backgroundImage: `url("/background.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        backgroundAttachment: "fixed",
       }}
       strength={500}
     >
-      <Container fluid style={{ height: 1650 }}>
+      <Container fluid style={{ height: "auto" }} className="px-0">
         <div>
-          <Row>
-            <Col>
-              <NavigationBar />
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="about" element={<AboutPage />} />
-                <Route path="answers" element={<AnswersPage />} />
-                <Route path="questions" element={<QuestionsPage />} />
-                <Route
-                  path="dynamic/:categoryName"
-                  element={<SelectByCatPage />}
-                />
-              </Routes>
-            </Col>
+          <Row className="px-0">
+            <NavigationBar />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="answers" element={<AnswersPage />} />
+              <Route path="questions" element={<QuestionsPage />} />
+              <Route
+                path="dynamic/:categoryName"
+                element={<SelectByCatPage />}
+              />
+            </Routes>
           </Row>
         </div>
         <Row>

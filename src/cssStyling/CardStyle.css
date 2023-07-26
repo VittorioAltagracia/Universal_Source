@@ -1,16 +1,19 @@
+.main-categorized-card {
+  opacity: 0.9;
+}
 .card-color {
   background-color: #7188e7;
 }
 
 .card-text-category-1 {
   background-color: #fff;
-  padding: 0.3rem;
+  padding: 0.4rem;
   margin-bottom: 2rem;
 }
 
 .in-detail {
   margin-top: 1rem;
-  padding: 0.3rem;
+  padding: 0.4rem;
   background-color: #ffffff;
 }
 
@@ -27,5 +30,4 @@
 .categorized-card-title {
   background-color: #4263eb;
   color: #fff;
-  opacity: 0.9;
 }
