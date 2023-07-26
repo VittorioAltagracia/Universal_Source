@@ -26,8 +26,8 @@ const NavigationBar = () => {
 
   return (
     <>
-      <Navbar sticky="top" expand="md" dark className="mt-3 py-0 nav-bar">
-        <h3 className="header-app-name">Universal Source (Beta)</h3>
+      <Navbar sticky="top" expand="md" dark className="mt-2 mb-5 py-0 nav-bar">
+        <h3 className="header-app-name">Universal Source (BETA)</h3>
 
         <NavbarToggler onClick={() => setNavOpen(!navOpen)} />
         <Collapse isOpen={navOpen} navbar>

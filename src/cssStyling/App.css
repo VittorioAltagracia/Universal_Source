@@ -38,9 +38,9 @@ h3 {
 
 .acc-header {
   font-weight: bold;
-  display: flex;
+  /* display: flex;
   align-self: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .accordion-header .accordion-button:focus {
@@ -55,10 +55,10 @@ h3 {
   opacity: 0.9;
 }
 
-.accordion-header .accordion-button {
+/* .accordion-header .accordion-button {
   display: block;
   align-items: center;
-}
+} */
 
 /* links */
 

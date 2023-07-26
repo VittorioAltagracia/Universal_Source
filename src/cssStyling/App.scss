@@ -1,0 +1,96 @@
+$color-primary: #4263eb;
+$color-white: #fff;
+$color-header: #dbe4ff;
+$color-black: #000;
+$color-app-info: #e5e9fd;
+
+.App {
+  text-align: center;
+}
+
+/* Global reset */
+#root {
+  padding: 0;
+  margin: 0;
+}
+
+.header-app-name {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50rem;
+  padding: 1vh;
+  pointer-events: none;
+  margin-bottom: 0;
+}
+
+.nav-bar {
+  opacity: 0.9;
+  background-color: $color-primary;
+}
+
+.change {
+  background-color: $color-header;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+h3 {
+  margin-left: 3rem;
+  background-color: $color-header;
+  color: $color-primary;
+}
+
+.acc-header {
+  font-weight: bold;
+  /* display: flex;
+    align-self: center;
+    justify-content: center; */
+}
+
+.accordion-header {
+  .accordion-button:focus {
+    background-color: $color-primary;
+    color: $color-white;
+    opacity: 0.9;
+  }
+}
+
+.accordion-header {
+  .accordion-button:not(:focus) {
+    background-color: $color-primary;
+    color: $color-white;
+    opacity: 0.9;
+  }
+}
+
+/* .accordion-header .accordion-button {
+    display: block;
+    align-items: center;
+  } */
+
+/* links */
+
+.link-button {
+  a:visited {
+    color: $color-black;
+  }
+}
+
+.link-button {
+  a:hover {
+    color: $color-primary;
+  }
+}
+
+.app-info {
+  background-color: $color-app-info;
+
+  opacity: 0.8;
+}
+
+.questions-overlay {
+  background-color: $color-white;
+  opacity: 0.9;
+}
