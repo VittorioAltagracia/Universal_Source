@@ -23,7 +23,7 @@ const QuestionsList = () => {
     <>
       <Row className="ms-auto justify-content-center align-items-center questions-overlay">
         {questions.map((question) => (
-          <Col md="8" className="m-5" key={question.id}>
+          <Col md="8" xs="11" className="my-5 p-0 " key={question.id}>
             <Question question={question} />
           </Col>
         ))}

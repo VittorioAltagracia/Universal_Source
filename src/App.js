@@ -29,10 +29,11 @@ function App() {
         backgroundImage: `url("/background.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        backgroundAttachment: "fixed",
       }}
       strength={500}
     >
-      <Container fluid style={{ height: 1650 }}>
+      <Container fluid style={{ height: 1650 }} className="px-0">
         <div>
           <Row>
             <Col>
