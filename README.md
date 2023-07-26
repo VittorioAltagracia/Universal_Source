@@ -14,13 +14,3 @@ The information is scattered around the web and often available mostly in Englis
 
 The project is still in development and the data needs to be moved to a remote server, currently, the app fetches the data from a local JSON server.
 
-
-# To run the project
-
-- Clone the repository
-- Open the project in your code editor
-- Run `npm install` (this will install all the required dependencies from package.json)
-- Execute `npm start` in the project folder
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
