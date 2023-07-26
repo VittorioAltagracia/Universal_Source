@@ -46,9 +46,9 @@ const SelectByCatPage = () => {
       <Container fluid key={category.id}>
         <Row
           key={category.id}
-          className="ms-auto justify-content-center align-items-center mt-4"
+          className="justify-content-center align-items-center mt-4"
         >
-          <Col key={category.id} md="6">
+          <Col key={category.id} md="6" xs="11">
             <Card className="my-5">
               <CardTitle className="categorized-card-title my-0 p-3">
                 {category.name}

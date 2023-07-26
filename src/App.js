@@ -33,22 +33,20 @@ function App() {
       }}
       strength={500}
     >
-      <Container fluid style={{ height: 1650 }} className="px-0">
+      <Container fluid style={{ height: "auto" }} className="px-0">
         <div>
-          <Row>
-            <Col>
-              <NavigationBar />
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="about" element={<AboutPage />} />
-                <Route path="answers" element={<AnswersPage />} />
-                <Route path="questions" element={<QuestionsPage />} />
-                <Route
-                  path="dynamic/:categoryName"
-                  element={<SelectByCatPage />}
-                />
-              </Routes>
-            </Col>
+          <Row className="px-0">
+            <NavigationBar />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="answers" element={<AnswersPage />} />
+              <Route path="questions" element={<QuestionsPage />} />
+              <Route
+                path="dynamic/:categoryName"
+                element={<SelectByCatPage />}
+              />
+            </Routes>
           </Row>
         </div>
         <Row>

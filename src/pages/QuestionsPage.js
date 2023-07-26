@@ -1,14 +1,14 @@
-import { Row } from "reactstrap";
+import { Row, Container } from "reactstrap";
 import QuestionsList from "../questions/QuestionsList";
 import { Category } from "../utils/category";
 
 const QuestionsPage = ({ selected }) => {
   return (
-    <div>
-      <Row>
+    <Container>
+      <Row className="questions-overlay">
         <QuestionsList Category={Category} selected={selected} />
       </Row>
-    </div>
+    </Container>
   );
 };
 

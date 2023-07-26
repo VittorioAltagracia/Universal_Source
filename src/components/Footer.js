@@ -2,7 +2,7 @@ import { Row, Col, Toast, ToastHeader, ToastBody } from "reactstrap";
 
 const FooterComponent = () => {
   return (
-    <footer className="main-footer mt-5">
+    <footer className="main-footer my-5">
       <div className="d-flex justify-content-center align-items-center">
         <Row>
           <Col>
