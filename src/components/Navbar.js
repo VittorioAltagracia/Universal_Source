@@ -26,15 +26,13 @@ const NavigationBar = () => {
 
   return (
     <>
-      <Navbar sticky="top" expand="md" dark className="mb-5 mt-3 py-0 nav-bar">
-        <h3 className="header-app-name">Universal Source (BETA)</h3>
-
+      <Navbar sticky="top" expand="md" dark className="mb-5 mt-3 py-0 nav-bar ">
         <NavbarToggler onClick={() => setNavOpen(!navOpen)} />
         <Collapse isOpen={navOpen} navbar>
-          <Nav className="ms-auto change">
+          <Nav className="change justify-content-center align-items-center">
             <NavItem>
-              <NavLink to="/" className="nav-link">
-                Home
+              <NavLink to="/" className="nav-link p-0 mx-4">
+                <h4 className="header-app-name">Universal Source (BETA)</h4>
               </NavLink>
             </NavItem>
             <NavItem>
