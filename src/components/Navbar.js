@@ -77,7 +77,7 @@ const NavigationBar = () => {
             </NavItem>
             <NavItem>
               <NavLink to="/about" className="nav-link">
-                About
+                About Creator
               </NavLink>
             </NavItem>
           </Nav>

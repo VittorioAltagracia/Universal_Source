@@ -1,7 +1,7 @@
 import NavigationBar from "./components/Navbar.js";
 import "../src/cssStyling/App.css";
 import "../src/cssStyling/CardStyle.css";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row } from "reactstrap";
 import FooterComponent from "./components/Footer.js";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage.js";
