@@ -40,7 +40,7 @@ const LandingPage = () => {
     <Container fluid className="mt-5">
       <Row className="align-items-start">
         <Col md="5" className="app-info py-3">
-          <h2>
+          <h2 style={{ color: "#000" }}>
             New in the US? Find quick answers to the most important questions.
           </h2>
         </Col>

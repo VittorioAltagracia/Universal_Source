@@ -12,9 +12,8 @@
   display: flex;
   justify-content: flex-start;
   gap: 50rem;
-  padding: 1vh;
-  pointer-events: none;
   margin-bottom: 0;
+  color: #4263eb;
 }
 
 .nav-bar {
@@ -24,18 +23,18 @@
 
 .change {
   background-color: #dbe4ff;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  margin-left: 2rem;
+  padding: 0.4rem;
 }
 
-h3 {
-  margin-left: 3rem;
-  background-color: #dbe4ff;
-  color: #4263eb;
+h2,
+h4 {
+  color: #ff711f;
 }
 
+/* .nav-item .nav-link {
+  padding: 0;
+} */
 /* main class is assigned to the div that renders info about this app on the home page */
 
 .main {
