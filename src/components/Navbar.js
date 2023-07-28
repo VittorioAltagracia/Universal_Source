@@ -10,19 +10,15 @@ import {
   Collapse,
   NavbarToggler,
 } from "reactstrap";
-import SecondDropdown from "../subComponents/SecondDropdown";
-import { Category } from "../utils/category";
+import LanguageSelectorDropdown from "../subComponents/LanguageSelector";
+import CategorySelector from "../subComponents/CategorySelector";
 import { NavLink } from "react-router-dom";
 
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);
-  const [navOpen, setNavOpen] = useState(false);
-  const [selected, setSelected] = useState("");
 
-  const onDropdownClick = (catName) => {
-    setSelected(catName);
-  };
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
     <>
@@ -38,42 +34,26 @@ const NavigationBar = () => {
 
             {/* first dropdown is below */}
             <NavItem>
-              <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+              <Dropdown nav isOpen={dropdownOpen} toggle={toggle} role="menu">
                 <DropdownToggle nav caret>
-                  Answers by Category
+                  <i className="fa fa-list fa-lg" />
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>
-                    <NavLink to="/questions" className="nav-link">
-                      Load all answers
-                    </NavLink>
-                  </DropdownItem>
+                  <NavLink to="/questions" className="nav-link">
+                    Load all answers
+                  </NavLink>
                   <DropdownItem divider />
-
-                  {Category.map((cat) => {
-                    return (
-                      <DropdownItem key={cat.id}>
-                        <NavLink
-                          to={`/dynamic/${cat.name}`}
-                          onClick={() => onDropdownClick(cat.name)}
-                          className="dropdown-item"
-                        >
-                          {cat.name}
-                        </NavLink>
-                      </DropdownItem>
-                    );
-                  })}
+                  {/* category enddown (aka dropdown to the right) */}
+                  <CategorySelector />
+                  <DropdownItem divider />
+                  {/* independent dropdown (aka dropdown to the right) for languages is below */}
+                  <LanguageSelectorDropdown />
+                  <DropdownItem divider />
+                  <NavLink to="/about" className="nav-link">
+                    About Creator
+                  </NavLink>
                 </DropdownMenu>
               </Dropdown>
-            </NavItem>
-            <NavItem>
-              {/* independent dropdown for languages is below */}
-              <SecondDropdown />
-            </NavItem>
-            <NavItem>
-              <NavLink to="/about" className="nav-link">
-                About Creator
-              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
