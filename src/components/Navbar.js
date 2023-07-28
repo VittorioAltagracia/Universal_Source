@@ -35,11 +35,7 @@ const NavigationBar = () => {
                 <h4 className="header-app-name">Universal Source (BETA)</h4>
               </NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink to="/questions" className="nav-link">
-                Load all answers
-              </NavLink>
-            </NavItem>
+
             {/* first dropdown is below */}
             <NavItem>
               <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
@@ -47,6 +43,13 @@ const NavigationBar = () => {
                   Answers by Category
                 </DropdownToggle>
                 <DropdownMenu>
+                  <DropdownItem>
+                    <NavLink to="/questions" className="nav-link">
+                      Load all answers
+                    </NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+
                   {Category.map((cat) => {
                     return (
                       <DropdownItem key={cat.id}>
@@ -60,12 +63,6 @@ const NavigationBar = () => {
                       </DropdownItem>
                     );
                   })}
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    <NavLink className="dropdown-item" to="/answers">
-                      All answers together
-                    </NavLink>
-                  </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </NavItem>
