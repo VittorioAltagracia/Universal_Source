@@ -6,24 +6,23 @@ import {
   DropdownMenu,
 } from "reactstrap";
 
-const SecondDropdown = () => {
+const LanguageSelectorDropdown = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggle1 = () => setDropdownOpen(!dropdownOpen);
+  const toggle = () => setDropdownOpen(!dropdownOpen);
 
   return (
     <>
-      <Dropdown nav isOpen={dropdownOpen} toggle={toggle1}>
+      <Dropdown nav isOpen={dropdownOpen} toggle={toggle} direction="end">
         <DropdownToggle nav caret>
           Languages
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem disabled>English 🌎</DropdownItem>
-          <DropdownItem>Ukrainian 🔷 (coming soon) </DropdownItem>
+          <DropdownItem>Ukrainian 🔷 </DropdownItem>
         </DropdownMenu>
       </Dropdown>
     </>
   );
 };
 
-export default SecondDropdown;
+export default LanguageSelectorDropdown;
