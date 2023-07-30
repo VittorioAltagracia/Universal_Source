@@ -15,8 +15,7 @@ const FooterComponent = () => {
               </ToastHeader>
               <ToastBody>
                 This application is still in development and may contain fake
-                data and is not 100% responsive to all screensizes. New updates
-                and improvemets are being added regularly.
+                data. New updates and improvemets are being added regularly.
               </ToastBody>
             </Toast>
           </Col>
