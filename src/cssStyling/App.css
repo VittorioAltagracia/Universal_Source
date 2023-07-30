@@ -14,6 +14,13 @@
   gap: 50rem;
   margin-bottom: 0;
   color: #4263eb;
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .header-app-name {
+    margin-left: 0.1rem;
+  }
 }
 
 .nav-bar {
@@ -27,10 +34,10 @@
   padding: 0.4rem;
 }
 
-h2,
+/* h2,
 h4 {
   color: #ff711f;
-}
+} */
 
 /* .nav-item .nav-link {
   padding: 0;

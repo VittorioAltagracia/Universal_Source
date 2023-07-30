@@ -22,6 +22,8 @@ const CategorySelector = () => {
     <>
       <Dropdown isOpen={categoryOpen} toggle={toggle} direction="end">
         <DropdownToggle nav caret>
+          <i className="fa fa-indent" />
+          {` `}
           Answers by Categories
         </DropdownToggle>
         <DropdownMenu>
