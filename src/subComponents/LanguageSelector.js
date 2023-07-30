@@ -14,7 +14,8 @@ const LanguageSelectorDropdown = () => {
     <>
       <Dropdown nav isOpen={dropdownOpen} toggle={toggle} direction="end">
         <DropdownToggle nav caret>
-          Languages
+          <i className="fa fa-language" />
+          {` `}Languages
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem disabled>English 🌎</DropdownItem>
