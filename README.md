@@ -10,7 +10,4 @@ The information is scattered around the web and often available mostly in Englis
 
  As well as people who generally want to have a source of truth for most common questions a ‘newcomer’ may have
 
-# Disclaimer
-
-The project is still in development and the data needs to be moved to a remote server, currently, the app fetches the data from a local JSON server.
 
