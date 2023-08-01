@@ -61,7 +61,13 @@ const Question = ({ question }) => {
                 )}
               </button>
             </span>
-            <button onClick={() => TranslateViaAPI(answer)}>Translate</button>
+            <button
+              onClick={() =>
+                TranslateViaAPI(category, name, required_documents)
+              }
+            >
+              Translate
+            </button>
           </AccordionBody>
         </AccordionItem>
       </Accordion>
