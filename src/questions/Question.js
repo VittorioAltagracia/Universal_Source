@@ -9,13 +9,16 @@ import {
 } from "reactstrap";
 import React, { useState } from "react";
 import { TranslateViaAPI } from "./fetchTranslations";
-import { useSelector } from "react-redux";
-import { selectAllQuestions } from "./questionsSlice";
 
 const Question = ({ question }) => {
   const { name, answer, category, source, required_documents } = question;
-  const questions = useSelector(selectAllQuestions);
+  const { translated_answer } = question;
+  const { uk, es } = translated_answer;
+  const [translate, setTranslate] = useState(null);
 
+  const translateIntoUkrainian = () => {
+    setTranslate(translated_answer.uk);
+  };
   const [open, setOpen] = useState(false);
   const toggle = (id) => {
     if (open === id) {
@@ -33,8 +36,17 @@ const Question = ({ question }) => {
             <span className="acc-header">{name}</span>
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
+            {
+              <button onClick={() => translateIntoUkrainian()}>
+                Translate into Ukrainian
+              </button>
+            }
             <Card className="mb-3">
-              <CardBody className="p-3">{answer}</CardBody>
+              <CardBody className="p-3">
+                {translate === translated_answer.uk
+                  ? translated_answer.uk
+                  : answer}
+              </CardBody>
               {required_documents ? (
                 <CardFooter className="p-3">
                   Accepted/Required Documents:
