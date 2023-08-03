@@ -79,11 +79,3 @@ export const questionsReducer = questionsSlice.reducer;
 export const selectAllQuestions = (state) => {
   return state.questions.questionsArray;
 };
-
-const translatedIntoUkrainianSlice = createSlice({
-  name: "ukrainianData",
-  initialState,
-  reducers: {},
-});
-
-export const ukrainianReducer = translatedIntoUkrainianSlice.reducer;

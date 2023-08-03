@@ -1,5 +1,5 @@
 import axios from "axios";
-import { apiKey } from "../utils/nlpApiKey";
+import { apiKey } from "../nlpApiKey";
 
 export const TranslateViaAPI = async (...questionsData) => {
   try {

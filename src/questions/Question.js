@@ -8,13 +8,11 @@ import {
   CardFooter,
 } from "reactstrap";
 import React, { useState } from "react";
-import { TranslateViaAPI } from "./fetchTranslations";
-import { useSelector } from "react-redux";
-import { selectAllQuestions } from "./questionsSlice";
+import { useTranslation } from "react-i18next";
 
 const Question = ({ question }) => {
   const { name, answer, category, source, required_documents } = question;
-  const questions = useSelector(selectAllQuestions);
+  const { t } = useTranslation();
 
   const [open, setOpen] = useState(false);
   const toggle = (id) => {
@@ -34,7 +32,9 @@ const Question = ({ question }) => {
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
             <Card className="mb-3">
-              <CardBody className="p-3">{answer}</CardBody>
+              <CardBody className="p-3">
+                {t("key1")} {t(answer)}
+              </CardBody>
               {required_documents ? (
                 <CardFooter className="p-3">
                   Accepted/Required Documents:
@@ -61,13 +61,6 @@ const Question = ({ question }) => {
                 )}
               </button>
             </span>
-            <button
-              onClick={() =>
-                TranslateViaAPI(category, name, required_documents)
-              }
-            >
-              Translate
-            </button>
           </AccordionBody>
         </AccordionItem>
       </Accordion>
