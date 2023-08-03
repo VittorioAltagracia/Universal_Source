@@ -8,16 +8,12 @@ import {
   CardFooter,
 } from "reactstrap";
 import React, { useState } from "react";
-import { TranslateViaAPI } from "./fetchTranslations";
+import { useTranslation } from "react-i18next";
 
 const Question = ({ question }) => {
   const { name, answer, category, source, required_documents } = question;
-  const { translated_answer } = question;
-  const [translate, setTranslate] = useState(null);
+  const { t } = useTranslation();
 
-  const translateIntoUkrainian = () => {
-    setTranslate(translated_answer.uk);
-  };
   const [open, setOpen] = useState(false);
   const toggle = (id) => {
     if (open === id) {
@@ -35,16 +31,9 @@ const Question = ({ question }) => {
             <span className="acc-header">{name}</span>
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
-            {
-              <button onClick={() => translateIntoUkrainian()}>
-                Translate into Ukrainian
-              </button>
-            }
             <Card className="mb-3">
               <CardBody className="p-3">
-                {translate === translated_answer.uk
-                  ? translated_answer.uk
-                  : answer}
+                {t("key1")} {t(answer)}
               </CardBody>
               {required_documents ? (
                 <CardFooter className="p-3">
@@ -72,13 +61,6 @@ const Question = ({ question }) => {
                 )}
               </button>
             </span>
-            <button
-              onClick={() =>
-                TranslateViaAPI(category, name, required_documents)
-              }
-            >
-              Translate
-            </button>
           </AccordionBody>
         </AccordionItem>
       </Accordion>

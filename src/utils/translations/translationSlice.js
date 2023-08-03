@@ -14,5 +14,9 @@ const selectedLanguage = createSlice({
   },
 });
 
+export const selectLanguageFromState = (state) => {
+  return state.defaultLang;
+};
+
 export const { switchLanguage } = selectedLanguage.actions;
 export const translationReducer = selectedLanguage.reducer;

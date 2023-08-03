@@ -7,9 +7,11 @@ import {
 } from "reactstrap";
 import { useDispatch } from "react-redux";
 import { switchLanguage } from "../utils/translations/translationSlice";
+import { useTranslation } from "react-i18next";
 
 const LanguageSelectorDropdown = () => {
   const dispatch = useDispatch();
+  const { t, i18n } = useTranslation();
 
   const updateLangOnClick = (selectedLang) => {
     dispatch(switchLanguage(selectedLang));
