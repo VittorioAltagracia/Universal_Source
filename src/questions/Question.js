@@ -13,7 +13,6 @@ import { TranslateViaAPI } from "./fetchTranslations";
 const Question = ({ question }) => {
   const { name, answer, category, source, required_documents } = question;
   const { translated_answer } = question;
-  const { uk, es } = translated_answer;
   const [translate, setTranslate] = useState(null);
 
   const translateIntoUkrainian = () => {

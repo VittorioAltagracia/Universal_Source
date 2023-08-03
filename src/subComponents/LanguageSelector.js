@@ -5,8 +5,16 @@ import {
   DropdownToggle,
   DropdownMenu,
 } from "reactstrap";
+import { useDispatch } from "react-redux";
+import { switchLanguage } from "../utils/translations/translationSlice";
 
 const LanguageSelectorDropdown = () => {
+  const dispatch = useDispatch();
+
+  const updateLangOnClick = (selectedLang) => {
+    dispatch(switchLanguage(selectedLang));
+  };
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);
 
@@ -18,8 +26,12 @@ const LanguageSelectorDropdown = () => {
           {` `}Languages
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem disabled>English 🌎</DropdownItem>
-          <DropdownItem>Ukrainian 🔷 </DropdownItem>
+          <DropdownItem onClick={() => updateLangOnClick("en")}>
+            English 🌎
+          </DropdownItem>
+          <DropdownItem onClick={() => updateLangOnClick("uk")}>
+            Ukrainian 🔷{" "}
+          </DropdownItem>
         </DropdownMenu>
       </Dropdown>
     </>
