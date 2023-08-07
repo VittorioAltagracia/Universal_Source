@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import {
   getQuestions,
   selectAllQuestions,
@@ -10,14 +11,23 @@ const RequestTranslatedData = () => {
   const dispatch = useDispatch();
   const questions = useSelector(selectAllQuestions);
 
-  useEffect(() => {
-    dispatch(getQuestions()).then(() => {
-      setResources(questions);
-    });
-  }, []);
-  console.log("I have finished running");
+  // the logic below is needed to prevent the setResouces function from running before the data arrives to the redux store, there are a couple of asyncronous operations happening when user requests translation so the following needs to be in place.
+  const [dataIsFetched, setDataIsFetched] = useState(false);
 
-  // return null;
+  useEffect(() => {
+    dispatch(getQuestions());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (questions.length > 0) {
+      setResources(questions);
+      setDataIsFetched(true);
+    }
+  }, [questions]);
+
+  if (!dataIsFetched) {
+    return null;
+  }
 };
 
 export default RequestTranslatedData;
