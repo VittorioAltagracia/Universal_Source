@@ -1,11 +1,9 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-window.i18n = i18n;
 
 export const setResources = (questions) => {
   const translations = { uk: {}, en: {} };
-  console.log(translations);
   questions.forEach((question) => {
     const {
       id,
@@ -15,20 +13,26 @@ export const setResources = (questions) => {
       answer,
       name,
       required_documents,
+      translated_names_documents,
       category,
     } = question;
-    console.log(translated_answer.uk, answer);
-    translations.uk = {
-      key1: translated_answer.uk,
+
+    translations.uk[id] = {
+      key1: translated_name.uk,
+      key2: translated_answer.uk,
+      key3: translated_names_documents.uk,
+      key4: translated_category.uk,
     };
-    translations.en = {
-      key1: answer,
+    translations.en[id] = {
+      key1: name,
+      key2: answer,
+      key3: required_documents,
+      key4: category,
     };
   });
 
   i18n.addResourceBundle("uk", "translation", translations.uk, true, true);
   i18n.addResourceBundle("en", "translation", translations.en, true, true);
-  console.log("function execution is complete");
 };
 
 i18n

@@ -11,11 +11,15 @@ import {
 import LanguageSelectorDropdown from "../subComponents/LanguageSelector";
 import CategorySelector from "../subComponents/CategorySelector";
 import { NavLink } from "react-router-dom";
+import { TextForNavbar } from "../utils/translations/hardCodedUITranslations";
+import { useTranslation } from "react-i18next";
 
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);
+  const { i18n } = useTranslation();
 
+  // i18n.language is a property that holds the current language code accessable via i18next library
   return (
     <>
       <Navbar sticky="top" expand="md" dark className="mb-5 mt-3 py-0 nav-bar">
@@ -37,7 +41,8 @@ const NavigationBar = () => {
                 </DropdownToggle>
                 <DropdownMenu>
                   <NavLink to="/questions" className="nav-link">
-                    <i className="fa fa-globe" /> Load all answers
+                    <i className="fa fa-globe" />{" "}
+                    {TextForNavbar.navbar1[i18n.language]}
                   </NavLink>
                   <DropdownItem divider />
                   {/* category enddown (aka dropdown to the right) */}
@@ -49,7 +54,7 @@ const NavigationBar = () => {
                   <NavLink to="/about" className="nav-link">
                     <i className="fa fa-user-circle" />
                     {` `}
-                    About Creator
+                    {TextForNavbar.navbar2[i18n.language]}
                   </NavLink>
                 </DropdownMenu>
               </Dropdown>
