@@ -10,6 +10,7 @@ const selectedLanguage = createSlice({
   reducers: {
     switchLanguage: (state, action) => {
       state.defaultLang = action.payload;
+      console.log("Language is now Ukrainian");
     },
   },
 });

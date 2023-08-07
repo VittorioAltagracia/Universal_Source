@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 export const setResources = (questions) => {
-  const translations = {};
+  const translations = { uk: {}, en: {} };
   questions.forEach((question) => {
     const {
       id,
@@ -13,17 +13,21 @@ export const setResources = (questions) => {
       answer,
       name,
       required_documents,
+      translated_names_documents,
       category,
     } = question;
+
     translations.uk[id] = {
-      translation: {
-        key1: translated_answer.uk,
-      },
+      key1: translated_name.uk,
+      key2: translated_answer.uk,
+      key3: translated_names_documents.uk,
+      key4: translated_category.uk,
     };
     translations.en[id] = {
-      translation: {
-        key1: answer,
-      },
+      key1: name,
+      key2: answer,
+      key3: required_documents,
+      key4: category,
     };
   });
 
