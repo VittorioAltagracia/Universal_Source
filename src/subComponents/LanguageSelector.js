@@ -15,6 +15,8 @@ const LanguageSelectorDropdown = () => {
 
   const updateLangOnClick = (selectedLang) => {
     dispatch(switchLanguage(selectedLang));
+
+    i18n.changeLanguage(selectedLang);
   };
 
   const [dropdownOpen, setDropdownOpen] = useState(false);

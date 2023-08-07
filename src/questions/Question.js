@@ -11,8 +11,18 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Question = ({ question }) => {
-  const { name, answer, category, source, required_documents } = question;
+  const {
+    name,
+    answer,
+    category,
+    source,
+    required_documents,
+    translated_answer,
+  } = question;
   const { t } = useTranslation();
+
+  console.log("ID:", question.id);
+  console.log("Translation:", t("key1"));
 
   const [open, setOpen] = useState(false);
   const toggle = (id) => {
@@ -32,9 +42,7 @@ const Question = ({ question }) => {
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
             <Card className="mb-3">
-              <CardBody className="p-3">
-                {t("key1")} {t(answer)}
-              </CardBody>
+              <CardBody className="p-3">{t("key1")}</CardBody>
               {required_documents ? (
                 <CardFooter className="p-3">
                   Accepted/Required Documents:

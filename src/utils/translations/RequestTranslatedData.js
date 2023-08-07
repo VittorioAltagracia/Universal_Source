@@ -15,7 +15,9 @@ const RequestTranslatedData = () => {
       setResources(questions);
     });
   }, []);
-  return null;
+  console.log("I have finished running");
+
+  // return null;
 };
 
 export default RequestTranslatedData;
