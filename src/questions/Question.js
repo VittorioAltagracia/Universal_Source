@@ -9,10 +9,11 @@ import {
 } from "reactstrap";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { AccordionAndCardText } from "../utils/translations/hardCodedUITranslations";
 
 const Question = ({ question }) => {
   const { source, id } = question;
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   console.log("Translated Name:", t("key1", { id: question.id }));
   console.log("Translated Answer:", t("key2", { id: question.id }));
   const [open, setOpen] = useState(false);
@@ -36,18 +37,17 @@ const Question = ({ question }) => {
               <CardBody className="p-3">{t(`${id}.key2`)}</CardBody>
               {t(`${id}.key3`) ? (
                 <CardFooter className="p-3">
-                  Accepted/Required Documents:
+                  {AccordionAndCardText.docs[i18n.language]}:
                   {` ` + t(`${id}.key3`)}
                 </CardFooter>
               ) : null}
             </Card>
             <span className="card-text-category-1">
-              Category: {t(`${id}.key4`)}
+              {AccordionAndCardText.category[i18n.language]}: {t(`${id}.key4`)}
             </span>
             <br />
             <span className="in-detail">
-              To read more in detail about this topic please visit the link if
-              it's available:
+              {AccordionAndCardText.linkText1[i18n.language]}:
               <button className="link-button">
                 {source.includes("https") ? (
                   <a
@@ -55,10 +55,10 @@ const Question = ({ question }) => {
                     target="_blank"
                     alt="leads to a source of information or describes it"
                   >
-                    Click here
+                    {AccordionAndCardText.linkText2[i18n.language]}
                   </a>
                 ) : (
-                  `The link is unavailable or is not provided yet.`
+                  `${AccordionAndCardText.linkText3[i18n.language]}`
                 )}
               </button>
             </span>
