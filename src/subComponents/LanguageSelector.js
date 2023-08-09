@@ -8,10 +8,11 @@ import {
 import { useDispatch } from "react-redux";
 import { switchLanguage } from "../utils/translations/translationSlice";
 import { useTranslation } from "react-i18next";
+import { TextForNavbar } from "../utils/translations/hardCodedUITranslations";
 
 const LanguageSelectorDropdown = () => {
   const dispatch = useDispatch();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const updateLangOnClick = (selectedLang) => {
     dispatch(switchLanguage(selectedLang));
@@ -27,14 +28,17 @@ const LanguageSelectorDropdown = () => {
       <Dropdown nav isOpen={dropdownOpen} toggle={toggle} direction="end">
         <DropdownToggle nav caret>
           <i className="fa fa-language" />
-          {` `}Languages
+          {` `}
+          {TextForNavbar.languageSelector[i18n.language]}
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem onClick={() => updateLangOnClick("en")}>
-            English 🌎
+            {TextForNavbar.languageName1[i18n.language]}
+            🌎
           </DropdownItem>
           <DropdownItem onClick={() => updateLangOnClick("uk")}>
-            Ukrainian 🔷{" "}
+            {TextForNavbar.languageName2[i18n.language]}
+            🔷{" "}
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>

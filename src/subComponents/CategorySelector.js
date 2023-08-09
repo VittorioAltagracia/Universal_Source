@@ -7,6 +7,11 @@ import {
 } from "reactstrap";
 import { Category } from "../utils/category";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import {
+  CategorySelectorText,
+  TranslatedCategories,
+} from "../utils/translations/hardCodedUITranslations";
 
 const CategorySelector = () => {
   const [categoryOpen, setCategoryOpen] = useState(false);
@@ -18,16 +23,20 @@ const CategorySelector = () => {
     setSelected(catName);
   };
 
+  const { i18n } = useTranslation();
+  // keeps track of current language of the app
+  const currentLang = i18n.language;
+
   return (
     <>
       <Dropdown isOpen={categoryOpen} toggle={toggle} direction="end">
         <DropdownToggle nav caret>
           <i className="fa fa-indent" />
           {` `}
-          Answers by Categories
+          {CategorySelectorText.catSelector[i18n.language]}
         </DropdownToggle>
         <DropdownMenu>
-          {Category.map((cat) => {
+          {Category.map((cat, index) => {
             return (
               <DropdownItem key={cat.id}>
                 <NavLink
@@ -35,7 +44,7 @@ const CategorySelector = () => {
                   onClick={() => onDropdownClick(cat.name)}
                   className="dropdown-item"
                 >
-                  {cat.name}
+                  {TranslatedCategories[i18n.language][index]}
                 </NavLink>
               </DropdownItem>
             );
