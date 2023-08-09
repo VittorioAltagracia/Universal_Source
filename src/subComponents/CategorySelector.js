@@ -24,8 +24,6 @@ const CategorySelector = () => {
   };
 
   const { i18n } = useTranslation();
-  // keeps track of current language of the app
-  const currentLang = i18n.language;
 
   return (
     <>

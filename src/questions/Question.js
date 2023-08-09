@@ -14,8 +14,7 @@ import { AccordionAndCardText } from "../utils/translations/hardCodedUITranslati
 const Question = ({ question }) => {
   const { source, id } = question;
   const { t, i18n } = useTranslation();
-  console.log("Translated Name:", t("key1", { id: question.id }));
-  console.log("Translated Answer:", t("key2", { id: question.id }));
+
   const [open, setOpen] = useState(false);
   const toggle = (id) => {
     if (open === id) {

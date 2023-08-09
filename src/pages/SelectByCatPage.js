@@ -11,6 +11,8 @@ import {
   CardTitle,
   CardFooter,
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
+
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import ErrorToast from "../subComponents/ErrorToast";
 
@@ -19,6 +21,8 @@ const SelectByCatPage = () => {
   const questions = useSelector(selectAllQuestions);
   const isLoading = useSelector((state) => state.questions.isLoading);
   const errorMes = useSelector((state) => state.questions.errorMes);
+
+  const { t, i18n } = useTranslation();
 
   // This function filters data from questions array
   // below I am passing in it an argument which is a category that user clicks on
@@ -51,7 +55,7 @@ const SelectByCatPage = () => {
           <Col key={category.id} md="6" xs="11">
             <Card className="my-5 main-categorized-card">
               <CardTitle className="categorized-card-title my-0 p-3">
-                {category.name}
+                {t(`${id}.key1`)}
               </CardTitle>
               <CardBody className="categorized-card p-3">
                 {category.answer}
