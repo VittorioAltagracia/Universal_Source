@@ -27,7 +27,7 @@ const NavigationBar = () => {
           <div className="d-flex flex-row-reverse flex-md-row align-items-center w-md-auto">
             <NavItem>
               <NavLink to="/" className="nav-link p-0 mx-4">
-                <div className="d-flex align-items-center test">
+                <div className="d-flex align-items-center">
                   <i className="fa fa-university fa-lg " />
                   <h4 className="header-app-name">Universal Source</h4>
                 </div>
