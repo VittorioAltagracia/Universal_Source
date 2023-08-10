@@ -104,3 +104,25 @@ export const AboutCreator = {
     uk: "По іронії долі, минув майже рік з моменту, як я переїхав до Остіна, і так вийшло, що в мене з'явилося багато знайомих серед українців - тут, в Техасі.",
   },
 };
+
+export const AboutTheApp = {
+  header: {
+    en: "New in the US? Find quick answers to the most important questions.",
+    uk: "Тільки приїхали в США? Знайдіть швидкі відповіді на найважливіші питання.",
+  },
+  $1stPart: {
+    en: "As someone who knows what it is like to start your life over in a different country and allow your life to take a 180-degree turn, I know the struggles of immigrants. One of the biggest needs that a person with such a background has - is the need for information. What documents do you need to apply for a driver’s license? How to find a job and where to start looking? It also includes the need to understand our basic and non-basic rights, as well as what to expect when applying for refugee status or applying for an SSN?! On top of that, most people who move to the US, don’t speak English quite well just yet or struggle with technical terms or diverse cultural aspects of the United States of America that are different across the world. This app is created to alleviate the struggles I described above. I am coding this app with a thought about immigrants who move to this country to start their life over.",
+    uk: "Як людина, яка знає, що таке почати життя заново в іншій країні і дозволити своєму життю розвернутися на 180 градусів, я знаю, з чим доводиться стикатися іммігрантам. Однією з найбільших потреб людини з таким досвідом є потреба в інформації. Які документи потрібні для отримання водійських прав? Як знайти роботу і з чого почати її шукати? Це також включає в себе необхідність розуміти наші основні та неосновні права, а також те, чого очікувати при подачі заяви на отримання статусу біженця або подачі заяви на отримання SSN?! Крім того, більшість людей, які переїжджають до США, ще не дуже добре розмовляють англійською мовою або мають труднощі з технічними термінами чи різноманітними культурними аспектами Сполучених Штатів Америки, які відрізняються від інших країн світу. Цей додаток створений для того, щоб полегшити труднощі, які я описав вище. Я створюю цей додаток з думкою про іммігрантів, які переїжджають до цієї країни, щоб почати своє життя заново.",
+  },
+};
+
+export const WarningToast = {
+  header: {
+    en: "Please note",
+    uk: "Будь-ласка, зверніть увагу",
+  },
+  content: {
+    en: "New updates and improvements are being added regularly. The developer is actively working on improving the quality of translation and improving the readability of the information.",
+    uk: "Оновлення та покращення регулярно додаються. Розробник активно працює над покращенням якості перекладу та удосконаленням читабельності інформації.",
+  },
+};

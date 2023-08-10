@@ -1,6 +1,9 @@
 import { Row, Col, Toast, ToastHeader, ToastBody } from "reactstrap";
-
+import { useTranslation } from "react-i18next";
+import { WarningToast } from "../utils/translations/hardCodedUITranslations";
 const FooterComponent = () => {
+  const { i18n } = useTranslation();
+
   return (
     <footer className="main-footer my-5">
       <div className="d-flex justify-content-center align-items-center">
@@ -11,12 +14,9 @@ const FooterComponent = () => {
               style={{ backgroundColor: "#ff711f", opacity: "0.9" }}
             >
               <ToastHeader className="justify-content-center">
-                Please note
+                {WarningToast.header[i18n.language]}
               </ToastHeader>
-              <ToastBody>
-                This application is still in development and may contain fake
-                data. New updates and improvemets are being added regularly.
-              </ToastBody>
+              <ToastBody>{WarningToast.content[i18n.language]}</ToastBody>
             </Toast>
           </Col>
         </Row>
