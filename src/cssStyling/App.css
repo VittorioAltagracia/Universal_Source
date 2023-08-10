@@ -11,7 +11,7 @@
 .header-app-name {
   display: flex;
   justify-content: flex-start;
-  gap: 50rem;
+  gap: 5px;
   margin-bottom: 0;
   color: #4263eb;
   margin-left: 0.5rem;
@@ -34,25 +34,12 @@
   padding: 0.4rem;
 }
 
-/* h2,
-h4 {
-  color: #ff711f;
-} */
-
-/* .nav-item .nav-link {
-  padding: 0;
-} */
-/* main class is assigned to the div that renders info about this app on the home page */
-
 .main {
   padding-left: 0;
 }
 
 .acc-header {
   font-weight: bold;
-  /* display: flex;
-  align-self: center;
-  justify-content: center; */
 }
 
 .accordion-header .accordion-button:focus {

@@ -11,14 +11,18 @@ import {
   CardTitle,
   CardFooter,
 } from "reactstrap";
+import { useTranslation } from "react-i18next";
+import { AccordionAndCardText } from "../utils/translations/hardCodedUITranslations";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import ErrorToast from "../subComponents/ErrorToast";
 
 const SelectByCatPage = () => {
-  const { categoryName } = useParams();
+  const { categoryName, categoryId } = useParams();
   const questions = useSelector(selectAllQuestions);
   const isLoading = useSelector((state) => state.questions.isLoading);
   const errorMes = useSelector((state) => state.questions.errorMes);
+
+  const { t, i18n } = useTranslation();
 
   // This function filters data from questions array
   // below I am passing in it an argument which is a category that user clicks on
@@ -29,14 +33,15 @@ const SelectByCatPage = () => {
     return filterByCategory;
   };
 
-  //  This function will render a category that corresponds to data user is viewing and a footer, below this function is called upon in QuestionAnswerCard function
-  const displaySelectedCat = (categoryName) => {
+  //  This component will render a category that corresponds to data user is viewing, below, this function is called upon in QuestionAnswerCard component. The component accepts 2 parameters, categoryId is passed in on line 71 to allow for dynamic translation
+  const displaySelectedCat = (categoryName, categoryId) => {
     return (
       <CardFooter
         className="p-3"
         style={{ backgroundColor: "#7188e7", color: "#fff" }}
       >
-        Selected category: {categoryName}
+        {AccordionAndCardText.selectedCatText[i18n.language]}:{" "}
+        {t(`${categoryName}.key4`)}
       </CardFooter>
     );
   };
@@ -51,20 +56,21 @@ const SelectByCatPage = () => {
           <Col key={category.id} md="6" xs="11">
             <Card className="my-5 main-categorized-card">
               <CardTitle className="categorized-card-title my-0 p-3">
-                {category.name}
+                {t(`${category.id}.key1`)}
               </CardTitle>
               <CardBody className="categorized-card p-3">
-                {category.answer}
+                {t(`${category.id}.key2`)}
               </CardBody>
               {category.required_documents ? (
                 <CardFooter
                   className="p-3"
                   style={{ backgroundColor: "#7188e7", color: "#fff" }}
                 >
-                  Required Documents: {category.required_documents}
+                  {AccordionAndCardText.docs[i18n.language]}:{" "}
+                  {t(`${category.id}.key3`)}
                 </CardFooter>
               ) : null}
-              {displaySelectedCat(categoryName)}
+              {displaySelectedCat(categoryId)}
             </Card>
           </Col>
         </Row>

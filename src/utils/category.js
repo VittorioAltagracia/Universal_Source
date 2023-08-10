@@ -4,8 +4,6 @@ export const Category = [
   {
     id: 2,
     name: "Driving",
-    en: "Driving",
-    uk: "Тест",
   },
   {
     id: 3,

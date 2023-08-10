@@ -30,6 +30,10 @@ export const AccordionAndCardText = {
     en: "Category",
     uk: "Категорія",
   },
+  selectedCatText: {
+    en: "Selected сategory",
+    uk: "Обрана категорія",
+  },
   linkText1: {
     en: "To read more in detail about this topic please visit the link",
     uk: "Щоб прочитати більш детально про цю тему, перейдіть будь-ласка по посиланню",

@@ -24,8 +24,6 @@ const CategorySelector = () => {
   };
 
   const { i18n } = useTranslation();
-  // keeps track of current language of the app
-  const currentLang = i18n.language;
 
   return (
     <>
@@ -40,7 +38,7 @@ const CategorySelector = () => {
             return (
               <DropdownItem key={cat.id}>
                 <NavLink
-                  to={`/dynamic/${cat.name}`}
+                  to={`/dynamic/${cat.name}/${cat.id}`}
                   onClick={() => onDropdownClick(cat.name)}
                   className="dropdown-item"
                 >
