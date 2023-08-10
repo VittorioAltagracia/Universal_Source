@@ -38,7 +38,7 @@ const CategorySelector = () => {
             return (
               <DropdownItem key={cat.id}>
                 <NavLink
-                  to={`/dynamic/${cat.name}`}
+                  to={`/dynamic/${cat.name}/${cat.id}`}
                   onClick={() => onDropdownClick(cat.name)}
                   className="dropdown-item"
                 >

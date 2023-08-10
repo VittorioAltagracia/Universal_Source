@@ -39,7 +39,7 @@ function App() {
               <Route path="about" element={<AboutPage />} />
               <Route path="questions" element={<QuestionsPage />} />
               <Route
-                path="dynamic/:categoryName"
+                path="dynamic/:categoryName/:categoryId"
                 element={<SelectByCatPage />}
               />
             </Routes>
