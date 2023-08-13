@@ -14,7 +14,7 @@ const LanguageSelectorDropdown = () => {
   const dispatch = useDispatch();
   const { i18n } = useTranslation();
 
-  const updateLangOnClick = (selectedLang) => {
+  const updateLangOnClick = (selectedLang, i18n) => {
     dispatch(switchLanguage(selectedLang));
 
     i18n.changeLanguage(selectedLang);
@@ -32,11 +32,11 @@ const LanguageSelectorDropdown = () => {
           {TextForNavbar.languageSelector[i18n.language]}
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem onClick={() => updateLangOnClick("en")}>
+          <DropdownItem onClick={() => updateLangOnClick("en", i18n)}>
             {TextForNavbar.languageName1[i18n.language]}
             🌎
           </DropdownItem>
-          <DropdownItem onClick={() => updateLangOnClick("uk")}>
+          <DropdownItem onClick={() => updateLangOnClick("uk", i18n)}>
             {TextForNavbar.languageName2[i18n.language]}
             🔷{" "}
           </DropdownItem>
