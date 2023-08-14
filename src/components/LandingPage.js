@@ -8,7 +8,7 @@ const LandingPage = () => {
     <Container fluid className="mt-5">
       <Row className="align-items-start">
         <Col md="4" className="app-info-2 py-3">
-          <h2 style={{ color: "#000" }}>{AboutTheApp.header[i18n.language]}</h2>
+          <h3 style={{ color: "#000" }}>{AboutTheApp.header[i18n.language]}</h3>
         </Col>
       </Row>
       <Row className="pb-5">
@@ -24,7 +24,7 @@ const LandingPage = () => {
       </Row>
       <Row className="justify-content-end mt-5">
         <Col md="4" className="app-info-2 py-3">
-          <h2 style={{ color: "#000" }}>The Simplicity of Use</h2>
+          <h3 style={{ color: "#000" }}>The Simplicity of Use</h3>
         </Col>
       </Row>
       <Row className="justify-content-end ">
@@ -48,7 +48,7 @@ const LandingPage = () => {
       </Row>
       <Row className="justify-content-start mt-5">
         <Col md="4" className="app-info-2 py-3">
-          <h2 style={{ color: "#000" }}>Multi-Lingual Support</h2>
+          <h3 style={{ color: "#000" }}>Multi-Lingual Support</h3>
         </Col>
       </Row>
       <Row className="justify-content-start ">
