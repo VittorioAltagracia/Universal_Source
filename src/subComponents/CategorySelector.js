@@ -34,15 +34,16 @@ const CategorySelector = () => {
           {CategorySelectorText.catSelector[i18n.language]}
         </DropdownToggle>
         <DropdownMenu>
-          {Category.map((cat, index) => {
+          {Category.map((cat) => {
             return (
               <DropdownItem key={cat.id}>
                 <NavLink
                   to={`/dynamic/${cat.name}/${cat.id}`}
-                  onClick={() => onDropdownClick(cat.name)}
+                  onClick={() => onDropdownClick(cat.name, cat.id)}
                   className="dropdown-item"
                 >
-                  {TranslatedCategories[i18n.language][index]}
+                  {cat.name}
+                  {/* {TranslatedCategories[i18n.language]} */}
                 </NavLink>
               </DropdownItem>
             );

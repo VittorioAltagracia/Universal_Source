@@ -34,14 +34,15 @@ const SelectByCatPage = () => {
   };
 
   //  This component will render a category that corresponds to data user is viewing, below, this function is called upon in QuestionAnswerCard component. The component accepts 2 parameters, categoryId is passed in on line 71 to allow for dynamic translation
-  const displaySelectedCat = (categoryName, categoryId) => {
+  const displaySelectedCat = (categoryId, categoryName) => {
     return (
       <CardFooter
         className="p-3"
         style={{ backgroundColor: "#7188e7", color: "#fff" }}
       >
         {AccordionAndCardText.selectedCatText[i18n.language]}:{" "}
-        {t(`${categoryName}.key4`)}
+        {/* {t(`${categoryId}.${categoryName}.key4`)}{" "} */}
+        {categoryName}
       </CardFooter>
     );
   };
@@ -70,7 +71,7 @@ const SelectByCatPage = () => {
                   {t(`${category.id}.key3`)}
                 </CardFooter>
               ) : null}
-              {displaySelectedCat(categoryId)}
+              {displaySelectedCat(categoryId, categoryName)}
             </Card>
           </Col>
         </Row>
