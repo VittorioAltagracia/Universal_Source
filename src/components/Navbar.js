@@ -13,7 +13,6 @@ import CategorySelector from "../subComponents/CategorySelector";
 import { NavLink } from "react-router-dom";
 import { TextForNavbar } from "../utils/translations/hardCodedUITranslations";
 import { useTranslation } from "react-i18next";
-
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);

@@ -12,9 +12,10 @@ import { TextForNavbar } from "../utils/translations/hardCodedUITranslations";
 
 const LanguageSelectorDropdown = () => {
   const dispatch = useDispatch();
+
   const { i18n } = useTranslation();
 
-  const updateLangOnClick = (selectedLang, i18n) => {
+  const updateLangOnClick = (selectedLang) => {
     dispatch(switchLanguage(selectedLang));
 
     i18n.changeLanguage(selectedLang);
@@ -32,11 +33,11 @@ const LanguageSelectorDropdown = () => {
           {TextForNavbar.languageSelector[i18n.language]}
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem onClick={() => updateLangOnClick("en", i18n)}>
+          <DropdownItem onClick={() => updateLangOnClick("en")}>
             {TextForNavbar.languageName1[i18n.language]}
             🌎
           </DropdownItem>
-          <DropdownItem onClick={() => updateLangOnClick("uk", i18n)}>
+          <DropdownItem onClick={() => updateLangOnClick("uk")}>
             {TextForNavbar.languageName2[i18n.language]}
             🔷{" "}
           </DropdownItem>

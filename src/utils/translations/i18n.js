@@ -44,10 +44,7 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    resources: {
-      en: {},
-      uk: {},
-    },
+
     defaultNS: "translation",
   });
 

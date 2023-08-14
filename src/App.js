@@ -10,14 +10,30 @@ import QuestionsPage from "./pages/QuestionsPage.js";
 import SelectByCatPage from "./pages/SelectByCatPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getQuestions } from "./questions/questionsSlice.js";
+import { switchLanguage } from "../src/utils/translations/translationSlice.js";
+
+import { useTranslation } from "react-i18next";
 
 function App() {
   const dispatch = useDispatch();
+  const { i18n } = useTranslation();
+  // Setting the default language at the beginning
 
   useEffect(() => {
-    dispatch(getQuestions());
-  }, [dispatch]);
+    dispatch(switchLanguage("en"));
+    i18n.changeLanguage("en");
+  }, [dispatch, i18n]);
+
+  // useEffect(() => {
+  //   const storedLanguage = localStorage.getItem("selectedLang");
+  //   if (storedLanguage) {
+  //     dispatch(switchLanguage(storedLanguage));
+  //     i18n.changeLanguage(storedLanguage);
+  //   } else {
+  //     dispatch(switchLanguage("en"));
+  //     i18n.changeLanguage("en");
+  //   }
+  // }, [dispatch, i18n]);
 
   return (
     <div
