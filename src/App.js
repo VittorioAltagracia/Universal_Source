@@ -24,17 +24,6 @@ function App() {
     i18n.changeLanguage("en");
   }, [dispatch, i18n]);
 
-  // useEffect(() => {
-  //   const storedLanguage = localStorage.getItem("selectedLang");
-  //   if (storedLanguage) {
-  //     dispatch(switchLanguage(storedLanguage));
-  //     i18n.changeLanguage(storedLanguage);
-  //   } else {
-  //     dispatch(switchLanguage("en"));
-  //     i18n.changeLanguage("en");
-  //   }
-  // }, [dispatch, i18n]);
-
   return (
     <div
       className="App"
