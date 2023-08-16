@@ -122,8 +122,8 @@ export const SimplicityOfUse = {
     uk: "Простота в користуванні",
   },
   $1stPart: {
-    en: "The app is simple to use and the information is categorized. Most of the posts contain a source link where you can find out more! Get started.",
-    uk: "Додаток простий у використанні, а інформація розподілена за категоріями. Більшість постів містять посилання на джерело, де ви можете дізнатися більше! Почати зараз.",
+    en: "The app is simple to use and the information is categorized. Most of the posts contain a source link where you can find out more!",
+    uk: "Додаток простий у використанні, а інформація розподілена за категоріями. Більшість постів містять посилання на джерело, де ви можете дізнатися більше!",
   },
 };
 
