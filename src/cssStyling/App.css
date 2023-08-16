@@ -69,7 +69,7 @@
   color: #4263eb;
 }
 
-.app-info {
+.app-info-1 {
   background-color: #e5e9fd;
   border-radius: 170px;
   opacity: 0.8;
@@ -77,6 +77,7 @@
 
 .app-info-2 {
   background-color: #d6dcfa;
+  border-radius: 170px;
 
   opacity: 0.9;
 }
