@@ -34,6 +34,7 @@ const LanguageSelectorDropdown = () => {
           <DropdownMenu>
             <DropdownItem onClick={() => updateLangOnClick("en")}>
               {TextForNavbar.languageName1[i18n.language]}
+              🌎{" "}
             </DropdownItem>
             <DropdownItem onClick={() => updateLangOnClick("uk")}>
               {TextForNavbar.languageName2[i18n.language]}
