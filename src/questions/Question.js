@@ -26,7 +26,7 @@ const Question = ({ question }) => {
 
   return (
     <div>
-      <Accordion open={open} toggle={toggle} className="accordion">
+      <Accordion open={open} toggle={toggle} className="accordion my-5">
         <AccordionItem>
           <AccordionHeader targetId="1" className="accordion-header">
             <span className="acc-header">{t(`${id}.key1`)}</span>
