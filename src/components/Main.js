@@ -1,4 +1,4 @@
-import LandingPage from "./LandingPage";
+import LandingPage from "../subComponents/LandingPage";
 import { Container, Row, Col } from "reactstrap";
 
 const Main = () => {
