@@ -116,6 +116,28 @@ export const AboutTheApp = {
   },
 };
 
+export const SimplicityOfUse = {
+  header: {
+    en: "The Simplicity of Use",
+    uk: "Простота в користуванні",
+  },
+  $1stPart: {
+    en: "The app is simple to use and the information is categorized. Most of the posts contain a source link where you can find out more! Get started.",
+    uk: "Додаток простий у використанні, а інформація розподілена за категоріями. Більшість постів містять посилання на джерело, де ви можете дізнатися більше! Почати зараз.",
+  },
+};
+
+export const MultiLingualSupport = {
+  header: {
+    en: "Multi-lingual support",
+    uk: "Підтримка декількох мов",
+  },
+  $1stPart: {
+    en: "This app's main feature is that the data displayed for users is curated and professionally translated allowing for the highest accuracy and level of understanding even for people who are not fluent in English. Future updates will support other languages as well. (i.g Spanish)",
+    uk: "Головною особливістю цього додатку є те, що дані, які відображаються для користувачів, ретельно підбираються та професійно перекладаються, що забезпечує найвищу точність та рівень розуміння навіть для людей, які не володіють англійською мовою. У майбутніх оновленнях буде додано підтримку інших мов. (наприклад, іспанську)",
+  },
+};
+
 export const WarningToast = {
   header: {
     en: "Please note",
