@@ -1,6 +1,6 @@
 # Url to see the project live
 
-https://universalsource-6b70f.web.app
+https://source-universal.com/
 
 ###
 The project is still in development (as of June 2023) but it is mostly done.
