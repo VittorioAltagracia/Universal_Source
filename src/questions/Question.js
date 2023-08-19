@@ -35,7 +35,7 @@ const Question = ({ question }) => {
             <Card className="mb-3">
               <CardBody className="p-3">{t(`${id}.key2`)}</CardBody>
               {t(`${id}.key3`) ? (
-                <CardFooter className="p-3">
+                <CardFooter className="p-3" style={{ backgroundColor: "#fff" }}>
                   {AccordionAndCardText.docs[i18n.language]}:
                   {` ` + t(`${id}.key3`)}
                 </CardFooter>
