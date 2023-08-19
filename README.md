@@ -1,6 +1,6 @@
 # Url to see the project live
 
-https://source-universal.com/
+https://source-universal.com/ (there is still some DNS config happening so URL seems to be unavailable sometimes)  OR https://universalsource-6b70f.web.app/
 
 ###
 The project is still in development (as of June 2023) but it is mostly done.
