@@ -23,6 +23,14 @@ const LanguageSelectorDropdown = () => {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);
+  const [disabled, setDisabled] = useState(false);
+
+  const toggleDisabled = () => {
+    if (i18n.language === "uk") setDisabled(true);
+    else if (i18n.language === "en") {
+      setDisabled(false);
+    }
+  };
 
   return (
     <>
@@ -32,11 +40,20 @@ const LanguageSelectorDropdown = () => {
           {` `}
           {TextForNavbar.languageSelector[i18n.language]}
           <DropdownMenu>
-            <DropdownItem onClick={() => updateLangOnClick("en")}>
+            <DropdownItem
+              onClick={() => updateLangOnClick("en")}
+              disabled={false}
+            >
               {TextForNavbar.languageName1[i18n.language]}
               🌎{" "}
             </DropdownItem>
-            <DropdownItem onClick={() => updateLangOnClick("uk")}>
+            <DropdownItem
+              onClick={() => {
+                updateLangOnClick("uk");
+                toggleDisabled();
+              }}
+              disabled={disabled}
+            >
               {TextForNavbar.languageName2[i18n.language]}
               🔷{" "}
             </DropdownItem>
