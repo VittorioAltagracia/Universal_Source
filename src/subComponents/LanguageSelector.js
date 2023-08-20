@@ -23,14 +23,14 @@ const LanguageSelectorDropdown = () => {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);
-  const [disabled, setDisabled] = useState(false);
+  // const [disabled, setDisabled] = useState(false);
 
-  const toggleDisabled = () => {
-    if (i18n.language === "uk") setDisabled(true);
-    else if (i18n.language === "en") {
-      setDisabled(false);
-    }
-  };
+  // const toggleDisabled = () => {
+  //   if (i18n.language === "uk") setDisabled(true);
+  //   else if (i18n.language === "en") {
+  //     setDisabled(false);
+  //   }
+  // };
 
   return (
     <>
@@ -48,10 +48,7 @@ const LanguageSelectorDropdown = () => {
               🌎{" "}
             </DropdownItem>
             <DropdownItem
-              onClick={() => {
-                updateLangOnClick("uk");
-                toggleDisabled();
-              }}
+              onClick={() => updateLangOnClick("uk")}
               disabled={disabled}
             >
               {TextForNavbar.languageName2[i18n.language]}
