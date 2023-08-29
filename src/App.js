@@ -31,7 +31,6 @@ function App() {
         backgroundImage: `url("/background.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        opacity: "0.9",
         backgroundAttachment: "fixed",
       }}
       strength={500}
