@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .App {
+    background-position: center;
+  }
+}
 /* Global reset */
 #root {
   padding: 0;
