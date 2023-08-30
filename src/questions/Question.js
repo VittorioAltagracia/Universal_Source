@@ -26,7 +26,7 @@ const Question = ({ question }) => {
 
   return (
     <div>
-      <Accordion open={open} toggle={toggle} className="accordion">
+      <Accordion open={open} toggle={toggle} className="accordion my-5">
         <AccordionItem>
           <AccordionHeader targetId="1" className="accordion-header">
             <span className="acc-header">{t(`${id}.key1`)}</span>
@@ -35,7 +35,7 @@ const Question = ({ question }) => {
             <Card className="mb-3">
               <CardBody className="p-3">{t(`${id}.key2`)}</CardBody>
               {t(`${id}.key3`) ? (
-                <CardFooter className="p-3">
+                <CardFooter className="p-3" style={{ backgroundColor: "#fff" }}>
                   {AccordionAndCardText.docs[i18n.language]}:
                   {` ` + t(`${id}.key3`)}
                 </CardFooter>
