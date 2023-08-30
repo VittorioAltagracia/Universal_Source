@@ -4,7 +4,6 @@ import {
   DropdownItem,
   DropdownToggle,
   DropdownMenu,
-  Nav,
 } from "reactstrap";
 import { Category } from "../utils/category";
 import { NavLink } from "react-router-dom";
@@ -25,15 +24,6 @@ const CategorySelector = () => {
   };
 
   const { i18n } = useTranslation();
-  const TranslatedCategoriesArray = Object.entries(TranslatedCategories).map(
-    ([language, categories]) => ({
-      language,
-      categories: categories.map((category, index) => ({
-        id: index,
-        name: category,
-      })),
-    })
-  );
 
   return (
     <>
@@ -44,9 +34,7 @@ const CategorySelector = () => {
           {CategorySelectorText.catSelector[i18n.language]}
         </DropdownToggle>
         <DropdownMenu>
-          {TranslatedCategoriesArray.find(
-            (entry) => entry.language === i18n.language
-          ).categories.map((cat) => {
+          {Category.map((cat) => {
             return (
               <DropdownItem key={cat.id}>
                 <NavLink
@@ -55,6 +43,7 @@ const CategorySelector = () => {
                   className="dropdown-item"
                 >
                   {cat.name}
+                  {/* {TranslatedCategories[i18n.language]} */}
                 </NavLink>
               </DropdownItem>
             );
