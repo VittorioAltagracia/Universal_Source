@@ -5,6 +5,7 @@ import {
   MultiLingualSupport,
   SimplicityOfUse,
 } from "../utils/translations/hardCodedUITranslations";
+
 const LandingPage = () => {
   const { i18n } = useTranslation();
 
@@ -33,7 +34,7 @@ const LandingPage = () => {
           </h3>
         </Col>
       </Row>
-      <Row className="justify-content-end ">
+      <Row className="justify-content-end">
         <Col md="6" lg="6" xl="4" className="app-info-1 py-3 mb-5">
           <p>{SimplicityOfUse.$1stPart[i18n.language]}</p>
         </Col>
