@@ -45,6 +45,9 @@ i18n
       escapeValue: false,
     },
     defaultNS: "translation",
+    detection: {
+      order: ["localStorage", "navigator"],
+    },
   });
 
 export default i18n;
