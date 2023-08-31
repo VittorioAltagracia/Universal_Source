@@ -27,15 +27,21 @@ const LanguageSelectorDropdown = () => {
   return (
     <>
       <Dropdown nav isOpen={dropdownOpen} toggle={toggle} direction="end">
-        <DropdownToggle nav caret>
+        <DropdownToggle nav caret className="dropdown-color">
           <i className="fa fa-language" />{" "}
           {TextForNavbar.languageSelector[i18n.language]}
           <DropdownMenu>
-            <DropdownItem onClick={() => updateLangOnClick("en")}>
+            <DropdownItem
+              onClick={() => updateLangOnClick("en")}
+              className="dropdown-color"
+            >
               {TextForNavbar.languageName1[i18n.language]}
               🌎{" "}
             </DropdownItem>
-            <DropdownItem onClick={() => updateLangOnClick("uk")}>
+            <DropdownItem
+              onClick={() => updateLangOnClick("uk")}
+              className="dropdown-color"
+            >
               {TextForNavbar.languageName2[i18n.language]}
               🔷{" "}
             </DropdownItem>
