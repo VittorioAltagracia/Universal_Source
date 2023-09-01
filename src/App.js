@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import QuestionsPage from "./pages/QuestionsPage.js";
 import SelectByCatPage from "./pages/SelectByCatPage.js";
+import RequestsPage from "./pages/RequestsPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { switchLanguage } from "../src/utils/translations/translationSlice.js";
@@ -47,6 +48,7 @@ function App() {
                 path="dynamic/:categoryName/:categoryId"
                 element={<SelectByCatPage />}
               />
+              <Route path="requests" element={<RequestsPage />} />
             </Routes>
           </Row>
         </div>
