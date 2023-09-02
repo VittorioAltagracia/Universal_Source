@@ -1,6 +1,6 @@
-import { Button, Label, Col, FormGroup, Input } from "reactstrap";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import { useEffect, useState } from "react";
+import { Button, Label, Col, Row, FormGroup, Input, Form } from "reactstrap";
+
+import { useState } from "react";
 import { requestNewCategoryOrPost } from "./requestsSlice";
 
 const RequestForm = () => {
@@ -8,57 +8,80 @@ const RequestForm = () => {
   const [textMessage, setTextMessage] = useState("");
   const [contactInfo, setContactInfo] = useState("");
 
+  const resetForm = () => {
+    setFirstName("");
+    setTextMessage("");
+    setContactInfo("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    requestNewCategoryOrPost(firstName, textMessage, contactInfo);
+    resetForm();
+  };
+
   return (
-    <>
-      <Formik
-        initialValues={{
-          firstName: "",
-          textMessage: "",
-          contactInfo: "",
-        }}
-        onSubmit={(values) => {
-          requestNewCategoryOrPost(
-            values.firstName,
-            values.textMessage,
-            values.contactInfo
-          );
-        }}
-      >
-        {(formikProps) => (
-          <Form>
+    <Row className="justify-content-center">
+      <Col md="7" xs="10" lg="7">
+        <h2>Request new answers or contact developer</h2>
+        <Row className="mb-5">
+          <Col>
+            <p>
+              Here you can send a request to the developer to include new post
+              and/or category. For example: there is something you think would
+              be helpfull for others to be on this website available in
+              different languages. The form below will allow you to articulate
+              your thouhgts. For example: you believe this app should have info
+              on to apply for Unemployment.
+            </p>
+          </Col>
+        </Row>
+        <div className="form-position">
+          {/* Actual form starts below */}
+          <Form onSubmit={handleSubmit}>
             <FormGroup row>
               <Label htmlFor="firstName">Your Name</Label>
-              <Col md="6">
-                <Field
-                  placeholder="Enter your name"
-                  name="firstName"
-                  className="form-control"
-                />
-              </Col>
+              <Input
+                placeholder="Enter your name"
+                name="firstName"
+                className="form-control"
+                value={firstName}
+                onChange={(e) => {
+                  setFirstName(e.target.value);
+                }}
+              />
             </FormGroup>
             <FormGroup row>
               <Label htmlFor="textMessage">Text Message</Label>
-              <Col md="6">
-                <Input id="textMessage" name="textMessage" type="textarea" />
-              </Col>
+              <Input
+                name="textMessage"
+                placeholder="Enter your message here..."
+                type="textarea"
+                value={textMessage}
+                onChange={(e) => {
+                  setTextMessage(e.target.value);
+                }}
+              />
             </FormGroup>
             <FormGroup row>
               <Label htmlFor="contactInfo">Contact Info(phone or email)</Label>
-              <Col md="6">
-                <Field
-                  placeholder="Enter your contact info here..."
-                  name="contactInfo"
-                  className="form-control"
-                />
-              </Col>
+              <Input
+                placeholder="Enter your contact info here..."
+                name="contactInfo"
+                className="form-control"
+                value={contactInfo}
+                onChange={(e) => {
+                  setContactInfo(e.target.value);
+                }}
+              />
             </FormGroup>
             <Button type="submit" color="info">
               Send
             </Button>
           </Form>
-        )}
-      </Formik>
-    </>
+        </div>
+      </Col>
+    </Row>
   );
 };
 
