@@ -22,11 +22,13 @@ const RequestForm = () => {
 
   return (
     <Row className="justify-content-center">
-      <Col md="7" xs="10" lg="7">
-        <h2>Request new answers or contact developer</h2>
-        <Row className="mb-5">
+      <Col md="7" lg="6" xl="5" xs="10" sm="9">
+        <h2 className="app-info-2 mb-0">
+          Request new answers or contact developer
+        </h2>
+        <Row className="mb-4">
           <Col>
-            <p>
+            <p className="app-info-1">
               Here you can send a request to the developer to include new post
               and/or category. For example: there is something you think would
               be helpfull for others to be on this website available in
@@ -36,7 +38,7 @@ const RequestForm = () => {
             </p>
           </Col>
         </Row>
-        <div className="form-position">
+        <div>
           {/* Actual form starts below */}
           <Form onSubmit={handleSubmit}>
             <FormGroup row>
