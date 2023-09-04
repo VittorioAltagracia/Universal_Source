@@ -89,6 +89,17 @@
   opacity: 0.9;
 }
 
+.form-style {
+  background-color: #e5e9fd;
+  border-radius: 20px;
+  padding: 2rem;
+  opacity: 0.9;
+}
+
 .dropdown-color {
   color: #4263eb !important;
+}
+
+a.dropdown-item.dropdown-color.active {
+  background-color: #e5e9fd;
 }
