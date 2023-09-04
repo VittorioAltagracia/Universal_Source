@@ -11,6 +11,10 @@ export const requestNewCategoryOrPost = async (
   contactInfo
 ) => {
   try {
+    // let testError = true;
+    // if (testError) {
+    //   throw new Error(`test error`);
+    // }
     const postRequest = await addDoc(collection(db, "requests"), {
       to: emailToSendTo,
       name: firstName,
