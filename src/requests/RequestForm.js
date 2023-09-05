@@ -1,14 +1,16 @@
 import { Button, Label, Col, Row, FormGroup, Input, Form } from "reactstrap";
 import ErrorToast from "../subComponents/ErrorToast";
+import SuccessToast from "../subComponents/successToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { requestNewCategoryOrPost } from "./sendRequest";
 const RequestForm = () => {
   const [firstName, setFirstName] = useState("");
   const [textMessage, setTextMessage] = useState("");
   const [contactInfo, setContactInfo] = useState("");
-  const [promiseState, setPromiseState] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const resetForm = () => {
     setFirstName("");
@@ -16,33 +18,30 @@ const RequestForm = () => {
     setContactInfo("");
   };
 
+  useEffect(() => {
+    if (isSuccess || isError) {
+      setIsLoading(false);
+    }
+  }, [isSuccess, isError]);
+
   const handleSubmit = async (e) => {
     try {
       setIsLoading(true);
       e.preventDefault();
-      const resolvedProm = await requestNewCategoryOrPost(
-        firstName,
-        textMessage,
-        contactInfo
-      );
+      await requestNewCategoryOrPost(firstName, textMessage, contactInfo);
       resetForm();
-      setIsLoading(false);
-      setPromiseState("success");
-      return resolvedProm;
+      setIsSuccess(true);
     } catch (error) {
-      setIsLoading(false);
-      setPromiseState("error");
+      setIsError(true);
       return error;
     }
   };
 
   return (
     <div>
-      {promiseState === "error" && (
-        <ErrorToast errorMes={`Request resulted in:` + promiseState} />
-      )}
-      {promiseState === "success" && <p>success test</p>}
-      {!isLoading && (
+      {isError && <ErrorToast errorMes={`Request resulted in an error`} />}
+      {isSuccess && <SuccessToast successMes={`It worked`} />}
+      {!isLoading && !isSuccess && !isError && (
         <Row className="justify-content-center">
           <Col md="7" lg="6" xl="6" xs="10" sm="9">
             <h2 className="app-info-2 mb-0 py-3">
