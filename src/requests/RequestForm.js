@@ -1,6 +1,6 @@
 import { Button, Label, Col, Row, FormGroup, Input, Form } from "reactstrap";
 import ErrorToast from "../subComponents/ErrorToast";
-import SuccessToast from "../subComponents/successToast";
+import SuccessToast from "../subComponents/SuccessToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import { useEffect, useState } from "react";
 import { requestNewCategoryOrPost } from "./sendRequest";
@@ -39,9 +39,11 @@ const RequestForm = () => {
 
   return (
     <div>
-      {isError && <ErrorToast errorMes={`Request resulted in an error`} />}
-      {isSuccess && <SuccessToast successMes={`It worked`} />}
-      {!isLoading && !isSuccess && !isError && (
+      {isError && <ErrorToast errorMes={`Request resulted in error`} />}
+      {isSuccess && (
+        <SuccessToast successMes={`Your information has been sent.`} />
+      )}
+      {
         <Row className="justify-content-center">
           <Col md="7" lg="6" xl="6" xs="10" sm="9">
             <h2 className="app-info-2 mb-0 py-3">
@@ -54,7 +56,7 @@ const RequestForm = () => {
                   post and/or category. For example: there is something you
                   think would be helpfull for others to be on this website
                   available in different languages. The form below will allow
-                  you to articulate your thouhgts. For example: you believe this
+                  you to articulate your thoughts. For example: you believe this
                   app should have info on to apply for Unemployment.
                 </p>
               </Col>
@@ -123,7 +125,7 @@ const RequestForm = () => {
             </div>
           </Col>
         </Row>
-      )}
+      }
       {isLoading && <LoadingSpinner />}
     </div>
   );
