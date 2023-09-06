@@ -51,7 +51,7 @@ const NavigationBar = () => {
                   <LanguageSelectorDropdown />
                   <DropdownItem divider />
                   <NavLink to="/requests" className="nav-link dropdown-color">
-                    <i className="fa fa-book" />
+                    <i className="fa fa-pencil-square-o" />
                     {` `}
                     Request new answers
                   </NavLink>
