@@ -4,6 +4,10 @@ import SuccessToast from "../subComponents/SuccessToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import { useEffect, useState } from "react";
 import { requestNewCategoryOrPost } from "./sendRequest";
+import { switchLanguage } from "../utils/translations/translationSlice";
+import { requestNewAnswers } from "../utils/translations/requestsPageTranslations";
+import { useTranslation } from "react-i18next";
+
 const RequestForm = () => {
   const [firstName, setFirstName] = useState("");
   const [textMessage, setTextMessage] = useState("");
@@ -17,6 +21,8 @@ const RequestForm = () => {
     setTextMessage("");
     setContactInfo("");
   };
+
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     if (isSuccess || isError) {
@@ -40,24 +46,17 @@ const RequestForm = () => {
   return (
     <div>
       {isError && <ErrorToast errorMes={`Request resulted in error`} />}
-      {isSuccess && (
-        <SuccessToast successMes={`Your information has been sent.`} />
-      )}
+      {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
       {
         <Row className="justify-content-center">
           <Col md="7" lg="6" xl="6" xs="10" sm="9">
             <h2 className="app-info-2 mb-0 py-3">
-              Request new answers or contact developer
+              {requestNewAnswers.header[i18n.language]}
             </h2>
             <Row className="mt-0 mb-4">
               <Col>
                 <p className="app-info-1 p-2">
-                  Here you can send a request to the developer to include new
-                  post and/or category. For example: there is something you
-                  think would be helpfull for others to be on this website
-                  available in different languages. The form below will allow
-                  you to articulate your thoughts. For example: you believe this
-                  app should have info on to apply for Unemployment.
+                  {requestNewAnswers.$1stPart[i18n.language]}
                 </p>
               </Col>
             </Row>
@@ -65,9 +64,11 @@ const RequestForm = () => {
               {/* Actual form starts below */}
               <Form inline onSubmit={handleSubmit}>
                 <FormGroup row>
-                  <Label htmlFor="name">Your Name</Label>
+                  <Label htmlFor="name">
+                    {requestNewAnswers.label1[i18n.language]}
+                  </Label>
                   <Input
-                    placeholder="Enter your name..."
+                    placeholder={requestNewAnswers.placeholder1[i18n.language]}
                     name="name"
                     id="name"
                     type="text"
@@ -80,11 +81,13 @@ const RequestForm = () => {
                   />
                 </FormGroup>
                 <FormGroup row>
-                  <Label htmlFor="textMessage">Text Message</Label>
+                  <Label htmlFor="textMessage">
+                    {requestNewAnswers.label2[i18n.language]}
+                  </Label>
                   <Input
                     name="textMessage"
                     id="textMessage"
-                    placeholder="Enter your message..."
+                    placeholder={requestNewAnswers.placeholder2[i18n.language]}
                     type="textarea"
                     required
                     value={textMessage}
@@ -95,10 +98,10 @@ const RequestForm = () => {
                 </FormGroup>
                 <FormGroup row>
                   <Label htmlFor="contactInfo">
-                    Contact Info(phone or email)
+                    {requestNewAnswers.label3[i18n.language]}
                   </Label>
                   <Input
-                    placeholder="Enter your contact info..."
+                    placeholder={requestNewAnswers.placeholder3[i18n.language]}
                     name="contactInfo"
                     id="contactInfo"
                     required
@@ -119,7 +122,7 @@ const RequestForm = () => {
                     marginTop: "0.75rem",
                   }}
                 >
-                  Send
+                  {requestNewAnswers.sendButton[i18n.language]}
                 </Button>
               </Form>
             </div>
