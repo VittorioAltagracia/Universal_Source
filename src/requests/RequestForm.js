@@ -4,7 +4,6 @@ import SuccessToast from "../subComponents/SuccessToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import { useEffect, useState } from "react";
 import { requestNewCategoryOrPost } from "./sendRequest";
-import { switchLanguage } from "../utils/translations/translationSlice";
 import { requestNewAnswers } from "../utils/translations/requestsPageTranslations";
 import { useTranslation } from "react-i18next";
 

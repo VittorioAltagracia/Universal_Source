@@ -1,4 +1,3 @@
-import { post } from "jquery";
 import { db } from "../utils/firebase.config";
 import { collection, addDoc } from "firebase/firestore";
 

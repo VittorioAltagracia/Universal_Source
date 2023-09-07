@@ -31,12 +31,11 @@ function App() {
       style={{
         backgroundImage: `url("/background.jpg")`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
         backgroundAttachment: "fixed",
+        backgroundSize: "cover",
       }}
-      strength={500}
     >
-      <Container fluid style={{ height: "auto" }} className="px-0">
+      <Container fluid className="px-0">
         <div>
           <Row className="px-0">
             <NavigationBar />
