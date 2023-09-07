@@ -1,6 +1,8 @@
-import { Toast, ToastHeader, ToastBody, Col, Row } from "reactstrap";
-
+import { Toast, ToastHeader, ToastBody, Col, Row, Button } from "reactstrap";
+import { useState } from "react";
 const ErrorToast = ({ errorMes }) => {
+  const [dismissed, setDismissed] = useState(true);
+
   return (
     <div className="d-flex justify-content-center align-items-center">
       <Row>
@@ -8,9 +10,13 @@ const ErrorToast = ({ errorMes }) => {
           <Toast
             className="p-2 my-3"
             style={{ backgroundColor: "#ff711f", opacity: "0.9" }}
+            isOpen={dismissed}
           >
-            <ToastHeader>Error</ToastHeader>
+            <ToastHeader>Error ❌</ToastHeader>
             <ToastBody>{errorMes}</ToastBody>
+            <Button color="light" onClick={() => setDismissed(false)}>
+              X
+            </Button>
           </Toast>
         </Col>
       </Row>

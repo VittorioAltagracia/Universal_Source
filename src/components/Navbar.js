@@ -53,14 +53,14 @@ const NavigationBar = () => {
                   <NavLink to="/requests" className="nav-link dropdown-color">
                     <i className="fa fa-pencil-square-o" />
                     {` `}
-                    Request new answers
+                    {TextForNavbar.navbar2[i18n.language]}
                   </NavLink>
                   <DropdownItem divider />
 
                   <NavLink to="/about" className="nav-link dropdown-color">
                     <i className="fa fa-user-circle" />
                     {` `}
-                    {TextForNavbar.navbar2[i18n.language]}
+                    {TextForNavbar.navbar3[i18n.language]}
                   </NavLink>
                 </DropdownMenu>
               </Dropdown>
