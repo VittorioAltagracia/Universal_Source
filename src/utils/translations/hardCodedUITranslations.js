@@ -3,9 +3,10 @@ export const TextForNavbar = {
     en: "Load all answers",
     uk: "Показати усі відповіді",
   },
+
   navbar2: {
-    en: "About сreator",
-    uk: "Про автора",
+    en: "Request new answers",
+    uk: "Зробіть запит на нові відповіді",
   },
   languageSelector: {
     en: "Languages",
@@ -18,6 +19,10 @@ export const TextForNavbar = {
   languageName2: {
     en: "Ukrainian",
     uk: "Українська",
+  },
+  navbar3: {
+    en: "About сreator",
+    uk: "Про автора",
   },
 };
 

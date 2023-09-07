@@ -53,9 +53,7 @@ function App() {
           </Row>
         </div>
         <Row>
-          <div>
-            <FooterComponent />
-          </div>
+          <FooterComponent />
         </Row>
       </Container>
     </div>
