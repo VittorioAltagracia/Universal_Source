@@ -31,8 +31,8 @@ const RequestForm = () => {
 
   const handleSubmit = async (e) => {
     try {
-      setIsLoading(true);
       e.preventDefault();
+      setIsLoading(true);
       await requestNewCategoryOrPost(firstName, textMessage, contactInfo);
       resetForm();
       setIsSuccess(true);

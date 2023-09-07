@@ -82,14 +82,12 @@
 
 .app-info-1 {
   background-color: #e5e9fd;
-  border-radius: 170px;
-  opacity: 0.8;
+  border-radius: 20px;
 }
 
 .app-info-2 {
   background-color: #d6dcfa;
-  border-radius: 170px;
-
+  border-radius: 20px;
   opacity: 0.9;
 }
 
@@ -106,4 +104,28 @@
 
 a.dropdown-item.dropdown-color.active {
   background-color: #e5e9fd;
+}
+
+.social-par {
+  background-color: #d6dcfa;
+  opacity: 0.9;
+
+  display: inline-block;
+  margin-top: 5rem;
+  padding: 0.5rem;
+  border-radius: 7px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: x-large;
+  margin-top: 0.7rem;
+}
+
+.individual-link {
+  background-color: #fff;
+  padding: 0.2rem;
 }

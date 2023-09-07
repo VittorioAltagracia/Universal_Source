@@ -1,25 +1,29 @@
-import { Row, Col, Toast, ToastHeader, ToastBody } from "reactstrap";
 import { useTranslation } from "react-i18next";
-import { WarningToast } from "../utils/translations/hardCodedUITranslations";
+import { SocialLinks } from "../utils/translations/hardCodedUITranslations";
 const FooterComponent = () => {
   const { i18n } = useTranslation();
 
   return (
     <footer className="main-footer my-5">
-      <div className="d-flex justify-content-center align-items-center">
-        <Row>
-          <Col>
-            <Toast
-              className="p-2 my-3"
-              style={{ backgroundColor: "#ff711f", opacity: "0.9" }}
-            >
-              <ToastHeader className="justify-content-center">
-                {WarningToast.header[i18n.language]}
-              </ToastHeader>
-              <ToastBody>{WarningToast.content[i18n.language]}</ToastBody>
-            </Toast>
-          </Col>
-        </Row>
+      <p className="social-par">{SocialLinks.SocialLinks[i18n.language]}</p>
+      <div className="social-links">
+        <a
+          href="https://www.linkedin.com/in/viktor-palatnykdev/"
+          target="_blank"
+          alt="Link to LinkedIn of the creator of the app"
+          className="individual-link"
+        >
+          <i className="fa fa-lg fa-linkedin-square" />
+        </a>
+
+        <a
+          href="https://github.com/VittorioAltagracia"
+          target="_blank"
+          alt="Link to GitHub of the creator of the app"
+          className="individual-link"
+        >
+          <i className="fa fa-lg fa-github-square" />
+        </a>
       </div>
     </footer>
   );

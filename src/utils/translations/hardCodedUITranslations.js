@@ -143,13 +143,9 @@ export const MultiLingualSupport = {
   },
 };
 
-export const WarningToast = {
-  header: {
-    en: "Please note",
-    uk: "Будь-ласка, зверніть увагу",
-  },
-  content: {
-    en: "New updates and improvements are being added regularly. The developer is actively working on improving the quality of translation and improving the readability of the information.",
-    uk: "Оновлення та покращення регулярно додаються. Розробник активно працює над покращенням якості перекладу та удосконаленням читабельності інформації.",
+export const SocialLinks = {
+  SocialLinks: {
+    en: "Social links",
+    uk: "Соц мережі",
   },
 };
