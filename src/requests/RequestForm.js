@@ -114,8 +114,8 @@ const RequestForm = () => {
                 <Button
                   type="submit"
                   style={{
-                    backgroundColor: "#4263eb",
-                    color: "#fff",
+                    backgroundColor: "#d6d4d0",
+                    color: "#000",
                     paddingLeft: "1rem",
                     paddingRight: "1rem",
                     marginTop: "0.75rem",

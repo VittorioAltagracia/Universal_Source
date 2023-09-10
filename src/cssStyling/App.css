@@ -1,17 +1,19 @@
-.App {
-  text-align: center;
-  font-family: "Nunito Sans", "PT Sans", sans-serif;
+/* custom fonts
+  */
+
+@font-face {
+  font-family: "FixelText-Medium";
+  src: local("FixelText-Medium"),
+    url("./fonts/FixelText-Medium.woff2") format(woff2);
 }
 
-@media screen and (max-width: 768px) {
-  .App {
-    background-image: url("/public/backgroundMobile.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
+@font-face {
+  font-family: "FixelText-Bold";
+  src: local("FixelText-Bold"),
+    url("./fonts/FixelText-Bold.woff2") format(woff2);
 }
+
+/* fonts end here */
 
 /* Global reset */
 #root {
@@ -19,12 +21,27 @@
   margin: 0;
 }
 
+.App {
+  text-align: center;
+  font-family: FixelText-Medium;
+}
+
+.imgRight {
+  background-image: url("/public/ImageOnTheRight.jpg");
+  min-height: 103vh;
+  min-width: 53vw;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
 .header-app-name {
   display: flex;
   justify-content: flex-start;
   gap: 5px;
   margin-bottom: 0;
-  color: #4263eb;
+  color: #021740;
   margin-left: 0.5rem;
 }
 
@@ -36,11 +53,11 @@
 
 .nav-bar {
   opacity: 0.9;
-  background-color: #4263eb;
+  background-color: #021740;
 }
 
 .change {
-  background-color: #dbe4ff;
+  background-color: #d6d4d0;
   margin-left: 2rem;
   padding: 0.4rem;
 }
@@ -72,34 +89,36 @@
 
 /* links */
 
-.link-button > a:visited {
-  color: #000;
+button.btn.btn-primary > a:link {
+  color: #fff;
 }
 
-.link-button > a:hover {
-  color: #4263eb;
+button.btn.btn-primary > a:visited {
+  color: #fff;
 }
 
 .app-info-1 {
-  background-color: #e5e9fd;
-  border-radius: 20px;
+  background-color: #d6d4d0;
+  color: #021740;
+  padding: 0;
 }
 
 .app-info-2 {
-  background-color: #d6dcfa;
-  border-radius: 20px;
+  color: #768fab;
   opacity: 0.9;
+  font-family: FixelText-Bold;
+  padding: 0;
 }
 
 .form-style {
-  background-color: #e5e9fd;
+  background-color: #768fab;
   border-radius: 20px;
   padding: 2rem;
   opacity: 0.9;
 }
 
 .dropdown-color {
-  color: #4263eb !important;
+  color: #768fab !important;
 }
 
 a.dropdown-item.dropdown-color.active {
@@ -107,7 +126,7 @@ a.dropdown-item.dropdown-color.active {
 }
 
 .social-par {
-  background-color: #d6dcfa;
+  background-color: #d6d4d0;
   opacity: 0.9;
 
   display: inline-block;

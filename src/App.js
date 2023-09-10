@@ -26,16 +26,8 @@ function App() {
   }, [dispatch, i18n]);
 
   return (
-    <div
-      className="App"
-      style={{
-        backgroundImage: `url("/background.jpg")`,
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-      }}
-    >
-      <Container fluid className="px-0">
+    <div className="App">
+      <Container fluid>
         <div>
           <Row className="px-0">
             <NavigationBar />

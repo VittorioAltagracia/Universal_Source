@@ -11,18 +11,16 @@ const FooterComponent = () => {
           href="https://www.linkedin.com/in/viktor-palatnykdev/"
           target="_blank"
           alt="Link to LinkedIn of the creator of the app"
-          className="individual-link"
         >
-          <i className="fa fa-lg fa-linkedin-square" />
+          <i className="fa fa-lg fa-linkedin-square individual-link" />
         </a>
 
         <a
           href="https://github.com/VittorioAltagracia"
           target="_blank"
           alt="Link to GitHub of the creator of the app"
-          className="individual-link"
         >
-          <i className="fa fa-lg fa-github-square" />
+          <i className="fa fa-lg fa-github-square individual-link" />
         </a>
       </div>
     </footer>

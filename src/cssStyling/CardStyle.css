@@ -3,17 +3,17 @@
 }
 .card-color {
   background-color: #7188e7;
+  padding-bottom: 1rem;
 }
 
 .card-text-category-1 {
   background-color: #fff;
-  padding: 0.4rem;
-  margin-bottom: 2rem;
+  padding: 0.5rem;
 }
 
 .in-detail {
-  margin-top: 1rem;
-  padding: 0.4rem;
+  padding: 0.8rem;
+  padding-left: 1rem;
   background-color: #ffffff;
 }
 
