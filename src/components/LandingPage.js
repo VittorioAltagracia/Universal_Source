@@ -14,12 +14,12 @@ const LandingPage = () => {
       <div className="imgRight">
         <Container fluid className="mt-5">
           <Row className="align-items-center justify-content-start">
-            <Col md="6" lg="6" xl="4" className="app-info-2">
+            <Col md="6" lg="6" xl="8" className="app-info-2">
               <h3>{AboutTheApp.header[i18n.language]}</h3>
             </Col>
           </Row>
           <Row className="pb-5 justify-content-start">
-            <Col md="6" lg="6" xl="4" className="app-info-1 p-0">
+            <Col md="6" lg="6" xl="8" className="app-info-1 p-0">
               <Container>
                 <Row className="my-3">
                   <Col md="auto">

@@ -1,8 +1,8 @@
-import Main from "../components/Main";
+import LandingPage from "../components/LandingPage";
 const HomePage = () => {
   return (
-    <div className="main">
-      <Main />
+    <div>
+      <LandingPage />
     </div>
   );
 };
