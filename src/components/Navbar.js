@@ -39,7 +39,7 @@ const NavigationBar = () => {
                   <i className="fa fa-list fa-lg" />
                 </DropdownToggle>
                 <DropdownMenu>
-                  <NavLink to="/questions" className="nav-link">
+                  <NavLink to="/questions" className="nav-link dropdown-color">
                     <i className="fa fa-globe" />{" "}
                     {TextForNavbar.navbar1[i18n.language]}
                   </NavLink>
@@ -50,10 +50,17 @@ const NavigationBar = () => {
                   {/* independent dropdown (aka dropdown to the right) for languages is below */}
                   <LanguageSelectorDropdown />
                   <DropdownItem divider />
-                  <NavLink to="/about" className="nav-link">
-                    <i className="fa fa-user-circle" />
+                  <NavLink to="/requests" className="nav-link dropdown-color">
+                    <i className="fa fa-pencil-square-o" />
                     {` `}
                     {TextForNavbar.navbar2[i18n.language]}
+                  </NavLink>
+                  <DropdownItem divider />
+
+                  <NavLink to="/about" className="nav-link dropdown-color">
+                    <i className="fa fa-user-circle" />
+                    {` `}
+                    {TextForNavbar.navbar3[i18n.language]}
                   </NavLink>
                 </DropdownMenu>
               </Dropdown>

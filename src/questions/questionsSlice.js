@@ -47,7 +47,7 @@ export const addData = async () => {
 };
 
 const initialState = {
-  questionsArray: [],
+  questionsArray: null,
   errorMes: "",
   isLoading: true,
 };

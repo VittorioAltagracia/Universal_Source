@@ -28,7 +28,7 @@ const CategorySelector = () => {
   return (
     <>
       <Dropdown isOpen={categoryOpen} toggle={toggle} direction="end">
-        <DropdownToggle nav caret>
+        <DropdownToggle nav caret className="dropdown-color">
           <i className="fa fa-indent" />
           {` `}
           {CategorySelectorText.catSelector[i18n.language]}
@@ -40,10 +40,9 @@ const CategorySelector = () => {
                 <NavLink
                   to={`/dynamic/${cat.name}/${cat.id}`}
                   onClick={() => onDropdownClick(cat.name, cat.id)}
-                  className="dropdown-item"
+                  className="dropdown-item dropdown-color"
                 >
                   {cat.name}
-                  {/* {TranslatedCategories[i18n.language]} */}
                 </NavLink>
               </DropdownItem>
             );

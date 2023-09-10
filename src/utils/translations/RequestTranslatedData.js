@@ -19,8 +19,9 @@ const RequestTranslatedData = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (questions.length > 0) {
+    if (questions !== null) {
       setResources(questions);
+      i18n.changeLanguage(i18n.language);
       setDataIsFetched(true);
     }
   }, [questions]);

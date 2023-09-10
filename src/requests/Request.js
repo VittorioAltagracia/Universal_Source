@@ -1,18 +1,10 @@
-import { Card, CardBody, CardTitle, CardText } from "reactstrap";
-
-const Answer = ({ answer }) => {
-  const { id, name, description } = answer;
-
+import RequestForm from "./RequestForm";
+const Request = () => {
   return (
     <div>
-      <Card className="my-5">
-        <CardTitle> {name}</CardTitle>
-        <CardBody>
-          <CardText> {description}</CardText>
-        </CardBody>
-      </Card>
+      <RequestForm />
     </div>
   );
 };
 
-export default Answer;
+export default Request;

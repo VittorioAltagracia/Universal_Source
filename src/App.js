@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import QuestionsPage from "./pages/QuestionsPage.js";
 import SelectByCatPage from "./pages/SelectByCatPage.js";
+import RequestsPage from "./pages/RequestsPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { switchLanguage } from "../src/utils/translations/translationSlice.js";
@@ -30,12 +31,11 @@ function App() {
       style={{
         backgroundImage: `url("/background.jpg")`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
         backgroundAttachment: "fixed",
+        backgroundSize: "cover",
       }}
-      strength={500}
     >
-      <Container fluid style={{ height: "auto" }} className="px-0">
+      <Container fluid className="px-0">
         <div>
           <Row className="px-0">
             <NavigationBar />
@@ -47,13 +47,12 @@ function App() {
                 path="dynamic/:categoryName/:categoryId"
                 element={<SelectByCatPage />}
               />
+              <Route path="requests" element={<RequestsPage />} />
             </Routes>
           </Row>
         </div>
         <Row>
-          <div>
-            <FooterComponent />
-          </div>
+          <FooterComponent />
         </Row>
       </Container>
     </div>

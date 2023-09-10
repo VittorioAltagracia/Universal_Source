@@ -44,8 +44,10 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-
     defaultNS: "translation",
+    detection: {
+      order: ["localStorage", "navigator"],
+    },
   });
 
 export default i18n;

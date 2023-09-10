@@ -1,6 +1,7 @@
 import { Toast, ToastHeader, ToastBody, Col, Row, Button } from "reactstrap";
 import { useState } from "react";
-const ErrorToast = ({ errorMes }) => {
+
+const SuccessToast = ({ successMes }) => {
   const [dismissed, setDismissed] = useState(true);
 
   return (
@@ -8,13 +9,17 @@ const ErrorToast = ({ errorMes }) => {
       <Row>
         <Col>
           <Toast
-            className="p-2 my-3"
-            style={{ backgroundColor: "#ff711f", opacity: "0.9" }}
             isOpen={dismissed}
+            className="p-2 my-3"
+            style={{
+              backgroundColor: "#4263eb",
+              opacity: "0.9",
+              color: "#fff",
+            }}
           >
-            <ToastHeader>Error ❌</ToastHeader>
-            <ToastBody>{errorMes}</ToastBody>
-            <Button color="light" onClick={() => setDismissed(false)}>
+            <ToastHeader>Success ✅</ToastHeader>
+            <ToastBody>{successMes}</ToastBody>
+            <Button color="primary" onClick={() => setDismissed(false)}>
               X
             </Button>
           </Toast>
@@ -24,4 +29,4 @@ const ErrorToast = ({ errorMes }) => {
   );
 };
 
-export default ErrorToast;
+export default SuccessToast;
