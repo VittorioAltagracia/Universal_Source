@@ -26,18 +26,10 @@ function App() {
   }, [dispatch, i18n]);
 
   return (
-    <div
-      className="App"
-      style={{
-        backgroundImage: `url("/background.jpg")`,
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-      }}
-    >
-      <Container fluid className="px-0">
+    <div className="App">
+      <Container fluid>
         <div>
-          <Row className="px-0">
+          <Row>
             <NavigationBar />
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -51,9 +43,6 @@ function App() {
             </Routes>
           </Row>
         </div>
-        <Row>
-          <FooterComponent />
-        </Row>
       </Container>
     </div>
   );

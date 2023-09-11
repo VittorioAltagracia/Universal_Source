@@ -5,7 +5,7 @@ const SuccessToast = ({ successMes }) => {
   const [dismissed, setDismissed] = useState(true);
 
   return (
-    <div className="d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center mb-5">
       <Row>
         <Col>
           <Toast

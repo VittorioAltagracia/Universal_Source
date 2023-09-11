@@ -1,4 +1,6 @@
 import { Container, Row, Col } from "reactstrap";
+import FooterComponent from "../components/Footer";
+
 import { useTranslation } from "react-i18next";
 import {
   AboutTheApp,
@@ -9,49 +11,72 @@ import {
 const LandingPage = () => {
   const { i18n } = useTranslation();
 
+  //
+
   return (
-    <Container fluid className="mt-5">
-      <Row className="align-items-start">
-        <Col md="6" lg="6" xl="4" className="app-info-2 py-3">
-          <h3 style={{ color: "#000" }}>{AboutTheApp.header[i18n.language]}</h3>
-        </Col>
-      </Row>
-      <Row className="pb-5">
-        <Col md="6" lg="6" xl="4" className="app-info-1">
-          <Container>
-            <Row className="my-3">
-              <Col md="auto">
+    <>
+      <Container fluid className="mt-5">
+        <Row>
+          {/* Column for text */}
+          <Col md="8" lg="8" xl="8">
+            <Row className="align-items-center justify-content-start ">
+              <Col className="app-info-2 p-0">
+                <h3 className="new-us">{AboutTheApp.header1[i18n.language]}</h3>
+              </Col>
+            </Row>
+            <Row className="align-items-center justify-content-start">
+              <Col className="app-info-2 p-0">
+                <h3 className="dont-stress">
+                  {AboutTheApp.header2[i18n.language]}
+                </h3>
+              </Col>
+            </Row>
+          </Col>
+
+          {/* extends across entire view port */}
+          <Col xs="11">
+            <Row className="align-items-center justify-content-start">
+              <Col className="app-info-2 p-0">
+                <h3 className="large-font-quick-answers">
+                  {AboutTheApp.header3[i18n.language]}
+                </h3>
+              </Col>
+            </Row>
+          </Col>
+
+          {/* second part that takes 8 */}
+          <Col xs="8" md="8" lg="8" xl="8">
+            <Row className="pb-5 justify-content-start">
+              <Col className="app-info-1 p-0">
                 <p>{AboutTheApp.$1stPart[i18n.language]}</p>
               </Col>
             </Row>
-          </Container>
-        </Col>
-      </Row>
-      <Row className="justify-content-end mt-5">
-        <Col md="6" lg="6" xl="4" className="app-info-2 py-3">
-          <h3 style={{ color: "#000" }}>
-            {SimplicityOfUse.header[i18n.language]}
-          </h3>
-        </Col>
-      </Row>
-      <Row className="justify-content-end">
-        <Col md="6" lg="6" xl="4" className="app-info-1 py-3 mb-5">
-          <p>{SimplicityOfUse.$1stPart[i18n.language]}</p>
-        </Col>
-      </Row>
-      <Row className="justify-content-start mt-5">
-        <Col md="6" lg="6" xl="4" className="app-info-2 py-3">
-          <h3 style={{ color: "#000" }}>
-            {MultiLingualSupport.header[i18n.language]}
-          </h3>
-        </Col>
-      </Row>
-      <Row className="justify-content-start ">
-        <Col md="6" lg="6" xl="4" className="app-info-1 py-3">
-          <p>{MultiLingualSupport.$1stPart[i18n.language]}</p>
-        </Col>
-      </Row>
-    </Container>
+            <Row className="justify-content-start mt-5">
+              <Col className="app-info-2 p-0">
+                <h3>{SimplicityOfUse.header[i18n.language]}</h3>
+              </Col>
+            </Row>
+
+            <Row className="justify-content-start">
+              <Col className="app-info-1 p-0 mb-5">
+                <p>{SimplicityOfUse.$1stPart[i18n.language]}</p>
+              </Col>
+            </Row>
+            <Row className="justify-content-start mt-5">
+              <Col className="app-info-2 p-0">
+                <h3>{MultiLingualSupport.header[i18n.language]}</h3>
+              </Col>
+            </Row>
+            <Row className="justify-content-start ">
+              <Col className="app-info-1 p-0">
+                <p>{MultiLingualSupport.$1stPart[i18n.language]}</p>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+      <FooterComponent />
+    </>
   );
 };
 

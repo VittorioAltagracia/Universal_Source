@@ -111,9 +111,17 @@ export const AboutCreator = {
 };
 
 export const AboutTheApp = {
-  header: {
-    en: "New in the US? Find quick answers to the most important questions.",
-    uk: "Тільки приїхали в США? Знайдіть швидкі відповіді на найважливіші питання.",
+  header1: {
+    en: " New in the US?",
+    uk: " Тільки приїхали в США?!",
+  },
+  header2: {
+    en: " Don't stress out!",
+    uk: " Не стресуйте!",
+  },
+  header3: {
+    en: " Find quick answers to the most important questions.",
+    uk: " Знайдіть швидкі відповіді на найважливіші питання.",
   },
   $1stPart: {
     en: "As someone who knows what it is like to start your life over in a different country and allow your life to take a 180-degree turn, I know the struggles of immigrants. One of the biggest needs that a person with such a background has - is the need for information. What documents do you need to apply for a driver’s license? How to find a job and where to start looking? It also includes the need to understand our basic and non-basic rights, as well as what to expect when applying for refugee status or applying for an SSN?! On top of that, most people who move to the US, don’t speak English quite well just yet or struggle with technical terms or diverse cultural aspects of the United States of America that are different across the world. This app is created to alleviate the struggles I described above. I am coding this app with a thought about immigrants who move to this country to start their life over.",
@@ -143,13 +151,9 @@ export const MultiLingualSupport = {
   },
 };
 
-export const WarningToast = {
-  header: {
-    en: "Please note",
-    uk: "Будь-ласка, зверніть увагу",
-  },
-  content: {
-    en: "New updates and improvements are being added regularly. The developer is actively working on improving the quality of translation and improving the readability of the information.",
-    uk: "Оновлення та покращення регулярно додаються. Розробник активно працює над покращенням якості перекладу та удосконаленням читабельності інформації.",
+export const SocialLinks = {
+  SocialLinks: {
+    en: "Social links",
+    uk: "Соц мережі",
   },
 };

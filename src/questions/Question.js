@@ -6,6 +6,7 @@ import {
   Card,
   CardBody,
   CardFooter,
+  Button,
 } from "reactstrap";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -45,21 +46,32 @@ const Question = ({ question }) => {
               {AccordionAndCardText.category[i18n.language]}: {t(`${id}.key4`)}
             </span>
             <br />
+            <hr></hr>
             <span className="in-detail">
               {AccordionAndCardText.linkText1[i18n.language]}:
-              <button className="link-button">
-                {source.includes("https") ? (
-                  <a
-                    href={source}
-                    target="_blank"
-                    alt="leads to a source of information or describes it"
+              {source.includes("https") ? (
+                <>
+                  <Button
+                    color="primary"
+                    style={{ padding: "0.1rem", marginLeft: "0.3rem" }}
                   >
-                    {AccordionAndCardText.linkText2[i18n.language]}
-                  </a>
-                ) : (
-                  `${AccordionAndCardText.linkText3[i18n.language]}`
-                )}
-              </button>
+                    <a
+                      href={source}
+                      target="_blank"
+                      alt="leads to a source of information or describes it"
+                    >
+                      {AccordionAndCardText.linkText2[i18n.language]}
+                    </a>
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <hr></hr>
+                  <span>
+                    {` ` + AccordionAndCardText.linkText3[i18n.language]}
+                  </span>
+                </>
+              )}
             </span>
           </AccordionBody>
         </AccordionItem>

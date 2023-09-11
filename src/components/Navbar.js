@@ -21,13 +21,16 @@ const NavigationBar = () => {
   // i18n.language is a property that holds the current language code accessable via i18next library
   return (
     <>
-      <Navbar sticky="top" expand="md" dark className="mb-5 mt-3 py-0 nav-bar">
+      <Navbar sticky="top" expand="md" dark className="py-0 nav-bar">
         <Nav className="change justify-content-center align-items-center mx-3">
           <div className="d-flex flex-row-reverse flex-md-row align-items-center w-md-auto">
             <NavItem>
               <NavLink to="/" className="nav-link p-0 mx-4">
                 <div className="d-flex align-items-center">
-                  <i className="fa fa-university fa-lg " />
+                  <i
+                    className="fa fa-university fa-lg "
+                    style={{ color: "#021740" }}
+                  />
                   <h4 className="header-app-name">Universal Source</h4>
                 </div>
               </NavLink>
@@ -35,7 +38,7 @@ const NavigationBar = () => {
 
             <NavItem>
               <Dropdown nav isOpen={dropdownOpen} toggle={toggle} role="menu">
-                <DropdownToggle nav caret>
+                <DropdownToggle nav caret style={{ color: "#021740" }}>
                   <i className="fa fa-list fa-lg" />
                 </DropdownToggle>
                 <DropdownMenu>
