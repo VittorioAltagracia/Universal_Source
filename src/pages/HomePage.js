@@ -1,7 +1,7 @@
 import LandingPage from "../components/LandingPage";
 const HomePage = () => {
   return (
-    <div>
+    <div className="anti-stress">
       <LandingPage />
     </div>
   );

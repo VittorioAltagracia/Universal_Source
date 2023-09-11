@@ -2,15 +2,21 @@
   */
 
 @font-face {
-  font-family: "FixelText-Medium";
-  src: local("FixelText-Medium"),
-    url("./fonts/FixelText-Medium.woff2") format(woff2);
+  font-family: "FixelText-Light";
+  src: local("FixelText-Light"),
+    url("./fonts/FixelText-Light.woff2") format(woff2);
 }
 
 @font-face {
-  font-family: "FixelText-Bold";
-  src: local("FixelText-Bold"),
-    url("./fonts/FixelText-Bold.woff2") format(woff2);
+  font-family: "Test1";
+  src: local("Test1"),
+    url("./fonts/StavokGrotesqueTRIAL-Light.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "FixelText-ExtraBold";
+  src: local("FixelText-ExtraBold"),
+    url("./fonts/FixelText-ExtraBold.woff2") format(woff2);
 }
 
 /* fonts end here */
@@ -22,15 +28,9 @@
 }
 
 .App {
-  text-align: center;
-  font-family: FixelText-Medium;
-}
-
-.imgRight {
-  background-image: url("/public/photo_2023-09-10_10-40-46.jpg");
-  height: 15vh;
-  width: 15vw;
-  background-color: #021740;
+  text-align: left;
+  font-family: Test1;
+  overflow-x: hidden;
 }
 
 .header-app-name {
@@ -95,16 +95,39 @@ button.btn.btn-primary > a:visited {
 }
 
 .app-info-1 {
-  background-color: #d6d4d0;
-  color: #021740;
+  color: #768fab;
   padding: 0;
+  font-size: 1.25rem;
 }
 
 .app-info-2 {
   color: #768fab;
   opacity: 0.9;
-  font-family: FixelText-Bold;
-  padding: 0;
+  font-family: FixelText-ExtraBold;
+  text-transform: uppercase;
+}
+
+.new-us {
+  font-size: 6.24rem;
+  color: #021740;
+  margin-top: 1.6rem;
+}
+
+.dont-stress {
+  font-size: 3.25rem;
+  color: #021740;
+}
+
+.large-font-quick-answers {
+  color: #768fab;
+  font-size: 2.38rem;
+}
+
+.anti-stress {
+  background-image: url("/public/anti_stress.jpg");
+  background-repeat: no-repeat;
+  height: 200%;
+  background-position: bottom -20px right -310px; /* Align the image to the right */
 }
 
 .form-style {
