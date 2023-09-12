@@ -1,8 +1,9 @@
-import LandingPage from "../components/LandingPage";
+import Main from "../components/Main";
+
 const HomePage = () => {
   return (
     <div className="anti-stress">
-      <LandingPage />
+      <Main />
     </div>
   );
 };

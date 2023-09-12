@@ -110,7 +110,7 @@ button.btn.btn-primary > a:visited {
 .new-us {
   font-size: 6.24rem;
   color: #021740;
-  margin-top: 1.6rem;
+  max-height: 102px;
 }
 
 .dont-stress {
@@ -127,7 +127,7 @@ button.btn.btn-primary > a:visited {
   background-image: url("/public/anti_stress.jpg");
   background-repeat: no-repeat;
   height: 200%;
-  background-position: bottom -20px right -310px; /* Align the image to the right */
+  background-position: bottom -40px right -300px; /* Align the image to the right */
 }
 
 .form-style {
