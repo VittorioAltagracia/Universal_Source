@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "reactstrap";
-import FooterComponent from "../components/Footer";
 
 import { useTranslation } from "react-i18next";
 import {
@@ -11,22 +10,25 @@ import {
 const LandingPage = () => {
   const { i18n } = useTranslation();
 
-  //
-
   return (
     <>
-      <Container fluid className="mt-5">
+      <Container fluid>
         <Row>
           {/* Column for text */}
           <Col md="8" lg="8" xl="8">
             <Row className="align-items-center justify-content-start ">
               <Col className="app-info-2 p-0">
-                <h3 className="new-us">{AboutTheApp.header1[i18n.language]}</h3>
+                <h3
+                  className="new-us"
+                  style={{ marginBottom: "1px", marginTop: "5.5rem" }}
+                >
+                  {AboutTheApp.header1[i18n.language]}
+                </h3>
               </Col>
             </Row>
             <Row className="align-items-center justify-content-start">
               <Col className="app-info-2 p-0">
-                <h3 className="dont-stress">
+                <h3 className="dont-stress" style={{ marginBottom: "4rem" }}>
                   {AboutTheApp.header2[i18n.language]}
                 </h3>
               </Col>
@@ -67,7 +69,7 @@ const LandingPage = () => {
                 <h3>{MultiLingualSupport.header[i18n.language]}</h3>
               </Col>
             </Row>
-            <Row className="justify-content-start ">
+            <Row className="justify-content-start mb-5">
               <Col className="app-info-1 p-0">
                 <p>{MultiLingualSupport.$1stPart[i18n.language]}</p>
               </Col>
@@ -75,7 +77,6 @@ const LandingPage = () => {
           </Col>
         </Row>
       </Container>
-      <FooterComponent />
     </>
   );
 };

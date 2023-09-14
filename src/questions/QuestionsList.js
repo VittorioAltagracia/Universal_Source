@@ -21,9 +21,9 @@ const QuestionsList = () => {
 
   return (
     <>
-      <Row className="mx-0 pr-0 justify-content-center align-items-center">
+      <Row className="mx-0 mt-5 pr-0 justify-content-center align-items-center">
         {questions.map((question) => (
-          <Col md="8" xs="11" className="p-0" key={question.id}>
+          <Col md="8" xs="auto" className="p-0" key={question.id}>
             <Question question={question} />
           </Col>
         ))}

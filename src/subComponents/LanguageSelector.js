@@ -36,14 +36,12 @@ const LanguageSelectorDropdown = () => {
               className="dropdown-color"
             >
               {TextForNavbar.languageName1[i18n.language]}
-              🌎{" "}
             </DropdownItem>
             <DropdownItem
               onClick={() => updateLangOnClick("uk")}
               className="dropdown-color"
             >
               {TextForNavbar.languageName2[i18n.language]}
-              🔷{" "}
             </DropdownItem>
           </DropdownMenu>
         </DropdownToggle>

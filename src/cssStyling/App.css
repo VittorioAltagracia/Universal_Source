@@ -2,14 +2,8 @@
   */
 
 @font-face {
-  font-family: "FixelText-Light";
-  src: local("FixelText-Light"),
-    url("./fonts/FixelText-Light.woff2") format(woff2);
-}
-
-@font-face {
-  font-family: "Test1";
-  src: local("Test1"),
+  font-family: "StavokGrotesqueTRIAL-Light";
+  src: local("StavokGrotesqueTRIAL-Light"),
     url("./fonts/StavokGrotesqueTRIAL-Light.otf") format(opentype);
 }
 
@@ -17,6 +11,12 @@
   font-family: "FixelText-ExtraBold";
   src: local("FixelText-ExtraBold"),
     url("./fonts/FixelText-ExtraBold.woff2") format(woff2);
+}
+
+@font-face {
+  font-family: "FixelText-Medium";
+  src: local("FixelText-Medium"),
+    url("./fonts/FixelText-Medium.woff2") format(woff2);
 }
 
 /* fonts end here */
@@ -29,23 +29,16 @@
 
 .App {
   text-align: left;
-  font-family: Test1;
-  overflow-x: hidden;
+  font-family: FixelText-Medium;
+  /* overflow-x: hidden; */
 }
 
 .header-app-name {
   display: flex;
-  justify-content: flex-start;
-  gap: 5px;
+  justify-content: center;
   margin-bottom: 0;
   color: #021740;
-  margin-left: 0.5rem;
-}
-
-@media screen and (max-width: 480px) {
-  .header-app-name {
-    margin-left: 0.1rem;
-  }
+  font-size: xx-large;
 }
 
 .nav-bar {
@@ -63,26 +56,48 @@
   padding-left: 0;
 }
 
+/* Accordion styling */
+
+.accordion {
+  font-size: 1.2rem;
+}
+
 .acc-header {
   font-weight: bold;
+  font-size: 1.3rem;
+}
+div.accordion-item {
+  border: none;
 }
 
 .accordion-header .accordion-button:focus {
-  background-color: #4263eb;
+  background-color: #768fab;
   color: #fff;
   opacity: 0.9;
 }
 
 .accordion-header .accordion-button:not(:focus) {
-  background-color: #4263eb;
+  background-color: #768fab;
   color: #fff;
   opacity: 0.9;
 }
 
-/* .accordion-header .accordion-button {
-  display: block;
-  align-items: center;
-} */
+/* need to get back to this to figure out a way to change the color of that pseudo element */
+accordion-button::after {
+  background-color: #000;
+  border-color: #000;
+}
+
+/* font styling classes that will be shared with other components across the app but live in accordion styling */
+
+.fixel-font {
+  font-family: FixelText-Medium;
+}
+
+.default-font {
+  font-family: StavokGrotesqueTRIAL-Light;
+}
+/* Accordion styling */
 
 /* links */
 
@@ -98,6 +113,7 @@ button.btn.btn-primary > a:visited {
   color: #768fab;
   padding: 0;
   font-size: 1.25rem;
+  font-family: StavokGrotesqueTRIAL-Light;
 }
 
 .app-info-2 {
@@ -110,7 +126,7 @@ button.btn.btn-primary > a:visited {
 .new-us {
   font-size: 6.24rem;
   color: #021740;
-  margin-top: 1.6rem;
+  max-height: 102px;
 }
 
 .dont-stress {
@@ -127,7 +143,7 @@ button.btn.btn-primary > a:visited {
   background-image: url("/public/anti_stress.jpg");
   background-repeat: no-repeat;
   height: 200%;
-  background-position: bottom -20px right -310px; /* Align the image to the right */
+  background-position: bottom -40px right -300px; /* Align the image to the right */
 }
 
 .form-style {

@@ -27,11 +27,10 @@ const NavigationBar = () => {
             <NavItem>
               <NavLink to="/" className="nav-link p-0 mx-4">
                 <div className="d-flex align-items-center">
-                  <i
-                    className="fa fa-university fa-lg "
-                    style={{ color: "#021740" }}
-                  />
-                  <h4 className="header-app-name">Universal Source</h4>
+                  <h4 className="header-app-name">
+                    <strong>U</strong>niversal
+                    <strong>S</strong>ource
+                  </h4>
                 </div>
               </NavLink>
             </NavItem>

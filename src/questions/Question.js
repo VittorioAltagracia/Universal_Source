@@ -33,27 +33,37 @@ const Question = ({ question }) => {
             <span className="acc-header">{t(`${id}.key1`)}</span>
           </AccordionHeader>
           <AccordionBody accordionId="1" className="card-color">
-            <Card className="mb-3">
-              <CardBody className="p-3">{t(`${id}.key2`)}</CardBody>
+            <Card className="mb-3" style={{ border: "0px" }}>
+              <CardBody className="p-3" style={{ backgroundColor: "#fff" }}>
+                {t(`${id}.key2`)}
+              </CardBody>
               {t(`${id}.key3`) ? (
-                <CardFooter className="p-3" style={{ backgroundColor: "#fff" }}>
-                  {AccordionAndCardText.docs[i18n.language]}:
-                  {` ` + t(`${id}.key3`)}
+                <CardFooter
+                  className="p-3"
+                  style={{ backgroundColor: "#fff", border: "0px" }}
+                >
+                  <p className="fixel-font">
+                    {AccordionAndCardText.docs[i18n.language]}:
+                  </p>
+                  <p className="default-font mb-0">{` ` + t(`${id}.key3`)} </p>
                 </CardFooter>
               ) : null}
             </Card>
-            <span className="card-text-category-1">
-              {AccordionAndCardText.category[i18n.language]}: {t(`${id}.key4`)}
+            <span className="card-text-category-1 fixel-font">
+              {AccordionAndCardText.category[i18n.language]}:{" "}
+              <span className="default-font">{t(`${id}.key4`)}</span>
             </span>
-            <br />
-            <hr></hr>
-            <span className="in-detail">
+            <p className="in-detail">
               {AccordionAndCardText.linkText1[i18n.language]}:
               {source.includes("https") ? (
                 <>
                   <Button
-                    color="primary"
-                    style={{ padding: "0.1rem", marginLeft: "0.3rem" }}
+                    style={{
+                      padding: "0.3rem",
+                      marginLeft: "0.3rem",
+                      backgroundColor: "#d6d4d0",
+                      border: "0px",
+                    }}
                   >
                     <a
                       href={source}
@@ -66,13 +76,12 @@ const Question = ({ question }) => {
                 </>
               ) : (
                 <>
-                  <hr></hr>
-                  <span>
+                  <span className="default-font">
                     {` ` + AccordionAndCardText.linkText3[i18n.language]}
                   </span>
                 </>
               )}
-            </span>
+            </p>
           </AccordionBody>
         </AccordionItem>
       </Accordion>
