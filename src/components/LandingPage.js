@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "reactstrap";
-import FooterComponent from "../components/Footer";
 
 import { useTranslation } from "react-i18next";
 import {

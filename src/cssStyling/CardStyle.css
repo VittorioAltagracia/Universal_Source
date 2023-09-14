@@ -2,19 +2,19 @@
   opacity: 0.9;
 }
 .card-color {
-  background-color: #7188e7;
-  padding-bottom: 1rem;
+  background-color: #fff;
+  font-family: StavokGrotesqueTRIAL-Light;
 }
 
 .card-text-category-1 {
   background-color: #fff;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .in-detail {
-  padding: 0.8rem;
+  margin-top: 1.2rem;
   padding-left: 1rem;
-  background-color: #ffffff;
+  font-family: FixelText-Medium;
 }
 
 .link-button {

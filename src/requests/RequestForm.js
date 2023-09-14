@@ -1,4 +1,13 @@
-import { Button, Label, Col, Row, FormGroup, Input, Form } from "reactstrap";
+import {
+  Button,
+  Label,
+  Col,
+  Row,
+  FormGroup,
+  Input,
+  Form,
+  Container,
+} from "reactstrap";
 import ErrorToast from "../subComponents/ErrorToast";
 import SuccessToast from "../subComponents/SuccessToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
@@ -42,23 +51,26 @@ const RequestForm = () => {
     }
   };
 
+  //  expand  the text by full width, not the form, all the headers are fixel, , everything else is default, headers need to be dark blue
   return (
-    <div>
+    <Container fluid>
       {isError && <ErrorToast errorMes={`Request resulted in error`} />}
       {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
       {
         <Row className="justify-content-center">
           <Col md="7" lg="6" xl="6" xs="10" sm="9">
-            <h2 className="app-info-2 mb-0 py-3">
-              {requestNewAnswers.header[i18n.language]}
-            </h2>
-            <Row className="mt-0 mb-4">
-              <Col>
-                <p className="app-info-1 p-2">
-                  {requestNewAnswers.$1stPart[i18n.language]}
-                </p>
-              </Col>
-            </Row>
+            <Col md="12">
+              <h2 className="app-info-2 mb-0 py-3">
+                {requestNewAnswers.header[i18n.language]}
+              </h2>
+              <Row className="mt-0 mb-4">
+                <Col>
+                  <p className="app-info-1 p-2">
+                    {requestNewAnswers.$1stPart[i18n.language]}
+                  </p>
+                </Col>
+              </Row>
+            </Col>
             <div className="form-style">
               {/* Actual form starts below */}
               <Form inline onSubmit={handleSubmit}>
@@ -129,7 +141,7 @@ const RequestForm = () => {
         </Row>
       }
       {isLoading && <LoadingSpinner />}
-    </div>
+    </Container>
   );
 };
 
