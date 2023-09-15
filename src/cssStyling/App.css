@@ -33,6 +33,10 @@
   /* overflow-x: hidden; */
 }
 
+.center-text {
+  text-align: center;
+}
+
 .header-app-name {
   display: flex;
   justify-content: center;
@@ -123,6 +127,8 @@ button.btn.btn-primary > a:visited {
   text-transform: uppercase;
 }
 
+/* headers */
+
 .new-us {
   font-size: 6.24rem;
   color: #021740;
@@ -139,6 +145,13 @@ button.btn.btn-primary > a:visited {
   font-size: 2.38rem;
 }
 
+.dark-blue {
+  color: #021740;
+  font-size: 3.25rem;
+}
+
+/* headers */
+
 .anti-stress {
   background-image: url("/public/anti_stress.jpg");
   background-repeat: no-repeat;
@@ -147,10 +160,15 @@ button.btn.btn-primary > a:visited {
 }
 
 .form-style {
-  background-color: #768fab;
-  border-radius: 20px;
-  padding: 2rem;
   opacity: 0.9;
+  font-family: StavokGrotesqueTRIAL-Light;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: larger;
+  /* background-color: #768fab; */
 }
 
 .dropdown-color {
