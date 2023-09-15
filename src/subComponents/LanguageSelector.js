@@ -26,10 +26,9 @@ const LanguageSelectorDropdown = () => {
 
   return (
     <>
-      <Dropdown nav isOpen={dropdownOpen} toggle={toggle} direction="end">
-        <DropdownToggle nav caret className="dropdown-color">
-          <i className="fa fa-language" />{" "}
-          {TextForNavbar.languageSelector[i18n.language]}
+      <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+        <DropdownToggle nav caret style={{ color: "#021740" }}>
+          <i className="fa fa-lg fa-language" />{" "}
           <DropdownMenu>
             <DropdownItem
               onClick={() => updateLangOnClick("en")}
