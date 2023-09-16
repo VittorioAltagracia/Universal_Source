@@ -36,10 +36,7 @@ const SelectByCatPage = () => {
   //  This component will render a category that corresponds to data user is viewing, below, this function is called upon in QuestionAnswerCard component. The component accepts 2 parameters, categoryId is passed in on line 71 to allow for dynamic translation
   const displaySelectedCat = (categoryId, categoryName) => {
     return (
-      <CardFooter
-        className="p-3"
-        style={{ backgroundColor: "#7188e7", color: "#fff" }}
-      >
+      <CardFooter className="p-3" style={{ border: "0px" }}>
         {AccordionAndCardText.selectedCatText[i18n.language]}:{" "}
         {/* {t(`${categoryId}.${categoryName}.key4`)}{" "} */}
         {categoryName}
@@ -55,18 +52,18 @@ const SelectByCatPage = () => {
           className="justify-content-center align-items-center mt-4 "
         >
           <Col key={category.id} md="6" xs="11">
-            <Card className="my-5 main-categorized-card">
-              <CardTitle className="categorized-card-title my-0 p-3">
+            <Card
+              className="my-5 main-categorized-card default-font accordion "
+              style={{ border: "0px" }}
+            >
+              <CardTitle className="categorized-card-title acc-header fixel-font my-0 p-3">
                 {t(`${category.id}.key1`)}
               </CardTitle>
-              <CardBody className="categorized-card p-3">
+              <CardBody className="categorized-card  p-3">
                 {t(`${category.id}.key2`)}
               </CardBody>
               {category.required_documents ? (
-                <CardFooter
-                  className="p-3"
-                  style={{ backgroundColor: "#7188e7", color: "#fff" }}
-                >
+                <CardFooter className="p-3" style={{ border: "0px" }}>
                   {AccordionAndCardText.docs[i18n.language]}:{" "}
                   {t(`${category.id}.key3`)}
                 </CardFooter>

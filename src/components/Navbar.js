@@ -24,7 +24,7 @@ const NavigationBar = () => {
   // i18n.language is a property that holds the current language code accessable via i18next library
   return (
     <>
-      <Navbar sticky="top" expand="md" dark className="py-0 nav-bar">
+      <Navbar sticky="top" expand="sm" dark className="py-0 nav-bar">
         <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
         <Collapse isOpen={menuOpen} navbar>
           <Nav className="change justify-content-center align-items-center mx-3">
