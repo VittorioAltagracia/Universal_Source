@@ -31,6 +31,7 @@ function App() {
         <div>
           <Row>
             <NavigationBar />
+
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="about" element={<AboutPage />} />

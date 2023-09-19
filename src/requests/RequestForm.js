@@ -51,14 +51,13 @@ const RequestForm = () => {
     }
   };
 
-  //  expand  the text by full width, not the form, all the headers are fixel, , everything else is default, headers need to be dark blue
   return (
     <Container fluid className="center-text">
       {isError && <ErrorToast errorMes={`Request resulted in error`} />}
       {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
       {
         <Row className="justify-content-center" style={{ marginTop: "5rem" }}>
-          <Col Col="auto" lg="auto" xl="8">
+          <Col xs="auto" lg="auto" xl="8">
             <h2 className="app-info-2 mb-0 mt-5 py-3 dark-blue">
               {requestNewAnswers.header[i18n.language]}
             </h2>

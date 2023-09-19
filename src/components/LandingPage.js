@@ -15,9 +15,9 @@ const LandingPage = () => {
       <Container fluid>
         <Row>
           {/* Column for text */}
-          <Col md="8" lg="8" xl="8">
+          <Col md="8" lg="auto" xl="9">
             <Row className="align-items-center justify-content-start ">
-              <Col className="app-info-2 p-0">
+              <Col className="app-info-2 p-0" xs="auto" xl="9">
                 <h3
                   className="new-us"
                   style={{ marginBottom: "1px", marginTop: "5.5rem" }}
@@ -36,7 +36,7 @@ const LandingPage = () => {
           </Col>
 
           {/* extends across entire view port */}
-          <Col xs="11">
+          <Col xs="auto">
             <Row className="align-items-center justify-content-start">
               <Col className="app-info-2 p-0">
                 <h3 className="large-font-quick-answers">
@@ -47,7 +47,7 @@ const LandingPage = () => {
           </Col>
 
           {/* second part that takes 8 */}
-          <Col xs="8" md="8" lg="8" xl="8">
+          <Col xs="auto" md="8" lg="8" xl="8">
             <Row className="pb-5 justify-content-start">
               <Col className="app-info-1 p-0">
                 <p>{AboutTheApp.$1stPart[i18n.language]}</p>

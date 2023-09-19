@@ -30,7 +30,6 @@
 .App {
   text-align: left;
   font-family: FixelText-Medium;
-  /* overflow-x: hidden; */
 }
 
 .center-text {
@@ -38,11 +37,11 @@
 }
 
 .header-app-name {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0;
+  padding: 0.4rem;
+  padding-left: 0.7rem;
   color: #021740;
   font-size: xx-large;
+  background-color: #d6d4d0;
 }
 
 .nav-bar {
@@ -52,8 +51,16 @@
 
 .change {
   background-color: #d6d4d0;
-  margin-left: 2rem;
-  padding: 0.4rem;
+  padding: 0.35rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  gap: 2rem;
 }
 
 .main {
@@ -132,7 +139,6 @@ button.btn.btn-primary > a:visited {
 .new-us {
   font-size: 6.24rem;
   color: #021740;
-  max-height: 102px;
 }
 
 .dont-stress {
@@ -156,7 +162,14 @@ button.btn.btn-primary > a:visited {
   background-image: url("/public/anti_stress.jpg");
   background-repeat: no-repeat;
   height: 200%;
-  background-position: bottom -40px right -300px; /* Align the image to the right */
+  background-attachment: fixed;
+  background-position: bottom -300px right -300px; /* Align the image to the right */
+}
+
+@media (max-width: 772px) {
+  .anti-stress {
+    background-image: none;
+  }
 }
 
 .form-style {
@@ -201,4 +214,10 @@ a.dropdown-item.dropdown-color.active {
 .individual-link {
   background-color: #fff;
   padding: 0.2rem;
+}
+
+@media (max-width: 772px) {
+  .category-selector-container {
+    flex-direction: column;
+  }
 }
