@@ -27,7 +27,12 @@ const CategorySelector = () => {
 
   return (
     <>
-      <Dropdown isOpen={categoryOpen} toggle={toggle} direction="end">
+      <Dropdown
+        isOpen={categoryOpen}
+        toggle={toggle}
+        direction="end"
+        className="category-selector-container"
+      >
         <DropdownToggle nav caret className="dropdown-color">
           <i className="fa fa-indent" />
           {` `}

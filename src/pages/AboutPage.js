@@ -7,15 +7,19 @@ const AboutPage = () => {
   return (
     <div>
       <Container fluid className="mt-5 mx-2">
-        <Row className="align-items-center justify-content-center">
-          <Col sm="10" md="6" lg="6" xl="5" className="app-info-2 p-3">
-            <h2>{AboutCreator.mainHeader[i18n.language]}</h2>
+        <Row className="align-items-center justify-content-center text-center">
+          <Col sm="10" md="9" lg="10" xl="auto" className="app-info-2 p-3 mt-5">
+            <h2 className="dark-blue">
+              {AboutCreator.mainHeader[i18n.language]}
+            </h2>
           </Col>
         </Row>
-        <Row className="justify-content-center">
-          <Col sm="10" md="6" lg="6" xl="5" className="app-info-1 py-4 ">
+        <Row className="justify-content-center text-center">
+          <Col sm="10" md="9" lg="10" xl="9" className="app-info-1 p-3 mb-5">
             <p>{AboutCreator.$1stPart[i18n.language]}</p>
-            <h4>{AboutCreator.subHeader[i18n.language]}</h4>
+            <h4 className="mt-5 dark-blue app-info-2 pt-3">
+              {AboutCreator.subHeader[i18n.language]}
+            </h4>
             <p>{AboutCreator.$2ndPart[i18n.language]}</p>
             <p>{AboutCreator.$3rdPart[i18n.language]}</p>
             <p>{AboutCreator.$4thPart[i18n.language]}</p>
