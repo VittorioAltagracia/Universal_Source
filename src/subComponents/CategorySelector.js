@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Dropdown,
   DropdownItem,
@@ -18,6 +18,20 @@ const CategorySelector = () => {
   const toggle = () => setCategoryOpen(!categoryOpen);
 
   const [selected, setSelected] = useState("");
+  const [handleDirection, setHandleDirection] = useState(
+    window.innerWidth <= 600
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setHandleDirection(window.innerWidth <= 600);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const onDropdownClick = (catName) => {
     setSelected(catName);
@@ -30,8 +44,7 @@ const CategorySelector = () => {
       <Dropdown
         isOpen={categoryOpen}
         toggle={toggle}
-        direction="end"
-        className="category-selector-container"
+        direction={handleDirection ? "down" : "end"}
       >
         <DropdownToggle nav caret className="dropdown-color">
           <i className="fa fa-indent" />

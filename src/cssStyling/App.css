@@ -58,6 +58,16 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .change {
+    display: flex;
+    background-color: #d6d4d0;
+    margin-right: 12rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .flex {
   display: flex;
   gap: 2rem;
@@ -214,10 +224,4 @@ a.dropdown-item.dropdown-color.active {
 .individual-link {
   background-color: #fff;
   padding: 0.2rem;
-}
-
-@media (max-width: 772px) {
-  .category-selector-container {
-    flex-direction: column;
-  }
 }
