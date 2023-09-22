@@ -4,6 +4,7 @@ import {
   DropdownItem,
   DropdownToggle,
   DropdownMenu,
+  Button,
 } from "reactstrap";
 import { useDispatch } from "react-redux";
 import { switchLanguage } from "../utils/translations/translationSlice";
@@ -27,23 +28,25 @@ const LanguageSelectorDropdown = () => {
   return (
     <>
       <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle nav caret style={{ color: "#021740" }}>
-          <i className="fa fa-lg fa-language" />
-          <DropdownMenu>
-            <DropdownItem
-              onClick={() => updateLangOnClick("en")}
-              className="dropdown-color"
-            >
-              {TextForNavbar.languageName1[i18n.language]}
-            </DropdownItem>
-            <DropdownItem
-              onClick={() => updateLangOnClick("uk")}
-              className="dropdown-color"
-            >
-              {TextForNavbar.languageName2[i18n.language]}
-            </DropdownItem>
-          </DropdownMenu>
-        </DropdownToggle>
+        <Button style={{ backgroundColor: "#d6d4d0" }}>
+          <DropdownToggle nav caret style={{ color: "#021740" }}>
+            <i className="fa fa-lg fa-language" />
+            <DropdownMenu>
+              <DropdownItem
+                onClick={() => updateLangOnClick("en")}
+                className="dropdown-color"
+              >
+                {TextForNavbar.languageName1[i18n.language]}
+              </DropdownItem>
+              <DropdownItem
+                onClick={() => updateLangOnClick("uk")}
+                className="dropdown-color"
+              >
+                {TextForNavbar.languageName2[i18n.language]}
+              </DropdownItem>
+            </DropdownMenu>
+          </DropdownToggle>
+        </Button>
       </Dropdown>
     </>
   );

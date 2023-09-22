@@ -50,7 +50,6 @@
 }
 
 .change {
-  background-color: #d6d4d0;
   padding: 0.35rem;
 
   display: flex;
@@ -61,8 +60,8 @@
 @media (max-width: 768px) {
   .change {
     display: flex;
-    background-color: #d6d4d0;
-    margin-right: 12rem;
+    background-color: #021740;
+    margin-right: 11rem;
     justify-content: center;
     align-items: center;
   }
