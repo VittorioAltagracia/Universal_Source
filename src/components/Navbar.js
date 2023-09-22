@@ -9,6 +9,7 @@ import {
   Navbar,
   Collapse,
   NavbarToggler,
+  Button,
 } from "reactstrap";
 import LanguageSelectorDropdown from "../subComponents/LanguageSelector";
 import CategorySelector from "../subComponents/CategorySelector";
@@ -40,10 +41,11 @@ const NavigationBar = () => {
             <NavItem>
               <Dropdown nav isOpen={dropdownOpen} toggle={toggle} role="menu">
                 <div className="change">
-                  <DropdownToggle nav caret style={{ color: "#021740" }}>
-                    <i className="fa fa-list fa-lg" />
-                  </DropdownToggle>
-                  <LanguageSelectorDropdown />
+                  <Button style={{ backgroundColor: "#d6d4d0" }}>
+                    <DropdownToggle nav caret style={{ color: "#021740" }}>
+                      <i className="fa fa-list fa-lg" />
+                    </DropdownToggle>
+                  </Button>
                 </div>
                 <DropdownMenu>
                   <NavLink to="/questions" className="nav-link dropdown-color">
@@ -72,6 +74,7 @@ const NavigationBar = () => {
             </NavItem>
           </Nav>
         </Collapse>
+        <LanguageSelectorDropdown />
       </Navbar>
     </>
   );
