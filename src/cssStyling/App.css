@@ -49,15 +49,14 @@
   background-color: #021740;
 }
 
-.change {
-  padding: 0.35rem;
-
+/* .change {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  gap: 1rem;
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .change {
     display: flex;
     background-color: #021740;
@@ -65,13 +64,27 @@
     justify-content: center;
     align-items: center;
   }
+} */
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex {
   display: flex;
+  align-items: center;
+  justify-content: center;
+
   gap: 2rem;
 }
 
+.language-selector {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+}
 .main {
   padding-left: 0;
 }
