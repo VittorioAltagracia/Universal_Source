@@ -27,8 +27,13 @@ const LanguageSelectorDropdown = () => {
 
   return (
     <>
-      <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
-        <Button style={{ backgroundColor: "#d6d4d0" }}>
+      <Dropdown
+        nav
+        isOpen={dropdownOpen}
+        toggle={toggle}
+        className="language-selector"
+      >
+        <Button className="navbar-button">
           <DropdownToggle nav caret style={{ color: "#021740" }}>
             <i className="fa fa-lg fa-language" />
             <DropdownMenu>

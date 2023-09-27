@@ -27,7 +27,6 @@ const NavigationBar = () => {
     <>
       <Navbar sticky="top" dark expand="sm" className="p-0 nav-bar">
         <div className="flex">
-          {/* <div className="nav-container"> */}
           <NavLink to="/" className="nav-link p-0 mr-2">
             <h4 className="header-app-name" style={{ marginBottom: "0px" }}>
               <strong>U</strong>niversal
@@ -37,10 +36,16 @@ const NavigationBar = () => {
           <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
         </div>
         <Collapse isOpen={menuOpen} navbar horizontal={false}>
-          <Nav className=" justify-content-center align-items-center">
+          <Nav className=" justify-content-start align-items-center">
             <NavItem>
-              <Dropdown nav isOpen={dropdownOpen} toggle={toggle} role="menu">
-                <Button style={{ backgroundColor: "#d6d4d0" }}>
+              <Dropdown
+                nav
+                isOpen={dropdownOpen}
+                toggle={toggle}
+                role="menu"
+                className="main-dropdown"
+              >
+                <Button className="navbar-button">
                   <DropdownToggle nav caret style={{ color: "#021740" }}>
                     <i className="fa fa-list fa-lg" />
                   </DropdownToggle>
