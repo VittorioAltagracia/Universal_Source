@@ -25,7 +25,7 @@ const NavigationBar = () => {
   // i18n.language is a property that holds the current language code accessable via i18next library
   return (
     <>
-      <Navbar sticky="top" dark expand="md" className="py-0 nav-bar">
+      <Navbar sticky="top" dark expand="sm" className="p-0 nav-bar">
         <div className="flex">
           <NavLink to="/" className="nav-link p-0 mr-2">
             <h4 className="header-app-name" style={{ marginBottom: "0px" }}>
@@ -35,18 +35,21 @@ const NavigationBar = () => {
           </NavLink>
           <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
         </div>
-
         <Collapse isOpen={menuOpen} navbar horizontal={false}>
-          <Nav className=" justify-content-center align-items-center">
+          <Nav className=" justify-content-start align-items-center">
             <NavItem>
-              <Dropdown nav isOpen={dropdownOpen} toggle={toggle} role="menu">
-                <div className="change">
-                  <Button style={{ backgroundColor: "#d6d4d0" }}>
-                    <DropdownToggle nav caret style={{ color: "#021740" }}>
-                      <i className="fa fa-list fa-lg" />
-                    </DropdownToggle>
-                  </Button>
-                </div>
+              <Dropdown
+                nav
+                isOpen={dropdownOpen}
+                toggle={toggle}
+                role="menu"
+                className="main-dropdown"
+              >
+                <Button className="navbar-button">
+                  <DropdownToggle nav caret style={{ color: "#021740" }}>
+                    <i className="fa fa-list fa-lg" />
+                  </DropdownToggle>
+                </Button>
                 <DropdownMenu>
                   <NavLink to="/questions" className="nav-link dropdown-color">
                     <i className="fa fa-globe" />{" "}
@@ -72,9 +75,9 @@ const NavigationBar = () => {
                 </DropdownMenu>
               </Dropdown>
             </NavItem>
+            <LanguageSelectorDropdown />
           </Nav>
         </Collapse>
-        <LanguageSelectorDropdown />
       </Navbar>
     </>
   );
