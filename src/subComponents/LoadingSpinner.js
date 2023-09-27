@@ -2,7 +2,7 @@ import { Spinner, Col } from "reactstrap";
 
 const LoadingSpinner = () => {
   return (
-    <Col>
+    <Col className="text-center">
       <Spinner
         color="primary"
         className="m-4"

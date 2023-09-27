@@ -6,6 +6,7 @@ import {
   MultiLingualSupport,
   SimplicityOfUse,
 } from "../utils/translations/hardCodedUITranslations";
+import LoadingSpinner from "../subComponents/LoadingSpinner";
 
 const LandingPage = () => {
   const { i18n } = useTranslation();
