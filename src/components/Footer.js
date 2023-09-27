@@ -4,7 +4,7 @@ const FooterComponent = () => {
   const isHomePage = location.pathname === "/";
 
   return (
-    <footer className={`footer pb-5 ${isHomePage ? "anti-stress" : ""}`}>
+    <footer className={`footer pb-4 ${isHomePage ? "anti-stress" : ""}`}>
       <hr></hr>
       <div className="social-links">
         <a

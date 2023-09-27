@@ -252,28 +252,15 @@ a.dropdown-item.dropdown-color.active {
   background-color: #e5e9fd;
 }
 
-.social-par {
-  background-color: #d6d4d0;
-  opacity: 0.9;
-
-  display: inline-block;
-  padding: 0.5rem;
-  border-radius: 7px;
-}
-
-.footer {
-}
-
 .social-links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.1rem;
   font-size: x-large;
-  margin-top: 0.7rem;
+  margin-top: 1.5rem;
 }
 
 .individual-link {
-  background-color: #fff;
   padding: 0.2rem;
 }
