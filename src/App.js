@@ -31,7 +31,6 @@ function App() {
         <div>
           <Row>
             <NavigationBar />
-
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="about" element={<AboutPage />} />
@@ -44,6 +43,9 @@ function App() {
             </Routes>
           </Row>
         </div>
+        <Row>
+          <FooterComponent />
+        </Row>
       </Container>
     </div>
   );
