@@ -3,9 +3,9 @@ import FooterComponent from "./Footer";
 
 const Main = () => {
   return (
-    <>
+    <div>
       <LandingPage />
-    </>
+    </div>
   );
 };
 

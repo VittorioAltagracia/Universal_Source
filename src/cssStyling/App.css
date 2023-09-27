@@ -228,9 +228,11 @@ a.dropdown-item.dropdown-color.active {
   opacity: 0.9;
 
   display: inline-block;
-  margin-top: 5rem;
   padding: 0.5rem;
   border-radius: 7px;
+}
+
+.footer {
 }
 
 .social-links {

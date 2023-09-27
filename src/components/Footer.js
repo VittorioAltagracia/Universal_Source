@@ -1,11 +1,11 @@
-import { useTranslation } from "react-i18next";
-import { SocialLinks } from "../utils/translations/hardCodedUITranslations";
+import { useLocation } from "react-router-dom";
 const FooterComponent = () => {
-  const { i18n } = useTranslation();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
-    <footer className="main-footer my-5">
-      <p className="social-par">{SocialLinks.SocialLinks[i18n.language]}</p>
+    <footer className={`footer pb-5 ${isHomePage ? "anti-stress" : ""}`}>
+      <hr></hr>
       <div className="social-links">
         <a
           href="https://www.linkedin.com/in/viktor-palatnykdev/"
