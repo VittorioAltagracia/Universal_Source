@@ -24,15 +24,15 @@ export const requestNewAnswers = {
     uk: "Контактна Інформація",
   },
   placeholder1: {
-    en: "Enter your name...",
-    uk: "Введіть своє ім'я...",
+    en: "Your name...",
+    uk: "Ваше ім'я...",
   },
   placeholder2: {
-    en: "Enter your message...",
-    uk: "Введіть своє повідомлення...",
+    en: "Your message...",
+    uk: "Ваше повідомлення...",
   },
   placeholder3: {
-    en: "Enter your contact info...",
-    uk: "Введіть свої контактні дані...",
+    en: "Your contact info...",
+    uk: "Ваші контактні дані...",
   },
 };
