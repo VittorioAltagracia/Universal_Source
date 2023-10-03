@@ -61,7 +61,7 @@ const Question = ({ question }) => {
                     style={{
                       padding: "0.3rem",
                       marginLeft: "0.3rem",
-                      backgroundColor: "#d6d4d0",
+                      backgroundColor: "#768fab",
                       border: "0px",
                     }}
                   >
@@ -69,6 +69,7 @@ const Question = ({ question }) => {
                       href={source}
                       target="_blank"
                       alt="leads to a source of information or describes it"
+                      style={{ color: "#fff" }}
                     >
                       {AccordionAndCardText.linkText2[i18n.language]}
                     </a>
