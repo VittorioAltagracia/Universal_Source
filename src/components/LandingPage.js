@@ -18,12 +18,7 @@ const LandingPage = () => {
           <Col md="8" lg="auto" xl="9">
             <Row className="align-items-center justify-content-start ">
               <Col className="app-info-2 p-0" xs="auto" xl="9">
-                <h3
-                  className="new-us"
-                  style={{ marginBottom: "1px", marginTop: "5.5rem" }}
-                >
-                  {AboutTheApp.header1[i18n.language]}
-                </h3>
+                <h3 className="new-us">{AboutTheApp.header1[i18n.language]}</h3>
               </Col>
             </Row>
             <Row className="align-items-center justify-content-start">

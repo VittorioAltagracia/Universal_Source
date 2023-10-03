@@ -53,8 +53,6 @@ const RequestForm = () => {
 
   return (
     <Container fluid className="center-text">
-      {isError && <ErrorToast errorMes={`Request resulted in error`} />}
-      {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
       {
         <Row className="justify-content-center" style={{ marginTop: "5rem" }}>
           <Col xs="auto" lg="auto" xl="8">
@@ -71,7 +69,11 @@ const RequestForm = () => {
             <Form
               inline
               onSubmit={handleSubmit}
-              style={{ padding: "2rem" }}
+              style={{
+                padding: "2rem",
+                paddingBottom: "1rem",
+                marginBottom: "0.5rem",
+              }}
               className="form-style"
             >
               <FormGroup row>
@@ -140,6 +142,8 @@ const RequestForm = () => {
         </Row>
       }
       {isLoading && <LoadingSpinner />}
+      {isError && <ErrorToast errorMes={`Request resulted in error`} />}
+      {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
     </Container>
   );
 };

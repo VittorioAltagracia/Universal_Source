@@ -10,16 +10,26 @@ const SuccessToast = ({ successMes }) => {
         <Col>
           <Toast
             isOpen={dismissed}
-            className="p-2 my-3"
+            className="p-2 mt-5"
             style={{
-              backgroundColor: "#4263eb",
+              backgroundColor: "#021740",
               opacity: "0.9",
               color: "#fff",
+              fontSize: "medium",
             }}
           >
-            <ToastHeader>Success ✅</ToastHeader>
+            <ToastHeader style={{ color: "#021740" }}>Success ☑</ToastHeader>
             <ToastBody>{successMes}</ToastBody>
-            <Button color="primary" onClick={() => setDismissed(false)}>
+            <Button
+              style={{
+                backgroundColor: "#768fab",
+                paddingTop: "0.3rem",
+                paddingBottom: "0.2rem",
+                paddingLeft: "0.7rem",
+                paddingRight: "0.7rem",
+              }}
+              onClick={() => setDismissed(false)}
+            >
               X
             </Button>
           </Toast>

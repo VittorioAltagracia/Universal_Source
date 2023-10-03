@@ -113,7 +113,7 @@ export const AboutCreator = {
 export const AboutTheApp = {
   header1: {
     en: " New in the US?",
-    uk: " Нові в США?!",
+    uk: " Новенькі в США?!",
   },
   header2: {
     en: " Don't stress out!",
@@ -148,12 +148,5 @@ export const MultiLingualSupport = {
   $1stPart: {
     en: "This app's main feature is that the data displayed for users is curated and professionally translated allowing for the highest accuracy and level of understanding even for people who are not fluent in English. Future updates will support other languages as well. (i.g Spanish)",
     uk: "Головною особливістю цього додатку є те, що дані, які відображаються для користувачів, ретельно підбираються та професійно перекладаються, що забезпечує найвищу точність та рівень розуміння навіть для людей, які не володіють англійською мовою. У майбутніх оновленнях буде додано підтримку інших мов. (наприклад, іспанську)",
-  },
-};
-
-export const SocialLinks = {
-  SocialLinks: {
-    en: "Social links",
-    uk: "Соц мережі",
   },
 };

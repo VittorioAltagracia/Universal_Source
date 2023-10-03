@@ -9,12 +9,25 @@ const ErrorToast = ({ errorMes }) => {
         <Col>
           <Toast
             className="p-2 my-3"
-            style={{ backgroundColor: "#ff711f", opacity: "0.9" }}
+            style={{
+              backgroundColor: "orange",
+              opacity: "0.9",
+              fontSize: "medium",
+            }}
             isOpen={dismissed}
           >
             <ToastHeader>Error ❌</ToastHeader>
             <ToastBody>{errorMes}</ToastBody>
-            <Button color="light" onClick={() => setDismissed(false)}>
+            <Button
+              style={{
+                backgroundColor: "orangered",
+                paddingTop: "0.3rem",
+                paddingBottom: "0.2rem",
+                paddingLeft: "0.7rem",
+                paddingRight: "0.7rem",
+              }}
+              onClick={() => setDismissed(false)}
+            >
               X
             </Button>
           </Toast>

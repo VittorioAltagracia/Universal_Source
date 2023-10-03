@@ -40,6 +40,7 @@
   padding: 0.5rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
+  border-radius: 3px;
 
   color: #021740;
   font-size: xx-large;
@@ -48,7 +49,9 @@
 
 @media (max-width: 575px) {
   .header-app-name {
-    border-radius: 3px;
+    font-size: x-large;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
   }
 }
 
@@ -170,6 +173,22 @@ button.btn.btn-primary > a:visited {
 .new-us {
   font-size: 6.24rem;
   color: #021740;
+  margin-top: 5.5rem;
+  margin-bottom: 1px;
+}
+
+@media (max-width: 575px) {
+  .new-us {
+    font-size: 4rem;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .new-us {
+    font-size: 3rem;
+    margin-top: 3.25rem;
+  }
 }
 
 .dont-stress {
@@ -177,14 +196,38 @@ button.btn.btn-primary > a:visited {
   color: #021740;
 }
 
+@media (max-width: 350px) {
+  .dont-stress {
+    font-size: 3rem;
+  }
+}
+
 .large-font-quick-answers {
   color: #768fab;
   font-size: 2.38rem;
 }
 
+@media (max-width: 350px) {
+  .large-font-quick-answers {
+    font-size: 2rem;
+  }
+}
+
 .dark-blue {
   color: #021740;
   font-size: 3.25rem;
+}
+
+@media (max-width: 575px) {
+  .dark-blue {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .dark-blue {
+    font-size: 2.5rem;
+  }
 }
 
 /* headers */
@@ -259,9 +302,6 @@ a.dropdown-item.dropdown-color.active {
   display: inline-block;
   padding: 0.5rem;
   border-radius: 7px;
-}
-
-.footer {
 }
 
 .social-links {

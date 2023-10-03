@@ -6,7 +6,7 @@ const AboutPage = () => {
 
   return (
     <div>
-      <Container fluid className="mt-5 mx-2">
+      <Container fluid className="mt-5 ">
         <Row className="align-items-center justify-content-center text-center">
           <Col sm="10" md="9" lg="10" xl="auto" className="app-info-2 p-3 mt-5">
             <h2 className="dark-blue">

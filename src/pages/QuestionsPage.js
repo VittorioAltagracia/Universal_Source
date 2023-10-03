@@ -13,7 +13,7 @@ const QuestionsPage = ({ selected }) => {
   }, []);
   return (
     <Container>
-      <Row className="questions-overlay">
+      <Row>
         <QuestionsList Category={Category} selected={selected} />
       </Row>
     </Container>
