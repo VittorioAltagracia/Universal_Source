@@ -113,7 +113,7 @@ export const AboutCreator = {
 export const AboutTheApp = {
   header1: {
     en: " New in the US?",
-    uk: " Нові в США?!",
+    uk: " Новенькі в США?!",
   },
   header2: {
     en: " Don't stress out!",

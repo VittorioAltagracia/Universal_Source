@@ -5,7 +5,6 @@ const FooterComponent = () => {
 
   return (
     <footer className={`footer pb-4 ${isHomePage ? "anti-stress" : ""}`}>
-      <hr></hr>
       <div className="social-links">
         <a
           href="https://www.linkedin.com/in/viktor-palatnykdev/"

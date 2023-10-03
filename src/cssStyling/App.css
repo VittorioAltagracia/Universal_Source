@@ -49,6 +49,9 @@
 @media (max-width: 575px) {
   .header-app-name {
     border-radius: 3px;
+    font-size: x-large;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
   }
 }
 
@@ -172,9 +175,27 @@ button.btn.btn-primary > a:visited {
   color: #021740;
 }
 
+@media (max-width: 575px) {
+  .new-us {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .new-us {
+    font-size: 3rem;
+  }
+}
+
 .dont-stress {
   font-size: 3.25rem;
   color: #021740;
+}
+
+@media (max-width: 350px) {
+  .dont-stress {
+    font-size: 3rem;
+  }
 }
 
 .large-font-quick-answers {
@@ -182,9 +203,27 @@ button.btn.btn-primary > a:visited {
   font-size: 2.38rem;
 }
 
+@media (max-width: 350px) {
+  .large-font-quick-answers {
+    font-size: 2rem;
+  }
+}
+
 .dark-blue {
   color: #021740;
   font-size: 3.25rem;
+}
+
+@media (max-width: 575px) {
+  .dark-blue {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .dark-blue {
+    font-size: 2.5rem;
+  }
 }
 
 /* headers */
@@ -252,15 +291,25 @@ a.dropdown-item.dropdown-color.active {
   background-color: #e5e9fd;
 }
 
+.social-par {
+  background-color: #d6d4d0;
+  opacity: 0.9;
+
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 7px;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.1rem;
   font-size: x-large;
-  margin-top: 1.5rem;
+  margin-top: 0.7rem;
 }
 
 .individual-link {
+  background-color: #fff;
   padding: 0.2rem;
 }
