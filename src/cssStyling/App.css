@@ -173,17 +173,21 @@ button.btn.btn-primary > a:visited {
 .new-us {
   font-size: 6.24rem;
   color: #021740;
+  margin-top: 5.5rem;
+  margin-bottom: 1px;
 }
 
 @media (max-width: 575px) {
   .new-us {
     font-size: 4rem;
+    margin-top: 4rem;
   }
 }
 
 @media (max-width: 350px) {
   .new-us {
     font-size: 3rem;
+    margin-top: 3.25rem;
   }
 }
 
