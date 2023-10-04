@@ -11,6 +11,7 @@ import {
 import ErrorToast from "../subComponents/ErrorToast";
 import SuccessToast from "../subComponents/SuccessToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
+import { validateForm } from "../utils/formValidation";
 import { useEffect, useState } from "react";
 import { requestNewCategoryOrPost } from "./sendRequest";
 import { requestNewAnswers } from "../utils/translations/requestsPageTranslations";
