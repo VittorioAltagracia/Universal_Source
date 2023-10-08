@@ -11,7 +11,8 @@ import {
 import ErrorToast from "../subComponents/ErrorToast";
 import SuccessToast from "../subComponents/SuccessToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
-import { useEffect, useState } from "react";
+import { validateForm } from "../utils/formValidation";
+import { useState } from "react";
 import { requestNewCategoryOrPost } from "./sendRequest";
 import { requestNewAnswers } from "../utils/translations/requestsPageTranslations";
 import { useTranslation } from "react-i18next";
@@ -23,6 +24,7 @@ const RequestForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [validationErrors, setValidationErrors] = useState({});
 
   const resetForm = () => {
     setFirstName("");
@@ -32,21 +34,54 @@ const RequestForm = () => {
 
   const { i18n } = useTranslation();
 
-  useEffect(() => {
-    if (isSuccess || isError) {
-      setIsLoading(false);
-    }
-  }, [isSuccess, isError]);
+  // handles input Validation and calls validateForm function
+  const handleInput = (e) => {
+    const { name, value } = e.target;
 
+    switch (name) {
+      case "name":
+        setFirstName(value);
+        break;
+      case "textMessage":
+        setTextMessage(value);
+        break;
+      case "contactInfo":
+        setContactInfo(value);
+        break;
+    }
+
+    const errors = validateForm(
+      { firstName, textMessage, contactInfo },
+      setValidationErrors
+    );
+    setValidationErrors(errors);
+  };
+
+  // handles submit and checks that there are no errors in validationErrors stateful variable
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
       setIsLoading(true);
+
+      if (Object.keys(validationErrors).length > 0) {
+        setIsLoading(false);
+        return null;
+      }
+
       await requestNewCategoryOrPost(firstName, textMessage, contactInfo);
       resetForm();
       setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 10000);
+      setIsLoading(false);
     } catch (error) {
       setIsError(true);
+      setTimeout(() => {
+        setIsError(false);
+      }, 10000);
+      setIsLoading(false);
+
       return error;
     }
   };
@@ -90,8 +125,18 @@ const RequestForm = () => {
                   value={firstName}
                   onChange={(e) => {
                     setFirstName(e.target.value);
+                    handleInput(e);
                   }}
+                  onBlur={(e) => {
+                    handleInput(e);
+                  }}
+                  invalid={!!validationErrors.firstName}
                 />
+                {validationErrors.firstName && (
+                  <div className="invalid-input">
+                    {validationErrors.firstName}
+                  </div>
+                )}
               </FormGroup>
               <FormGroup row>
                 <Label htmlFor="textMessage">
@@ -106,8 +151,18 @@ const RequestForm = () => {
                   value={textMessage}
                   onChange={(e) => {
                     setTextMessage(e.target.value);
+                    handleInput(e);
                   }}
+                  onBlur={(e) => {
+                    handleInput(e);
+                  }}
+                  invalid={!!validationErrors.textMessage}
                 />
+                {validationErrors.textMessage && (
+                  <div className="invalid-input">
+                    {validationErrors.textMessage}
+                  </div>
+                )}
               </FormGroup>
               <FormGroup row>
                 <Label htmlFor="contactInfo">
@@ -118,12 +173,23 @@ const RequestForm = () => {
                   name="contactInfo"
                   id="contactInfo"
                   required
-                  className="form-control"
                   value={contactInfo}
+                  className="form-control"
+                  error={validateForm.errors}
                   onChange={(e) => {
                     setContactInfo(e.target.value);
+                    handleInput(e);
                   }}
+                  onBlur={(e) => {
+                    handleInput(e);
+                  }}
+                  invalid={!!validationErrors.contactInfo}
                 />
+                {validationErrors.contactInfo && (
+                  <div className="invalid-input">
+                    {validationErrors.contactInfo}
+                  </div>
+                )}
               </FormGroup>
               <Button
                 type="submit"
@@ -141,9 +207,9 @@ const RequestForm = () => {
           </Col>
         </Row>
       }
-      {isLoading && <LoadingSpinner />}
       {isError && <ErrorToast errorMes={`Request resulted in error`} />}
       {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
+      {isLoading && <LoadingSpinner />}
     </Container>
   );
 };

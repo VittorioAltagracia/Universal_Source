@@ -75,12 +75,6 @@
   margin-left: 2rem;
 }
 
-button.navbar-button {
-  padding-left: 0.5rem;
-  padding-right: 0.3rem;
-  background-color: #d6d4d0;
-}
-
 @media (max-width: 500px) {
   .language-selector {
     margin-left: 3.4rem;
@@ -144,7 +138,13 @@ accordion-button::after {
 }
 /* Accordion styling */
 
-/* links */
+/* links and buttons */
+
+button.navbar-button {
+  padding-left: 0.5rem;
+  padding-right: 0.3rem;
+  background-color: #d6d4d0;
+}
 
 button.btn.btn-primary > a:link {
   color: #fff;
@@ -152,6 +152,18 @@ button.btn.btn-primary > a:link {
 
 button.btn.btn-primary > a:visited {
   color: #fff;
+}
+
+button.navbar-button.btn.btn-secondary:hover {
+  background-color: #768fab;
+}
+
+button.navbar-button.btn.btn-secondary:active {
+  background-color: #768fab;
+}
+
+button.navbar-button.btn.btn-secondary:focus {
+  background-color: #768fab;
 }
 
 .app-info-1 {
