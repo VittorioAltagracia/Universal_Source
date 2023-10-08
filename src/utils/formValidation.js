@@ -1,4 +1,4 @@
-export const validateForm = (input) => {
+export const validateForm = (input, setValidationErrors) => {
   const errors = {};
   const checkForSpaces = /^\S/;
 
@@ -25,11 +25,13 @@ export const validateForm = (input) => {
     if (!checkForSpaces.test(input.contactInfo)) {
       errors.contactInfo = "Input can't start with spaces.";
     } else if (input.contactInfo.length < 8) {
-      errors.contactInfo = "Must be at least 8 characters.";
+      errors.contactInfo = "Must be at least 8 characters long.";
     } else if (input.contactInfo.length > 70) {
       errors.contactInfo = "Must not be longer than 70 characters.";
     }
   }
+
+  setValidationErrors(errors);
 
   return errors;
 };

@@ -40,15 +40,36 @@ const RequestForm = () => {
     }
   }, [isSuccess, isError]);
 
+  // handles input Validation and calls validateForm function
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+
+    switch (name) {
+      case "name":
+        setFirstName(value);
+        break;
+      case "textMessage":
+        setTextMessage(value);
+        break;
+      case "contactInfo":
+        setContactInfo(value);
+        break;
+    }
+
+    const errors = validateForm(
+      { firstName, textMessage, contactInfo },
+      setValidationErrors
+    );
+    setValidationErrors(errors);
+  };
+
+  // handles submit and checks that there are no errors in validationErrors stateful variable
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
       setIsLoading(true);
 
-      const errors = validateForm({ firstName, textMessage, contactInfo });
-      setValidationErrors(errors);
-
-      if (Object.keys(errors).length > 0) {
+      if (Object.keys(validationErrors).length > 0) {
         setIsLoading(false);
         return null;
       }
@@ -64,6 +85,8 @@ const RequestForm = () => {
 
   return (
     <Container fluid className="center-text">
+      {isError && <ErrorToast errorMes={`Request resulted in error`} />}
+      {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
       {
         <Row className="justify-content-center" style={{ marginTop: "5rem" }}>
           <Col xs="auto" lg="auto" xl="8">
@@ -101,6 +124,10 @@ const RequestForm = () => {
                   value={firstName}
                   onChange={(e) => {
                     setFirstName(e.target.value);
+                    handleInput(e);
+                  }}
+                  onBlur={(e) => {
+                    handleInput(e);
                   }}
                   invalid={validationErrors.firstName}
                 />
@@ -123,9 +150,18 @@ const RequestForm = () => {
                   value={textMessage}
                   onChange={(e) => {
                     setTextMessage(e.target.value);
-                    validateForm({ textMessage: e.target.value });
+                    handleInput(e);
                   }}
+                  onBlur={(e) => {
+                    handleInput(e);
+                  }}
+                  invalid={validationErrors.textMessage}
                 />
+                {validationErrors.textMessage && (
+                  <div className="invalid-input">
+                    {validationErrors.textMessage}
+                  </div>
+                )}
               </FormGroup>
               <FormGroup row>
                 <Label htmlFor="contactInfo">
@@ -136,14 +172,23 @@ const RequestForm = () => {
                   name="contactInfo"
                   id="contactInfo"
                   required
+                  value={contactInfo}
                   className="form-control"
-                  invalid={Object.keys(validationErrors).length > 0}
                   error={validateForm.errors}
                   onChange={(e) => {
                     setContactInfo(e.target.value);
-                    validateForm({ contactInfo: e.target.value });
+                    handleInput(e);
                   }}
+                  onBlur={(e) => {
+                    handleInput(e);
+                  }}
+                  invalid={validationErrors.contactInfo}
                 />
+                {validationErrors.contactInfo && (
+                  <div className="invalid-input">
+                    {validationErrors.contactInfo}
+                  </div>
+                )}
               </FormGroup>
               <Button
                 type="submit"
@@ -162,8 +207,6 @@ const RequestForm = () => {
         </Row>
       }
       {isLoading && <LoadingSpinner />}
-      {isError && <ErrorToast errorMes={`Request resulted in error`} />}
-      {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
     </Container>
   );
 };
