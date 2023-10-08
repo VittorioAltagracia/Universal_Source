@@ -24,6 +24,7 @@ const RequestForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [validationErrors, setValidationErrors] = useState({});
 
   const resetForm = () => {
     setFirstName("");
@@ -43,6 +44,15 @@ const RequestForm = () => {
     try {
       e.preventDefault();
       setIsLoading(true);
+
+      const errors = validateForm({ firstName, textMessage, contactInfo });
+      setValidationErrors(errors);
+
+      if (Object.keys(errors).length > 0) {
+        setIsLoading(false);
+        return null;
+      }
+
       await requestNewCategoryOrPost(firstName, textMessage, contactInfo);
       resetForm();
       setIsSuccess(true);
@@ -92,7 +102,13 @@ const RequestForm = () => {
                   onChange={(e) => {
                     setFirstName(e.target.value);
                   }}
+                  invalid={validationErrors.firstName}
                 />
+                {validationErrors.firstName && (
+                  <div className="invalid-input">
+                    {validationErrors.firstName}
+                  </div>
+                )}
               </FormGroup>
               <FormGroup row>
                 <Label htmlFor="textMessage">
@@ -107,6 +123,7 @@ const RequestForm = () => {
                   value={textMessage}
                   onChange={(e) => {
                     setTextMessage(e.target.value);
+                    validateForm({ textMessage: e.target.value });
                   }}
                 />
               </FormGroup>
@@ -120,9 +137,11 @@ const RequestForm = () => {
                   id="contactInfo"
                   required
                   className="form-control"
-                  value={contactInfo}
+                  invalid={Object.keys(validationErrors).length > 0}
+                  error={validateForm.errors}
                   onChange={(e) => {
                     setContactInfo(e.target.value);
+                    validateForm({ contactInfo: e.target.value });
                   }}
                 />
               </FormGroup>
