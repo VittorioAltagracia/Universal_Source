@@ -12,7 +12,7 @@ import ErrorToast from "../subComponents/ErrorToast";
 import SuccessToast from "../subComponents/SuccessToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import { validateForm } from "../utils/formValidation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { requestNewCategoryOrPost } from "./sendRequest";
 import { requestNewAnswers } from "../utils/translations/requestsPageTranslations";
 import { useTranslation } from "react-i18next";
@@ -33,12 +33,6 @@ const RequestForm = () => {
   };
 
   const { i18n } = useTranslation();
-
-  useEffect(() => {
-    if (isSuccess || isError) {
-      setIsLoading(false);
-    }
-  }, [isSuccess, isError]);
 
   // handles input Validation and calls validateForm function
   const handleInput = (e) => {
@@ -77,16 +71,23 @@ const RequestForm = () => {
       await requestNewCategoryOrPost(firstName, textMessage, contactInfo);
       resetForm();
       setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 10000);
+      setIsLoading(false);
     } catch (error) {
       setIsError(true);
+      setTimeout(() => {
+        setIsError(false);
+      }, 10000);
+      setIsLoading(false);
+
       return error;
     }
   };
 
   return (
     <Container fluid className="center-text">
-      {isError && <ErrorToast errorMes={`Request resulted in error`} />}
-      {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
       {
         <Row className="justify-content-center" style={{ marginTop: "5rem" }}>
           <Col xs="auto" lg="auto" xl="8">
@@ -129,7 +130,7 @@ const RequestForm = () => {
                   onBlur={(e) => {
                     handleInput(e);
                   }}
-                  invalid={validationErrors.firstName}
+                  invalid={!!validationErrors.firstName}
                 />
                 {validationErrors.firstName && (
                   <div className="invalid-input">
@@ -155,7 +156,7 @@ const RequestForm = () => {
                   onBlur={(e) => {
                     handleInput(e);
                   }}
-                  invalid={validationErrors.textMessage}
+                  invalid={!!validationErrors.textMessage}
                 />
                 {validationErrors.textMessage && (
                   <div className="invalid-input">
@@ -182,7 +183,7 @@ const RequestForm = () => {
                   onBlur={(e) => {
                     handleInput(e);
                   }}
-                  invalid={validationErrors.contactInfo}
+                  invalid={!!validationErrors.contactInfo}
                 />
                 {validationErrors.contactInfo && (
                   <div className="invalid-input">
@@ -206,6 +207,8 @@ const RequestForm = () => {
           </Col>
         </Row>
       }
+      {isError && <ErrorToast errorMes={`Request resulted in error`} />}
+      {isSuccess && <SuccessToast successMes={`Your request has been sent.`} />}
       {isLoading && <LoadingSpinner />}
     </Container>
   );
