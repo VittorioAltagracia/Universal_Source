@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Nav,
   NavItem,
@@ -13,14 +13,20 @@ import {
 } from "reactstrap";
 import LanguageSelectorDropdown from "../subComponents/LanguageSelector";
 import CategorySelector from "../subComponents/CategorySelector";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { TextForNavbar } from "../utils/translations/hardCodedUITranslations";
 import { useTranslation } from "react-i18next";
+
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);
   const { i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setDropdownOpen(false);
+  }, [location.pathname]);
 
   // i18n.language is a property that holds the current language code accessable via i18next library
   return (
