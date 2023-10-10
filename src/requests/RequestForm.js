@@ -52,7 +52,8 @@ const RequestForm = () => {
 
     const errors = validateForm(
       { firstName, textMessage, contactInfo },
-      setValidationErrors
+      setValidationErrors,
+      i18n
     );
     setValidationErrors(errors);
   };
@@ -175,7 +176,6 @@ const RequestForm = () => {
                   required
                   value={contactInfo}
                   className="form-control"
-                  error={validateForm.errors}
                   onChange={(e) => {
                     setContactInfo(e.target.value);
                     handleInput(e);
