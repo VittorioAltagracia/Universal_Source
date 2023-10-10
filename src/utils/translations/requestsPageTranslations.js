@@ -11,6 +11,7 @@ export const requestNewAnswers = {
     en: "Send",
     uk: "Надіслати",
   },
+  // field labels
   label1: {
     en: "Your Name",
     uk: "Ваше Ім'я",
@@ -23,6 +24,7 @@ export const requestNewAnswers = {
     en: "Contact Info",
     uk: "Контактна Інформація",
   },
+  // form placeholders
   placeholder1: {
     en: "Your name...",
     uk: "Ваше ім'я...",
@@ -34,5 +36,34 @@ export const requestNewAnswers = {
   placeholder3: {
     en: "Your contact info...",
     uk: "Ваші контактні дані...",
+  },
+  // form validation errors
+  spaceError: {
+    en: "Input can't start with spaces.",
+    uk: "Дані не можуть починатись з пробілу.",
+  },
+  fNameMinLength: {
+    en: "Must be at least 2 characters long.",
+    uk: "Має бути не менше 2 символів.",
+  },
+  fNameMaxLength: {
+    en: "Must not be longer than 50 characters.",
+    uk: "Має бути не більше 50 символів.",
+  },
+  textMesMinLength: {
+    en: "Must be at least 25 characters long.",
+    uk: "Має бути не менше 25 символів.",
+  },
+  textMesMaxLength: {
+    en: "Must not be longer than 500 characters.",
+    uk: "Має бути не більше 500 символів.",
+  },
+  contInfoMinLength: {
+    en: "Must be at least 8 characters long.",
+    uk: "Має бути не менше 8 символів.",
+  },
+  contInfoMaxLength: {
+    en: "Must not be longer than 70 characters.",
+    uk: "Має бути не більше 70 символів.",
   },
 };
