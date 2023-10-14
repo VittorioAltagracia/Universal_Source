@@ -38,7 +38,7 @@ const SelectByCatPage = () => {
     return (
       <CardFooter className="p-3" style={{ border: "0px" }}>
         {AccordionAndCardText.selectedCatText[i18n.language]}:{" "}
-        {/* {t(`${categoryId}.${categoryName}.key4`)}{" "} */}
+        {/* {t(`${categoryId}.${categoryName}.key4`)}  */}
         {categoryName}
       </CardFooter>
     );
@@ -114,6 +114,10 @@ const SelectByCatPage = () => {
         QuestionAnswerCard(category)
       );
     case "Finances":
+      return RenderByCat(categoryName).map((category) =>
+        QuestionAnswerCard(category)
+      );
+    case "Освіта":
       return RenderByCat(categoryName).map((category) =>
         QuestionAnswerCard(category)
       );

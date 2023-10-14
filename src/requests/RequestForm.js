@@ -90,9 +90,9 @@ const RequestForm = () => {
   return (
     <Container fluid className="center-text">
       {
-        <Row className="justify-content-center" style={{ marginTop: "5rem" }}>
-          <Col xs="auto" lg="auto" xl="8">
-            <h2 className="app-info-2 mb-0 mt-5 py-3 dark-blue">
+        <Row className="justify-content-center add-margin-top">
+          <Col xs="auto" lg="auto" xl="8" className="add-margin-top">
+            <h2 className="app-info-2 mb-0 mt-5 py-3 dark-blue ">
               {requestNewAnswers.header[i18n.language]}
             </h2>
             <p className="app-info-1 p-2 ">

@@ -8,10 +8,7 @@ import {
 import { Category } from "../utils/category";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import {
-  CategorySelectorText,
-  TranslatedCategories,
-} from "../utils/translations/hardCodedUITranslations";
+import { CategorySelectorText } from "../utils/translations/hardCodedUITranslations";
 
 const CategorySelector = () => {
   const [categoryOpen, setCategoryOpen] = useState(false);
