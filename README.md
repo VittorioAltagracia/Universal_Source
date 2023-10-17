@@ -3,7 +3,7 @@
 https://source-universal.com/ 
 
 ###
-The project is still in development (as of June 2023) but it is mostly done.
+The project is done. Bug fixes and improvements are being added occasionally.
 
 # Universal Source
 Project MVP -  https://universal-source.atlassian.net/wiki/spaces/~61320bfa6fa73c006a9ae562/pages/360449/MVP+for+The+Universal+Source
