@@ -3,7 +3,10 @@
 https://source-universal.com/ 
 
 ###
-The project is undergoing UI redesign, the core logic and functionality but  this APP add needs new look and feel
+
+The project is done. Bug fixes and improvements are being added occasionally.
+=======
+
 
 # Universal Source
 Project MVP -  https://universal-source.atlassian.net/wiki/spaces/~61320bfa6fa73c006a9ae562/pages/360449/MVP+for+The+Universal+Source
