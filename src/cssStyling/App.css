@@ -57,7 +57,7 @@
 
 @media (max-width: 370px) {
   .header-app-name {
-    font-size: x-large;
+    font-size: large;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
@@ -105,6 +105,13 @@
   button.btn.btn-secondary {
     padding: 0.4rem;
     margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 370px) {
+  button.btn.btn-secondary {
+    padding: 0.1rem;
+    margin-top: 0.4rem;
   }
 }
 
@@ -211,7 +218,7 @@ button.navbar-button.btn.btn-secondary:focus {
 
 @media (max-width: 370px) {
   .new-us {
-    font-size: 3.4rem;
+    font-size: 3rem;
     margin-top: 3.25rem;
   }
 }
@@ -223,7 +230,7 @@ button.navbar-button.btn.btn-secondary:focus {
 
 @media (max-width: 370px) {
   .dont-stress {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
     margin-top: 2rem;
   }
 }
@@ -235,7 +242,7 @@ button.navbar-button.btn.btn-secondary:focus {
 
 @media (max-width: 370px) {
   .large-font-quick-answers {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
