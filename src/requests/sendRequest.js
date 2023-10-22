@@ -7,14 +7,15 @@ const emailToSendTo = "vittorioaltagracia@gmail.com";
 export const requestNewCategoryOrPost = async (
   firstName,
   textMessage,
-  contactInfo
+  contactInfo,
+  collectionName
 ) => {
   try {
     // let testError = true;
     // if (testError) {
     //   throw new Error(`test error`);
     // }
-    const postRequest = await addDoc(collection(db, "requests"), {
+    const postRequest = await addDoc(collection(db, collectionName), {
       to: emailToSendTo,
       name: firstName,
       text: textMessage,

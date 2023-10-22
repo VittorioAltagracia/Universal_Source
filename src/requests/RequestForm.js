@@ -69,7 +69,12 @@ const RequestForm = () => {
         return null;
       }
 
-      await requestNewCategoryOrPost(firstName, textMessage, contactInfo);
+      await requestNewCategoryOrPost(
+        firstName,
+        textMessage,
+        contactInfo,
+        "requests"
+      );
       resetForm();
       setIsSuccess(true);
       setTimeout(() => {

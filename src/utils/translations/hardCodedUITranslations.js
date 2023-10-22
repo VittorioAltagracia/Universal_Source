@@ -24,6 +24,14 @@ export const TextForNavbar = {
     en: "About сreator",
     uk: "Про автора",
   },
+  navbar4: {
+    en: "Suggest improvement",
+    uk: "Запропонувати покращення",
+  },
+  navbar5: {
+    en: "Release notes",
+    uk: "Замітки релізів",
+  },
 };
 
 export const AccordionAndCardText = {

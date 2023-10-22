@@ -3,7 +3,7 @@ import "../src/cssStyling/App.css";
 import "../src/cssStyling/CardStyle.css";
 import { Container, Row } from "reactstrap";
 import FooterComponent from "./components/Footer.js";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import QuestionsPage from "./pages/QuestionsPage.js";
@@ -12,8 +12,9 @@ import RequestsPage from "./pages/RequestsPage.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { switchLanguage } from "../src/utils/translations/translationSlice.js";
-
 import { useTranslation } from "react-i18next";
+import ReleaseNotesPage from "./pages/ReleaseNotesPage.js";
+import EnhancementsPage from "./pages/EnhancementsPage.js";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,6 +25,11 @@ function App() {
     dispatch(switchLanguage("en"));
     i18n.changeLanguage("en");
   }, [dispatch, i18n]);
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
 
   return (
     <div className="App">
@@ -40,6 +46,8 @@ function App() {
                 element={<SelectByCatPage />}
               />
               <Route path="requests" element={<RequestsPage />} />
+              <Route path="enhancements" element={<EnhancementsPage />} />
+              <Route path="release_notes" element={<ReleaseNotesPage />} />
             </Routes>
           </Row>
         </div>
