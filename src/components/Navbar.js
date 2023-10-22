@@ -56,7 +56,7 @@ const NavigationBar = () => {
                     <i className="fa fa-list fa-lg" />
                   </DropdownToggle>
                 </Button>
-                <DropdownMenu>
+                <DropdownMenu className="dropdown-menu-opacity">
                   <NavLink to="/questions" className="nav-link dropdown-color">
                     <i className="fa fa-globe" />{" "}
                     {TextForNavbar.navbar1[i18n.language]}
@@ -72,11 +72,28 @@ const NavigationBar = () => {
                     {TextForNavbar.navbar2[i18n.language]}
                   </NavLink>
                   <DropdownItem divider />
-
+                  <NavLink
+                    to="/enhancements"
+                    className="nav-link dropdown-color"
+                  >
+                    <i className="fa fa-cog" />
+                    {` `}
+                    {TextForNavbar.navbar4[i18n.language]}
+                  </NavLink>
+                  <DropdownItem divider />
                   <NavLink to="/about" className="nav-link dropdown-color">
                     <i className="fa fa-user-circle" />
                     {` `}
                     {TextForNavbar.navbar3[i18n.language]}
+                  </NavLink>
+                  <DropdownItem divider />
+                  <NavLink
+                    to="/release_notes"
+                    className="nav-link dropdown-color"
+                  >
+                    <i className="fa fa-sticky-note" />
+                    {` `}
+                    {TextForNavbar.navbar5[i18n.language]}
                   </NavLink>
                 </DropdownMenu>
               </Dropdown>
