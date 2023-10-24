@@ -9,28 +9,29 @@ import {
   Container,
 } from "reactstrap";
 import ErrorToast from "../subComponents/ErrorToast";
-import SuccessToast from "../subComponents/SuccessToast";
+import SuccessToast from "../subComponents/successToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import { validateForm } from "../utils/formValidation";
 import { useState } from "react";
 import { requestNewCategoryOrPost } from "./sendRequest";
 import { requestNewAnswers } from "../utils/translations/requestsPageTranslations";
 import { useTranslation } from "react-i18next";
+import useResetForm from "../utils/resetForm";
 
 const RequestForm = () => {
-  const [firstName, setFirstName] = useState("");
-  const [textMessage, setTextMessage] = useState("");
-  const [contactInfo, setContactInfo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
   const [validationErrors, setValidationErrors] = useState({});
-
-  const resetForm = () => {
-    setFirstName("");
-    setTextMessage("");
-    setContactInfo("");
-  };
+  const {
+    firstName,
+    setFirstName,
+    textMessage,
+    setTextMessage,
+    contactInfo,
+    setContactInfo,
+    resetForm,
+  } = useResetForm();
 
   const { i18n } = useTranslation();
 
@@ -73,13 +74,16 @@ const RequestForm = () => {
         firstName,
         textMessage,
         contactInfo,
+        "",
         "requests"
       );
-      resetForm();
       setIsSuccess(true);
+
+      resetForm();
       setTimeout(() => {
         setIsSuccess(false);
       }, 10000);
+
       setIsLoading(false);
     } catch (error) {
       setIsError(true);
@@ -91,6 +95,8 @@ const RequestForm = () => {
       return error;
     }
   };
+
+  // Content is returned below
 
   return (
     <Container fluid className="center-text">
@@ -196,16 +202,7 @@ const RequestForm = () => {
                   </div>
                 )}
               </FormGroup>
-              <Button
-                type="submit"
-                style={{
-                  backgroundColor: "#021740",
-                  color: "#fff",
-                  paddingLeft: "1.5rem",
-                  paddingRight: "1.5rem",
-                  marginTop: "0.75rem",
-                }}
-              >
+              <Button type="submit" className="submit">
                 {requestNewAnswers.sendButton[i18n.language]}
               </Button>
             </Form>
