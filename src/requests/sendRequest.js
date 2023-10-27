@@ -8,6 +8,7 @@ export const requestNewCategoryOrPost = async (
   firstName,
   textMessage,
   contactInfo,
+  newParam,
   collectionName
 ) => {
   try {
@@ -15,10 +16,14 @@ export const requestNewCategoryOrPost = async (
     // if (testError) {
     //   throw new Error(`test error`);
     // }
+
+    // areaToImprove is an optinal parameter
+
     const postRequest = await addDoc(collection(db, collectionName), {
       to: emailToSendTo,
       name: firstName,
       text: textMessage,
+      areaToImprove: newParam ?? null,
       contactInfo: contactInfo,
     });
 
