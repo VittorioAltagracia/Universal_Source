@@ -60,6 +60,7 @@
     font-size: large;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    margin-right: 2rem;
   }
 }
 
@@ -91,7 +92,7 @@
 
 @media (max-width: 575px) {
   button.btn.btn-secondary {
-    padding: 0.3rem;
+    padding: 0.6rem;
     margin-top: 0.5rem;
   }
 }
@@ -179,7 +180,14 @@ button.submit {
   color: #fff;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+  button.submit.btn.btn-secondary {
+    padding: 0.5rem 1rem 0.5rem;
+    margin-top: 1rem;
+  }
 }
 
 button.submit:active {
@@ -276,6 +284,18 @@ button.submit:focus {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .fortyPX {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .fortyPX {
+    font-size: 36px;
+  }
+}
+
 /* headers */
 
 .anti-stress {
@@ -341,6 +361,11 @@ a.dropdown-item.dropdown-color.active {
   background-color: #e5e9fd;
 }
 
+button.dropdown-color.disabled.dropdown-item {
+  background-color: #ddd;
+  opacity: 0.7;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -363,4 +388,13 @@ a.dropdown-item.dropdown-color.active {
   .add-margin-top {
     margin-top: 0rem;
   }
+}
+
+.new-label::after {
+  content: "New";
+  color: #fff;
+  background-color: #ea4584;
+  border-radius: 3px;
+  padding: 6px 5px 4px;
+  margin-left: 5px;
 }

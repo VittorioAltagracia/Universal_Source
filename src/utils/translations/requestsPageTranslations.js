@@ -67,3 +67,44 @@ export const requestNewAnswers = {
     uk: "Має бути не більше 70 символів.",
   },
 };
+
+export const improvementsPage = {
+  header: {
+    en: `Here you can suggest improvements or enhancements for
+    Universal Source. Ideas how to make this project
+    better are always welcomed.`,
+    uk: "Тут ви можете запропонувати покращення або вдосконалення для Universal Source. Ідеї для покращення цього проекту, завжди вітаються.",
+  },
+  areaToImprove: {
+    en: "Area to improve",
+    uk: "Що покращити",
+  },
+  option1: {
+    en: "Colors and styling",
+    uk: "Кольори та стиль",
+  },
+  option2: {
+    en: "Site navigation",
+    uk: "Навігація по сайту",
+  },
+  option3: {
+    en: "Translation concerns or quality of translation",
+    uk: "Проблеми з перекладом або якість перекладу",
+  },
+  option4: {
+    en: "User experience",
+    uk: "Взаємодія користувача з додатком",
+  },
+  option5: {
+    en: "Performance of this site",
+    uk: "Швидкість сайту",
+  },
+  option6: {
+    en: "Other",
+    uk: "Інше",
+  },
+  option7: {
+    en: "I don't want to select",
+    uk: "Я не хочу обирати",
+  },
+};

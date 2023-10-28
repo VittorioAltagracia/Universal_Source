@@ -14,6 +14,8 @@ import { useTranslation } from "react-i18next";
 import useResetForm from "../utils/resetForm";
 import { validateForm } from "../utils/formValidation";
 import { requestNewAnswers } from "../utils/translations/requestsPageTranslations";
+import { TextForNavbar } from "../utils/translations/hardCodedUITranslations";
+import { improvementsPage } from "../utils/translations/requestsPageTranslations";
 import ErrorToast from "../subComponents/ErrorToast";
 import LoadingSpinner from "../subComponents/LoadingSpinner";
 import SuccessToast from "../subComponents/successToast";
@@ -103,16 +105,23 @@ const EnhancementsPage = () => {
   // Content is returned below
   return (
     <Container fluid className="center-text">
-      <Row className="align-items-center justify-content-center text-center">
-        <Col sm="10" md="9" lg="10" xl="auto" className="app-info-2 p-3 mt-5">
-          <h2 className="dark-blue">Suggest an improvement</h2>
+      <Row className="align-items-center justify-content-center">
+        <Col
+          xs="auto"
+          sm="10"
+          md="9"
+          lg="10"
+          xl="10"
+          className="app-info-2 p-3 mt-5"
+        >
+          <h2 className="dark-blue fortyPX">
+            {TextForNavbar.navbar4[i18n.language]}
+          </h2>
         </Col>
-        <Col sm="10" md="9" lg="10" xl="9" className="app-info-1 p-3 mb-5">
-          Here you can suggest improvements or enhancements for{" "}
-          {<strong>Universal Source</strong>}. Ideas how to make this project
-          better are always welcomed.
+        <Col sm="10" md="9" lg="10" xl="6" className="app-info-1 p-3">
+          {improvementsPage.header[i18n.language]}
         </Col>
-        <Col md="8" lg="7" xl="6">
+        <Col md="8" lg="7" xl="7">
           <Form
             inline
             onSubmit={handleSubmit}
@@ -120,6 +129,7 @@ const EnhancementsPage = () => {
               padding: "2rem",
               paddingBottom: "1rem",
               marginBottom: "0.5rem",
+              marginTop: "10px",
             }}
             className="form-style"
           >
@@ -177,7 +187,9 @@ const EnhancementsPage = () => {
               )}
             </FormGroup>
             <FormGroup row>
-              <Label htmlFor="select">Area to improve</Label>
+              <Label htmlFor="select">
+                {improvementsPage.areaToImprove[i18n.language]}
+              </Label>
               <Input
                 name="select"
                 id="select"
@@ -189,13 +201,13 @@ const EnhancementsPage = () => {
                   setAreaToImprove(e.target.value);
                 }}
               >
-                <option>Colors and styling</option>
-                <option>Site navigation</option>
-                <option>Translation concerns or quality</option>
-                <option>User experience</option>
-                <option>Performance</option>
-                <option>Other</option>
-                <option>I don't want to select</option>
+                <option>{improvementsPage.option1[i18n.language]}</option>
+                <option>{improvementsPage.option2[i18n.language]}</option>
+                <option>{improvementsPage.option3[i18n.language]}</option>
+                <option>{improvementsPage.option4[i18n.language]}</option>
+                <option>{improvementsPage.option5[i18n.language]}</option>
+                <option>{improvementsPage.option6[i18n.language]}</option>
+                <option>{improvementsPage.option7[i18n.language]}</option>
               </Input>
             </FormGroup>
             <FormGroup row>
