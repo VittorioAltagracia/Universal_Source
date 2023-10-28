@@ -14,10 +14,10 @@ export const TextForNavbar = {
   },
   languageName1: {
     en: "English",
-    uk: "Англійська",
+    uk: "English",
   },
   languageName2: {
-    en: "Ukrainian",
+    en: "Українська",
     uk: "Українська",
   },
   navbar3: {

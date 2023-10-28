@@ -39,14 +39,20 @@ const LanguageSelectorDropdown = () => {
             <DropdownMenu>
               <DropdownItem
                 onClick={() => updateLangOnClick("en")}
-                className="dropdown-color"
+                className={`dropdown-color ${
+                  i18n.language === "en" ? "disabled" : ""
+                }`}
               >
+                <span class="fi fi-us"></span>{" "}
                 {TextForNavbar.languageName1[i18n.language]}
               </DropdownItem>
               <DropdownItem
                 onClick={() => updateLangOnClick("uk")}
-                className="dropdown-color"
+                className={`dropdown-color ${
+                  i18n.language === "uk" ? "disabled" : ""
+                }`}
               >
+                <span class="fi fi-ua"></span>{" "}
                 {TextForNavbar.languageName2[i18n.language]}
               </DropdownItem>
             </DropdownMenu>
