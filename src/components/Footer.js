@@ -2,10 +2,14 @@ import { useLocation } from "react-router-dom";
 const FooterComponent = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-
+  const isReleaseNotesPage = location.pathname === "/release_notes";
   return (
-    <footer className={`footer pb-3 ${isHomePage ? "anti-stress" : ""}`}>
-      <hr></hr>
+    <footer
+      className={`pb-3 ${isHomePage ? "anti-stress" : ""} ${
+        isReleaseNotesPage ? "footer" : ""
+      }`}
+    >
+      {isHomePage ? "" : <div className="horizontal-line"></div>}
       <div className="social-links">
         <a
           href="https://www.linkedin.com/in/viktor-palatnykdev/"

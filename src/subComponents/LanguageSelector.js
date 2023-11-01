@@ -43,7 +43,7 @@ const LanguageSelectorDropdown = () => {
                   i18n.language === "en" ? "disabled" : ""
                 }`}
               >
-                <span class="fi fi-us"></span>{" "}
+                <span className="fi fi-us"></span>{" "}
                 {TextForNavbar.languageName1[i18n.language]}
               </DropdownItem>
               <DropdownItem
@@ -52,7 +52,7 @@ const LanguageSelectorDropdown = () => {
                   i18n.language === "uk" ? "disabled" : ""
                 }`}
               >
-                <span class="fi fi-ua"></span>{" "}
+                <span className="fi fi-ua"></span>{" "}
                 {TextForNavbar.languageName2[i18n.language]}
               </DropdownItem>
             </DropdownMenu>

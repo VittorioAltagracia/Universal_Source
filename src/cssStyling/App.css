@@ -60,7 +60,7 @@
     font-size: large;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 }
 
@@ -180,13 +180,13 @@ button.submit {
   color: #fff;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 2.7rem;
 }
 
 @media screen and (max-width: 576px) {
   button.submit.btn.btn-secondary {
     padding: 0.5rem 1rem 0.5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 }
 
@@ -292,7 +292,7 @@ button.submit:focus {
 
 @media screen and (max-width: 370px) {
   .fortyPX {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 
@@ -397,4 +397,16 @@ button.dropdown-color.disabled.dropdown-item {
   border-radius: 3px;
   padding: 6px 5px 4px;
   margin-left: 5px;
+}
+
+footer.footer {
+  margin-top: 2.7rem;
+}
+
+div.horizontal-line {
+  background-color: #aaa;
+  width: 75%;
+  height: 1px;
+  margin: 0 auto;
+  margin-bottom: 2.7rem;
 }

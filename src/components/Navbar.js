@@ -86,15 +86,15 @@ const NavigationBar = () => {
                     {` `}
                     {TextForNavbar.navbar3[i18n.language]}
                   </NavLink>
-                  {/* <DropdownItem divider />
+                  <DropdownItem divider />
                   <NavLink
                     to="/release_notes"
-                    className="nav-link dropdown-color"
+                    className="nav-link dropdown-color new-label"
                   >
                     <i className="fa fa-sticky-note" />
                     {` `}
                     {TextForNavbar.navbar5[i18n.language]}
-                  </NavLink> */}
+                  </NavLink>
                 </DropdownMenu>
               </Dropdown>
             </NavItem>

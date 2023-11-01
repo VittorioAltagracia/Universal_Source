@@ -1,0 +1,74 @@
+div.release-notes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+div.note-header {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+div.note-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+div.note-desc span {
+  margin: 0;
+}
+
+div.row {
+  align-items: center;
+}
+
+div.version {
+  padding: 5px 35px 5px;
+  background-color: #021740;
+  border-radius: 10px;
+  color: #fff;
+}
+
+div.note::before {
+  content: "";
+  width: 25%;
+  height: 1px;
+  background-color: #aaa;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 576px) {
+  div.note-desc {
+    max-width: 190px;
+    padding-bottom: 15px;
+  }
+  div.note-desc {
+    margin-left: 1rem;
+  }
+  div.version {
+    padding: 5px 22px 5px;
+  }
+  div.note-desc.col {
+    margin-left: 5.5rem;
+  }
+  div.note::before {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.has-span {
+    margin-top: 20px;
+  }
+  div.note::before {
+    width: 50%;
+  }
+}
+
+div.type {
+  background-color: #ea4584;
+}
