@@ -128,7 +128,6 @@ const EnhancementsPage = () => {
             style={{
               padding: "2rem",
               paddingBottom: "1rem",
-              marginBottom: "0.5rem",
               marginTop: "10px",
             }}
             className="form-style"

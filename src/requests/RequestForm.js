@@ -119,7 +119,6 @@ const RequestForm = () => {
               style={{
                 padding: "2rem",
                 paddingBottom: "1rem",
-                marginBottom: "0.5rem",
               }}
               className="form-style"
             >

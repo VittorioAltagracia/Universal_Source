@@ -48,7 +48,7 @@ function App() {
               />
               <Route path="requests" element={<RequestsPage />} />
               <Route path="enhancements" element={<EnhancementsPage />} />
-              {/* <Route path="release_notes" element={<ReleaseNotesPage />} /> */}
+              <Route path="release_notes" element={<ReleaseNotesPage />} />
             </Routes>
           </Row>
         </div>
