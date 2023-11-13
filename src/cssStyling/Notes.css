@@ -55,9 +55,6 @@ div.note::before {
   div.note-desc.col {
     margin-left: 5.5rem;
   }
-  div.note::before {
-    width: 75%;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -65,7 +62,7 @@ div.note::before {
     margin-top: 20px;
   }
   div.note::before {
-    width: 50%;
+    width: 75%;
   }
 }
 
