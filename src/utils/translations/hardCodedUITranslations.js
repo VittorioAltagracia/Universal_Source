@@ -32,6 +32,10 @@ export const TextForNavbar = {
     en: "Release notes",
     uk: "Замітки релізів",
   },
+  navbar6: {
+    en: "Contact creator",
+    uk: "Зв`язатись з автором",
+  },
 };
 
 export const AccordionAndCardText = {

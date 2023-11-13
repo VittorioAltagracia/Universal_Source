@@ -16,6 +16,7 @@ import CategorySelector from "../subComponents/CategorySelector";
 import { NavLink, useLocation } from "react-router-dom";
 import { TextForNavbar } from "../utils/translations/hardCodedUITranslations";
 import { useTranslation } from "react-i18next";
+import ContactCreatorDropdown from "../subComponents/ContactCreatorDropdown";
 
 const NavigationBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -65,13 +66,7 @@ const NavigationBar = () => {
                   {/* category enddown (aka dropdown to the right) */}
                   <CategorySelector />
                   <DropdownItem divider />
-                  {/* independent dropdown (aka dropdown to the right) for languages is below */}
-                  <NavLink to="/requests" className="nav-link dropdown-color">
-                    <i className="fa fa-pencil-square-o" />
-                    {` `}
-                    {TextForNavbar.navbar2[i18n.language]}
-                  </NavLink>
-                  <DropdownItem divider />
+
                   <NavLink
                     to="/enhancements"
                     className="nav-link dropdown-color new-label"
@@ -81,11 +76,9 @@ const NavigationBar = () => {
                     {TextForNavbar.navbar4[i18n.language]}
                   </NavLink>
                   <DropdownItem divider />
-                  <NavLink to="/about" className="nav-link dropdown-color">
-                    <i className="fa fa-user-circle" />
-                    {` `}
-                    {TextForNavbar.navbar3[i18n.language]}
-                  </NavLink>
+                  {/* New dropdown component that consolidates 2 menu options to make better user experience */}
+                  <ContactCreatorDropdown />
+                  {/*  */}
                   <DropdownItem divider />
                   <NavLink
                     to="/release_notes"
@@ -98,6 +91,7 @@ const NavigationBar = () => {
                 </DropdownMenu>
               </Dropdown>
             </NavItem>
+            {/* independent dropdown (aka dropdown to the right) for languages is below */}
             <LanguageSelectorDropdown />
           </Nav>
         </Collapse>

@@ -57,7 +57,7 @@ const ReleaseNotesPage = () => {
               for <strong>Universal Source</strong>. Said differently - here you
               can see the evolution of this project.{" "}
               <strong>Please note:</strong> Release notes themselves won't be
-              translated in other languages.
+              translated in other languages for the time being.
             </>
           ) : (
             <>

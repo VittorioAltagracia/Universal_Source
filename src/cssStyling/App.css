@@ -308,35 +308,29 @@ button.submit:focus {
 
 @media (min-width: 768px) and (max-width: 900px) {
   .anti-stress {
-    background-image: url("/public/anti_stress.jpg");
-    background-repeat: no-repeat;
-    height: 200%;
-    background-attachment: fixed;
     background-position: bottom -230px right -390px;
   }
 }
 
 @media (min-width: 773px) and (max-width: 900px) {
   .anti-stress {
-    background-image: url("/public/anti_stress.jpg");
-    background-repeat: no-repeat;
-    height: 200%;
-    background-attachment: fixed;
     background-position: bottom -85px right -390px;
   }
 }
 
-@media (min-width: 900px) and (max-width: 990px) and (min-height: 1368px) {
+@media screen and (min-width: 768px) and (max-height: 750px) {
   .anti-stress {
-    background-image: url("/public/anti_stress.jpg");
-    background-repeat: no-repeat;
-    height: auto;
-    background-attachment: fixed;
-    background-position: bottom 25px right -390px;
+    background-position: bottom -540px right -310px;
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 900px) and (min-height: 890px) and (max-height: 920px) {
+  .anti-stress {
+    background-position: bottom -340px right -310px;
+  }
+}
+
+@media (max-width: 728px) {
   .anti-stress {
     background-image: none;
   }
@@ -364,6 +358,11 @@ a.dropdown-item.dropdown-color.active {
 button.dropdown-color.disabled.dropdown-item {
   background-color: #ddd;
   opacity: 0.7;
+}
+
+div.no-pad.dropdown-menu.show button.dropdown-item {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .social-links {
@@ -409,4 +408,14 @@ div.horizontal-line {
   height: 1px;
   margin: 0 auto;
   margin-bottom: 2.7rem;
+}
+
+@media screen and (max-width: 576px) {
+  footer.footer {
+    margin-top: 2.7rem;
+  }
+
+  div.horizontal-line {
+    margin-bottom: 1rem;
+  }
 }
