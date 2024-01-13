@@ -7,7 +7,10 @@
 
 # testing
 /coverage
-jqueryExperiment.js
+/tests/end-to-end/cypress/downloads
+/tests/end-to-end/cypress/videos
+/tests/end-to-end/cypress/screenshots
+
 # production
 
 # misc
