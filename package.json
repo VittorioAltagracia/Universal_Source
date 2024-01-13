@@ -23,7 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "nyc jest",
+    "test": "jest",
+    "coverage": "nyc jest",
     "eject": "react-scripts eject",
     "scss": "sass src/cssStyling/*.scss"
   },
@@ -52,6 +53,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "babel-jest": "^29.7.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
     "jest": "^27.5.1",
     "nyc": "^15.1.0",
     "redux-logger": "^3.0.6",
