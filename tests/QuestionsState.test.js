@@ -1,3 +1,4 @@
+import { it, describe, expect } from "jest";
 const { selectAllQuestions } = require("../src/questions/questionsSlice");
 
 describe("tests selectAllQuestions function which provides data for the app", () => {
