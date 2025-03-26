@@ -1,7 +1,6 @@
 # Url to see the project live
 
-https://source-universal.com/ 
-
+https://universalsource-6b70f.web.app/
 ##
 
 The project is done. Bug fixes and improvements are being added occasionally.
